@@ -1,0 +1,142 @@
+.posts
+    padding: 0 15px
+    width: 100%
+    max-width: 1138px
+    margin: 0 auto
+    +sm
+        padding: 0
+
+.posts-inside
+    position: relative
+    width: 100%
+    padding-top: 20px
+    +sm
+        padding-top: 0
+    &__img
+        width: 682px
+        height: 375px
+        .icon
+            width: 682px
+            height: 375px
+            fill: #d5d5d5
+            opacity: .5
+        +sm
+            position: relative
+            margin-left: -380px
+    &__circle
+        position: absolute
+        border-radius: 50%
+        background-color: #E9E9E9
+        &--small
+            top: 300px
+            left: 50px
+            width: 404px
+            height: 404px
+            z-index: 1
+            opacity: .3
+        &--big
+            top: 10px
+            right: 10px
+            width: 890px
+            height: 890px
+            z-index: 3
+            opacity: .4
+            +sm
+                right: -300px
+
+.post
+    position: relative
+    width: 100%
+    max-width: 735px
+    margin: -300px 0 106px auto
+    z-index: 4
+    +sm
+        margin: -300px 0 36px auto
+    &__wrap
+        position: relative
+        width: 100%
+        padding: 53px 47px
+        +sm
+            padding: 53px 47px 43px 75px
+        &::before
+            display: block
+            content: ''
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            border-radius: 6px
+            background-color: $colorWhite
+            box-shadow: 0 0 20px rgba(0,0,0, .2)
+            opacity: .8
+            z-index: -1
+            +sm
+                border-radius: 0
+    &__row
+        display: flex
+        margin-bottom: 62px
+        +sm
+            flex-wrap: wrap
+            margin-bottom: 44px
+    &__col
+        &--left
+            margin-right: 30px
+            +sm
+                margin-right: 0
+        &--right
+            margin-top: 96px
+            +sm
+                margin-top: 65px
+                flex: 1 1 100%
+    &__title
+        margin-bottom: 15px
+    &__descript
+        font-size: 19px
+        color: $colorDark
+        opacity: .42
+    &__avatar
+        width: 192px
+        height: 192px
+        border-radius: 50%
+        background: transparent no-repeat 50% 50%
+        -webkit-background-size: cover
+        background-size: cover
+        overflow: hidden
+    &__text
+        margin-bottom: 60px
+        font-size: 20px
+        color: $colorDark
+        opacity: .75
+        +sm
+            margin-bottom: 25px
+    &__img-quote
+        width: 109px
+        height: 78px
+        background: transparent no-repeat 50% 50%
+        -webkit-background-size: cover
+        background-size: cover
+        transform: rotate(180deg)
+        font-size: 0
+        img
+            width: 100%
+        +sm
+            width: 58px
+            height: 42px
+        &-big
+            position: absolute
+            top: -50px
+            right: 47px
+            width: 188px
+            height: 134px
+            background: transparent no-repeat 50% 50%
+            -webkit-background-size: cover
+            background-size: cover
+            font-size: 0
+            img
+                width: 100%
+            +sm
+                top: 25px
+                right: 25px
+                width: 58px
+                height: 42px

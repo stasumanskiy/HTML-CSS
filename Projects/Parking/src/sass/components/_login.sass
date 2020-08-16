@@ -1,0 +1,179 @@
+.login
+    position: fixed
+    min-width: 280px 
+    min-height: 0px
+    max-width: 770px
+    width: 100%
+    background: $white
+    top: 100px
+    left: 50%
+    display: none
+    opacity: 1
+    z-index: 100
+    transform: translateX(-50%)
+    border-top: 3px solid $red
+    +md
+        left: 0
+        right: 0
+        bottom: 0
+        transform: translateX(0)
+        overflow: auto
+        top: 50px
+    &__wrap
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        +sm
+            flex-wrap: wrap
+            align-items: center
+            justify-content: center
+    &__col
+        padding: 25px 30px
+        flex: 1 1 410px   
+        &--mod
+            flex: 1 1 238px
+            background-color: $whiteSilver
+        +md
+            padding: 20px 15px    
+    &__row
+        max-width: 410px
+        &:not(:last-child)
+            margin-bottom: 10px
+        +sm
+            max-width: 100%    
+        &--mod
+            display: flex
+            align-items: center
+            justify-content: space-between 
+            padding: 10px 0        
+    &__forgot
+        text-decoration: none
+        font-size: 14px
+        font-family: $openSans
+        color: $dark            
+.input
+    height: 47px
+    width: 100%
+    box-sizing: border-box
+    border: 1px solid $grayDark
+    padding: 12px 20px
+    color: $grayDark
+    transition: border-color .3s
+    +placeholder
+        transition: color .3s
+        font-size: 14px
+        color: $grayDark
+    &:hover
+        border-color: $dark
+        +placeholder
+            font-size: 14px
+            color: $dark
+    &:focus      
+        +placeholder
+            color: $dark
+.overlay
+	z-index: 90
+	position: fixed
+	opacity: .9
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	cursor: pointer 
+	background-color: $black
+
+.buttons
+    max-width: 238px
+    height: 47px
+    &:not(:last-child)
+        margin-bottom: 10px
+    +sm
+        max-width: 100%     
+
+.hint
+    position: relative
+    display: inline-block
+    padding-right: 24px
+    &--mod
+        .hint__text
+            right: 100%
+            left: 0
+    &__quest
+        position: absolute
+        top: -11px
+        right: 0
+        font-size: 0
+        display: block
+        .icon
+            width: 14px
+            height: 14px
+            fill: $dark
+    &__quest--mod        
+        right: 100%
+        left: 0
+    &__text
+        position: absolute
+        padding: 15px 20px
+        right: 0
+        top: 20px
+        opacity: 0
+        width: 290px
+        font-size: 14px
+        background-color: $white
+        transition: opacity .3s 
+        z-index: -100
+        display: none
+    &:hover
+        .hint__text
+            display: block
+            opacity: 1
+            z-index: 100
+
+.checkbox
+    padding-left: 28px
+    cursor: pointer
+    &__input
+        display: none
+        &:checked ~ .checkbox__text
+                &:before
+                    opacity: 1
+    &__text
+        display: block
+        position: relative
+        color: $dark
+        font-size: 14px
+        &:after
+            position: absolute
+            top: 0
+            left: -28px
+            width: 17px
+            height: 17px
+            content: ''
+            box-sizing: border-box
+            border: 1px solid $grayDark
+        &:before
+            position: absolute
+            top: 4px
+            left: -24px
+            width: 9px
+            height: 9px
+            content: ''
+            background-image: url(../img/checked.svg)
+            background-repeat: no-repeat
+            background-position:  50% 50%
+            background-size: cover
+            opacity: 0
+            transition: opacity .3s
+
+
+.sige-in
+    font-size: 14px
+    text-align: center
+    margin-top: 20px
+    &__link
+        border-bottom: 1px solid transparent
+        transition: border-color .3s
+        text-decoration: none
+        color: $red
+        &:hover
+            border-bottom: 1px solid $red                

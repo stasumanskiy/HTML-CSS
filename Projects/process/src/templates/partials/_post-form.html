@@ -1,0 +1,27 @@
+<form class="post-form js-hide-in js-form">
+	<button class="post-form__close-btn js-close" type="button">{{ mixins.icon('close') }}</button>
+	<h5 class="post-form__title title-s">Leave your contact details.</h5>
+    <div class="post-form__row">
+    	<div class="post-form__col">
+	        <div class="post-form__line">
+	            <input class="post-form__input" type="text" value="" name="name" id="name" required>
+	            <label class="post-form__label" for="name">Your Name</label>
+	        </div>
+	        <div class="post-form__line">
+	            <input class="post-form__input" type="text" value="" name="mail" id="email" required>
+	            <label class="post-form__label" for="email">Your Email</label>
+	        </div>
+	        <div class="post-form__line">
+	            <input class="post-form__input" type="text" value="" name="phone" id="phone" required>
+	            <label class="post-form__label" for="phone">Your Phone</label>
+	        </div>
+    	</div>
+    	<div class="post-form__col">
+	        <div class="post-form__line">
+	            <textarea class="post-form__textarea" type="text"  name="message" required value="" id="message"></textarea>
+	            <label class="post-form__label" class="post-form__label" for="message">Your Message</label>
+	        </div>
+    	</div>
+    </div>
+    <button type="submit" class="btn1 js-btn-send">Send</button>
+</form>

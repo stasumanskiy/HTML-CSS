@@ -1,0 +1,50 @@
+.garant
+	background-color: $silver_blue
+	padding: 73px 0 32px
+	+sm
+		padding-top: 50px
+	&__title
+		text-align: center
+		margin-bottom: 42px
+		+sm
+			font-size: 28px
+			font-family: $roboto
+		&:after
+			display: none
+	&__wrap
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+		+sm
+			flex-wrap: wrap
+			justify-content: center
+	&__col
+		flex: 0 0 33.3%
+		min-width: 200px	
+		+sm
+			&:not(:last-child)
+				margin-bottom: 30px
+
+.block
+	display: flex
+	flex-direction: column
+	align-items: center
+	&__icon
+		width: 87px
+		margin-bottom: 30px
+		+sm
+			margin-bottom: 25px
+		img
+			display: block
+			max-width: 100%
+	p	
+		padding: 0 15px 10px
+		text-align: center
+		font-style: italic
+		font-size: 18px
+		font-weight: 500
+		line-height: 1.4
+		color: $white
+		+sm
+			font-size: 16px
+			font-weight: 400

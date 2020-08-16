@@ -1,0 +1,115 @@
+.works
+	background-color: $white
+	padding: 70px 0 90px
+	+sm
+		padding: 35px 0 45px
+	&__inner
+		position: relative
+	&__row
+		display: flex
+		justify-content: space-between
+		+sm
+			flex-wrap: wrap
+		&.works__col_height
+			justify-content: center
+			+md
+				justify-content: flex-start
+	&__image
+		position: relative
+		height: 0
+		font-size: 0
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: 50% 50%
+		box-shadow: 0 10px 25px rgba(0,0,0,.3)
+		+sm
+			margin-bottom: 30px
+		&.works__image--left
+			margin-top: 5px
+			width: 250px
+			padding-bottom: 25%
+			+sm
+				width: 100%
+				padding-bottom: 38%
+		&.works__image--center
+			position: relative
+			margin-left: -335px
+			width: 260px
+			padding-bottom: 38%
+			+md
+				margin-left: 0
+			+sm
+				width: 100%
+		&.works__image--right
+			position: relative
+			margin-top: -100px
+			width: 520px
+			padding-bottom: 28%
+			+md
+				width: 450px
+			+sm
+				width: 100%
+				margin-top: 0
+				padding-bottom: 38%
+				margin-bottom: 0
+				
+
+.progress-bar
+	position: absolute
+	overflow: hidden
+	width: 30%
+	padding: 40px 25px
+	+md
+		padding: 20px 15px
+	+sm
+		width: 200px
+		padding: 10px 10px 15px
+	&.progress-bar--left
+		top: -5px
+		left: 15px
+	&.progress-bar--center
+		bottom: 120px
+		left: 40%
+	&.progress-bar--right
+		top: 80px
+		right: 15px
+	+md
+		&.progress-bar--left
+			top: -5px
+			left: 15px
+		&.progress-bar--center
+			bottom: 0
+			right: 0
+		&.progress-bar--right
+			top: 0
+			right: 0
+	+sm
+		&.progress-bar--left
+			top: -5px
+			left: 15px
+		&.progress-bar--center
+			bottom: 0
+			right: 0
+		&.progress-bar--right
+			top: 50%
+			right: 50%
+			transform: translate(50%, -50%)	
+	&__number,
+	&__plus	
+		position: relative
+		font-size: 70px
+		font-weight: 700
+		+sm
+			font-size: 35px
+	p
+		position: relative
+		font-size: 14px
+		font-weight: 500
+		line-height: 1.3
+		padding-top: 15px
+		max-width: 70%
+		+sm
+			font-size: 12px
+			padding-top: 0px
+
+

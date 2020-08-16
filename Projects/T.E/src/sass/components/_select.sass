@@ -1,0 +1,65 @@
+.select-box
+    display: flex
+    align-items: center
+    &__label
+        display: block
+        min-width: 100px
+        margin-right: 27px
+        text-align: left
+        font-size: 12px
+        font-weight: 400
+        color: $colorBlack
+        line-height: 22px
+    &__toggle
+        width: 100%
+
+    .select2-container
+        max-width: 144px
+
+    .select2-container--default .select2-selection--single
+        height: 38px
+        text-align: left
+        border: 1px solid $colorSilverWhite
+
+    .select2-container--default .select2-selection--single
+        background-color: $colorWhiteWhite
+        border-radius: 3px
+
+    .select2-container--default .select2-selection--single .select2-selection__placeholder
+        font-size: 13px
+        color: $colorDark
+
+    .select2-container .select2-selection--single .select2-selection__rendered
+        height: 38px
+        padding-left: 13px
+        line-height: 2.8
+        font-size: 13px
+        color: $colorDark
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow
+        height: 38px
+        width: 26px
+
+.select2-results__option[aria-selected]:hover
+    background-color: $colorBlue
+    color: $colorWhite
+
+.select2-dropdown
+    max-height: 200px
+    border-radius: 2px
+    border: none
+    background-color: $colorWhite
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25)
+
+    .select2-results__options
+        font-size: 13px
+        font-weight: 400
+        color: $colorDark
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]
+    background-color: $colorBlue
+    font-weight: 400
+    color: $colorWhite
+
+.select2-container--default .select2-results__option[aria-selected=true]
+    background-color: transparent

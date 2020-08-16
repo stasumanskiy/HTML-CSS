@@ -1,0 +1,210 @@
+.coin
+	padding: 70px 0 120px
+	+sm
+		padding: 50px 0 60px
+	&__select-block
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		border: 1px solid $gray_blue
+		border-radius: 8px
+		padding: 21px 23px
+		background-color: rgba($gray,.1)
+		margin-bottom: 52px
+		+sm
+			flex-wrap: wrap
+			justify-content: center
+			margin-bottom: 26px
+	&__title
+		flex: 1 1 50%
+		text-align: right
+		white-space: nowrap
+		+sm
+			margin-bottom: 10px
+			text-align: center
+			flex: 1 1 100%
+	&__select
+		padding-left: 135px	
+		flex: 1 1 50%
+		+sm
+			padding-left: 0
+			flex: 1 1 100%
+	&__row
+		display: flex
+		flex-wrap: wrap
+		+md
+			justify-content: center
+		+sm	
+			flex-direction: column
+			align-items: center
+	&__col
+		flex: 0 0 30%
+		&:not(:last-child)
+			margin-right: 30px
+			+sm
+				margin-right: 0
+
+.card
+	position: relative
+	border-radius: 8px
+	width: 100%
+	max-width: 310px
+	min-width: 290px
+	overflow: hidden
+	margin-bottom: 25px
+	z-index: 2
+	&:before
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		content: ''
+		background: linear-gradient(180deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,0) 100%)
+	&:after
+		position: absolute
+		top: -50px
+		left: -100px
+		content: ''
+		width: 500px
+		height: 140px
+		background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,0) 100%)
+		transform: rotate(-20deg)
+		z-index: 2	
+	&__title
+		position: relative
+		z-index: 3
+		text-align: center
+		margin-bottom: 140px
+	&__wrap
+		position: relative
+		max-width: 100%
+		max-height: 100%
+		z-index: 3
+		padding: 18px 31px
+		background-repeat: no-repeat
+		background-size: cover
+
+.card--green
+	background-color: $green
+	background-position: -70% 50%
+
+.card--brown
+	background-color: $brown
+	background-position: 35% 50%
+
+.card--yellow
+	background-color: $dark_yellow
+	background-position: 20% 50%	
+
+.price-list
+	position: relative
+	z-index: 3
+	&__item
+		display: flex
+		align-items: center
+		justify-content: space-between
+		font-family: $roboto
+		font-weight: 500
+		&:not(:last-child)
+			margin-bottom: 2px
+		&:first-child
+			margin-bottom: 8px		
+	&__title
+		&:first-child
+			margin-right: 15px
+	&__col
+		color: rgba($white,.25)
+		font-size: 14px
+		&:first-child
+			margin-right: 15px
+	&__input-title
+		color: $white
+		margin-right: 15px
+		+sm
+			font-size: 14px
+	&__col--mod
+		font-size: 16px
+		color: $light_green
+		+sm
+			font-size: 14px		
+
+.select
+	width: 100%
+	+sm
+		max-width: 270px
+	.select2
+		.select2-selection__rendered
+			font-size: 16px
+			font-weight: 200
+			line-height: 16px
+			text-transform: uppercase
+			color: $white
+
+.select2-container--default .select2-selection--multiple,
+.select2-container--default .select2-selection--single	
+	background-color: transparent
+
+.select2-container .select2-selection--single
+	height: 52px
+	padding: 18px 0 18px
+	border: 1px solid $light_blue
+	border-radius: 4px
+
+.select2-container .select2-selection--single .select2-selection__rendered
+	padding: 0 35px 0 16px
+
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple,
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single
+	border-radius: 4px
+
+.select2-dropdown
+	margin-top: 10px
+	background-color: $dark_blue
+	border: transparent
+
+.select2-container--open .select2-dropdown--below
+	border-radius: 4px
+
+.select2-container--default .select2-results__option--highlighted[aria-selected],
+.select2-container--default .select2-results__option[aria-selected=true]	
+	background-color: transparent
+	color: $white
+
+.select2-results
+	padding: 10px 16px
+	border-radius: 4px
+	border: 1px solid $light_blue
+
+.select2-results__option
+	padding: 6px 0
+	color: $white
+	font-family: $roboto
+	font-weight: 200	
+
+.select2-container--default .select2-selection--single .select2-selection__arrow
+	height: 52px
+	width: 30px
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b
+	border-style: none
+	position: absolute
+	background-image: url(../img/arrow.svg)
+	background-repeat: no-repeat
+	top: 50%
+	left: 50%
+	width: 10px
+	height: 10px
+	transform-origin: 50% 50%
+	transform: translate(-50%, -50%)
+	z-index: 100
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
+	transform: rotate(180deg)
+	top: 50%
+	left: 50%
+	width: 10px
+	height: 10px
+	margin-top: -4px
+	transform-origin: 50% 50%
+	transform: translate(-50%, -50%) rotate(180deg)

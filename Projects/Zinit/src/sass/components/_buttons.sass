@@ -1,0 +1,214 @@
+.toggle
+	position: absolute
+	top: 50%
+	right: 10px
+	width: 36px
+	height: 36px
+	transform: translate(-50%, -50%)
+	transition: background-color .3s
+	cursor: pointer
+	z-index: 20
+	+md
+		width: 24px
+		height: 24px	
+	&__line
+		position: absolute
+		display: block
+		width: 50%
+		height: 4px
+		background-color: $color-cerulean
+		transition: .5s
+	&.is-active
+		.toggle__line
+			background-color: $color-cerulean	
+	&__line:nth-child(even)
+		left: 50%
+	&__line:nth-child(1),
+	&__line:nth-child(2)
+		top: 0
+        border-radius: 3px
+	&__line:nth-child(3),
+	&__line:nth-child(4)
+		top: 12px
+		+md
+			top: 8px
+	&__line:nth-child(5),
+	&__line:nth-child(6)
+		top: 24px
+		+md
+			top: 16px
+.toggle.is-active .toggle__line:nth-child(3)
+	transform: translateX(-50px)
+	opacity: 0
+
+.toggle.is-active .toggle__line:nth-child(4)
+	transform: translateX(50px)
+	opacity: 0
+
+.toggle .toggle__line:nth-child(1)
+	transform-origin: top left
+
+.toggle .toggle__line:nth-child(2)
+	transform-origin: top right
+
+.toggle.is-active .toggle__line:nth-child(1)
+	transform: rotate(45deg)
+	top: -3px
+	left: 7px
+	+md
+		left: 4px
+
+.toggle.is-active .toggle__line:nth-child(2)
+	transform: rotate(-45deg)
+	top: -3px
+	left: calc(50% - 3px)
+
+.toggle .toggle__line:nth-child(5)
+	transform-origin: bottom left
+
+.toggle .toggle__line:nth-child(6)
+	transform-origin: bottom right
+
+.toggle.is-active .toggle__line:nth-child(5)
+	transform: rotate(-45deg)
+	bottom: -3px
+	left: 7px	
+	+md
+		left: 4px
+
+.toggle.is-active .toggle__line:nth-child(6) 
+	transform: rotate(45deg)
+	bottom: -3px
+	left: calc(50% - 3px)
+
+.btn
+    position: relative
+    background: none
+    font-weight: 500
+    color: $color-mine-shaft
+    z-index: 2
+    &::before
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 28px
+        height: 28px
+        content: ''
+        border-radius: 50%
+        background-color: $color-cerulean
+        z-index: -1
+        opacity: 0
+        transition: opacity .3s
+    &.is-active
+        color: $color-white
+        &::before
+            opacity: 1
+
+// .btn-card
+// 	display: inline-block
+// 	color: $color-white
+// 	text-decoration: none
+// 	background-color: $color-cerulean
+// 	padding: 13px
+// 	+sm
+// 		padding: 10px
+
+.btn-card
+	display: block
+	position: relative
+	max-width: 180px
+	width: 100%
+	height: 42px
+	margin: 0 auto
+	font-size: 0.875em
+	font-weight: 500
+	font-family: $montserrat
+	line-height: 42px
+	color: $color-white
+	text-decoration: none
+	text-align: center
+	transition: color .5s
+	overflow: hidden
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: $color-cerulean
+		z-index: -1
+		transition: .5s
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+	&::after
+		content: ''
+		position: absolute
+		top: calc(-100% + 2px)
+		left: 100%
+		width: 100%
+		height: 100%
+		background-color: $color-cerulean
+		z-index: -1
+		transition: .5s
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+	span
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-left: 2px solid $color-cerulean
+		border-right: 2px solid $color-cerulean
+		box-sizing: border-box
+		transform-origin: top
+		transform: scaleY(0)
+		transition: .5s
+	&:hover
+		color: $color-cerulean
+		&::before
+			top: calc( 100% - 2px)
+		&::after
+			left: 0
+			transition-delay: .5s
+		span
+			transform: scaleY(1)
+			transition-delay: 1s
+
+.btn-up
+	position: fixed 
+	right: 20px
+	bottom: 60px 
+	width: 60px
+	height: 60px
+	outline: none
+	border: none
+	border-radius: 50%
+	font-size: 0
+	line-height: 10px
+	vertical-align: middle
+	text-align: center
+	background: none
+	background-color: $color-gray
+	transition: background-color .3s
+	z-index: 3
+	&:hover
+		background-color: $color-cerulean
+	.icon
+		display: inline-block
+		width: 30px
+		height: 18px
+		fill: $color-white
+	+sm
+		width: 32px
+		height: 32px
+		bottom: 45px
+		right: 15px
+		line-height: 5px
+		.icon
+			width: 15px
+			height: 9px				

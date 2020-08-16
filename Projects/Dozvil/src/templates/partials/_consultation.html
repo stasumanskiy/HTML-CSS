@@ -1,0 +1,48 @@
+<div class="wrapper  js-start-animation bg-image" style="background-image: url(img/computer-1920.jpg);">
+	<div class="consultation" id="consultation">
+		<div class="consultation__inner inner-s">
+			<h2 class="consultation__title title-md">
+				Консультация
+			</h2>
+			<div class="consultation__wrap">
+				<div class="consultation__text">
+					<p>
+						Консультация предоставляются бесплатно в режиме он-лайн
+						или по телефону: +38 (067) 341-03-03.
+					</p>
+					<p>
+						Укажите свое имя, телефон для связи и адрес для переписки.
+						Сформулируйте свой запрос в нескольких словах, что вы
+						хотите узнать и какой результат получить в итоге.
+					</p>
+					<p>
+						Мы с нетерпением ждем, чтобы начать сотрудничество с
+						вами!
+					</p>
+				</div>
+				<form class="consultation__form form js-form">
+					<div class="form__row">
+						<input class="form__input" type="text" name="name" minlength="3" value="" required placeholder="Имя *">
+					</div>
+					<div class="form__row">
+						<input class="form__input" type="email" name="email" minlength="3" value="" required placeholder="Email *">
+					</div>
+					<div class="form__row">
+						<input class="form__input" type="text" name="phone" minlength="3" value="" required placeholder="Телефон *">
+					</div>
+					<div class="form__row">
+						<textarea class="form__textarea" name="message" minlength="3" placeholder="Сообщение"></textarea>
+					</div>
+					<input name="bezspama" type="text" style="display: none;" value="">
+					<div class="form__row">
+						<button class="form__btn btn js-btn-submit" type="submit" disabled>Отправить</button>
+					</div>
+					<div class="form__row">
+						<div class="success js-success">Сообщение успешно отправлено!</div>
+						<div class="success-error js-success-error">Уупс.. Что-то пошло не так</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

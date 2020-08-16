@@ -1,0 +1,10 @@
+mixin input(options)
+    .input&attributes(attributes)
+        input.input__row(
+            type=options.type
+            name=options.name
+            placeholder=options.placeholder
+            value=options.value
+            required
+            autocomlete=options.autocomlete
+        )

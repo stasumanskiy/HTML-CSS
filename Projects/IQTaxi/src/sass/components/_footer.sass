@@ -1,0 +1,120 @@
+.footer
+    &__row
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        padding: 30px 0
+        +sm
+            flex-wrap: wrap
+    &__col
+        &:not(:first-child)
+            margin-left: 25px
+            +sm
+                margin-left: 0
+        &.first
+            flex: 1 1 25%
+            +sm
+                flex: 1 1 100% 
+        &.second
+            flex: 1 1 35%
+            +sm
+                flex: 1 1 100% 
+        &.third
+            flex: 1 1 25%
+            +sm
+                flex: 1 1 100% 
+        &.four
+            flex: 1 1 15%  
+            +sm
+                flex: 1 1 100% 
+    &__logo
+        margin-top: 25px
+        +sm
+            margin-top: 0
+            .logo
+                margin: 0 auto 30px
+    &__bottom
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 9px 0
+        border-top: 1px solid $gray
+        +sm
+            padding: 13px 0
+            flex-wrap: wrap
+            justify-content: center
+    &__bottom-col
+        p  
+            font-size: 15px
+            font-weight: 500
+            color: $dark
+            text-decoration: none
+            opacity: 0.5  
+        +sm
+            flex: 1 1 100%
+            text-align: center
+            &:last-child
+                order: -1  
+                margin-bottom: 17px   
+
+.list  
+    +sm
+        text-align: center
+    &__item
+        margin-bottom: 5px          
+    &__link
+        padding: 3px 0
+        font-size: 15px
+        font-weight: 400
+        color: $dark
+        text-decoration: none
+        opacity: 0.5
+        transition: color .3s, opacity .3s
+        &:hover
+            color: $purple
+            opacity: 1
+
+.social
+    display: flex
+    +sm
+        justify-content: center
+    &__item
+        &:not(:last-child)
+            margin-right: 20px
+    &__link
+        display: block
+        padding: 3px
+        .icon
+            height: 15px
+            max-width: 15px
+            fill: $dark
+            transition: fill .3s
+        &:hover
+            .icon
+                fill: $purple 
+
+.lang
+    padding: 2px 0
+    display: flex
+    align-items: center
+    background: none
+    outline: none
+    vertical-align: middle
+    font-style: $roboto
+    img
+        width: 18px
+        height: 18px
+        border-radius: 50%
+    &:hover
+        .lang__text
+            color: $purple
+            opacity: 1  
+    &__text
+        margin-left: 10px
+        font-size: 15px
+        font-weight: 400
+        line-height: 1.1
+        color: $dark
+        text-decoration: none
+        opacity: 0.5
+        transition: color .3s, opacity .3s                 

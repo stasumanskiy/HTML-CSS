@@ -1,0 +1,82 @@
+.nav
+    position: relative
+    background-color: $color-link-water
+    +md
+        min-height: 45px
+    &__toggle
+        display: none
+        position: absolute
+        top: 25px
+        right: 0
+        +md
+            display: block
+    &__wrap
+        +md
+            position: absolute
+            top: 45px
+            left: 0
+            right: 0
+            background-color: $color-link-water
+            z-index: 4
+    .toggle 
+        background: none
+        font-size: 0
+
+
+.menu
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 13px 33px 10px
+    +md
+        display: none
+        text-align: center
+    &__item
+        &:not(:last-child)
+            margin-right: 10px
+        +md
+            &:not(:last-child)
+                margin-right: 0
+                margin-bottom: 10px    
+    &__link
+        position: relative
+        font-size: 1em
+        font-weight: 600
+        font-family: $montserrat
+        letter-spacing: -0.2px
+        color: $color-mine-shaft
+        text-decoration: none
+        &::after
+            position: absolute
+            bottom: -4px
+            left: 0
+            content: ''
+            width: 100%
+            height: 2px
+            background-color: $color-cerulean
+            transform: scaleX(0)
+            transition: transform .3s	
+        &:hover
+            &::after
+                transform: scaleX(1)
+    &__item--mod
+        +md
+            margin-top: 20px
+        .menu__link
+            display: inline-block
+            margin-right: 28px
+            line-height: 1
+            color: $color-cerulean
+            &::after
+                bottom: -4px
+
+.font-size
+    display: inline-block
+    &__btn--first                                    
+        font-size: .750em
+    &__btn--second
+        font-size: .875em
+        margin-left: 18px
+    &__btn--third
+        margin-left: 30px
+        font-size: 1em       

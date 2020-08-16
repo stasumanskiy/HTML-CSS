@@ -1,0 +1,126 @@
+.header
+    height: 70px
+    padding: 11px 0 13px
+    border-bottom: 1px solid $gray
+    background-origin: border-box
+    +md
+        min-height: 70px
+        height: auto
+    &__wrap
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: space-between
+        &.is-open
+            .nav__item.btn-reg
+                opacity: 1
+
+.nav
+    +md
+        display: none
+        position: absolute
+        top: 59px
+        right: -15px
+        left: -15px
+        height: calc(100vh - 70px)
+        background-color: $whiteSilver
+        z-index: 10
+    &__list
+        display: flex
+        align-items: center
+        +md
+            position: relative
+            flex-direction: column
+            height: 100%
+            padding-top: 15px
+            padding-bottom: 140px
+    &__item
+        position: relative
+        margin: -11px 0 -13px
+        +md
+            width: 100%
+            text-align: left
+            margin: 0 15px
+            &:not(:last-child)
+                margin-top: 5px
+        &.hide
+            display: none
+        &.show
+            display: block
+        &.is-active
+            .nav__link
+                font-weight: 500    
+        +md
+            &.btn-reg
+                position: absolute
+                bottom: 50px
+                width: auto
+                right: 15px       
+                left: 15px
+                margin: 0
+                text-align: center
+                transition: opacity .5s
+                opacity: 0
+                .btn
+                    max-width: 345px
+                    width: 100%
+                    padding: 25px
+                    font-size: 17px
+                    font-weight: 400
+    &__item--mod
+        +md
+            order: -1
+    &__link-img
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+        width: 45px
+        height: 45px
+        border-radius: 50%
+        background-repeat: no-repeat
+        background-position: 50% 50%
+        background-size: cover
+    &__link
+        position: relative
+        display: block
+        padding: 25px 0
+        margin: 0 15px
+        font-weight: 500
+        line-height: 1.2
+        letter-spacing: 1.6px
+        color: $dark-gray
+        text-decoration: none
+        transition: color .3s
+        overflow: hidden
+        +md
+            font-size: 20px
+            font-weight: 300
+            padding: 8px 0
+            line-height: 1.55
+            &.is-active
+                font-weight: 500
+        &::before
+            position: absolute
+            bottom: -1px
+            left: 0
+            width: 100%
+            height: 5px
+            content: ''
+            background-color: $purple
+            transition: background-color .3s, transform .3s
+            transform: translate(-101%)
+        &:hover
+            color: $purple
+            &::before
+                transform: translate(0)
+        +md
+            &::before
+                display: none
+            &:hover
+                color: $dark-gray                   
+    &__link-img
+        display: none
+        +md
+            display: block
+                              

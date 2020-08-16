@@ -1,0 +1,56 @@
+.footer
+	background-color: $dark_gray
+	padding: 64px 0 120px
+	+sm
+		padding: 50px 0 60px
+	&__logo
+		text-align: center
+	&__text-block
+		font-size: 16px
+		font-style: italic
+		color: $white
+		+sm
+			font-size: 12px
+		p:first-child
+			margin-bottom: 10px
+		p:last-child
+			font-size: 14px
+			+sm
+				font-size: 12px
+	&__btn
+		box-shadow: 0 0 15px rgba(#0f10b1,.3)
+		transition: fill .3s, border-color .3s, background-color .3s, box-shadow .3s
+		.icon
+			fill: $white
+			transition: fill .3s
+			transform: rotate(180deg)
+			+sm
+				width: 20px	
+		&:hover
+			border-color: $blue
+			background: $white
+			.icon
+				fill: $blue
+	.logo
+		margin-bottom: 40px	
+		&__link	
+			display: inline-block
+			padding: 7px 10px 1px
+			background-color: $white
+	.nav-menu
+		justify-content: center
+		margin-bottom: 60px
+		+sm
+			padding: 0
+			margin-bottom: 35px
+		&__list
+			+sm
+				position: static
+				background-color: transparent
+				flex-direction: column
+				width: 100%
+				padding: 0
+		&__link
+			+sm
+				font-size: 14px
+				color: $white		

@@ -1,0 +1,14 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+.wrapper {
+	padding: 60px 0 100px;
+	background-color: $color-gallery;
+}

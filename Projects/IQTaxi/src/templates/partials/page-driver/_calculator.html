@@ -1,0 +1,130 @@
+<div class="wrapper">
+    <section class="calculator">
+        <div class="calculator__inner">
+            <h2 class="calculator__title title-md border">
+                Рассчитайте свой заработок
+            </h2>
+            <div class="calculator__wrap inner-s">
+                <form action="/" class="form-calc" id="form-calculate">
+                    <div class="form-calc__sum-block">
+                        <h3 class="form-calc__title title-m border">
+                            Ваш заработок составит
+                            <span class="sum js-amount-earnings">2114</span>
+                        </h3>
+                    </div>
+                    <div class="form-calc__wrap">
+                        <h5 class="form-calc__wrap-title title-s">
+                            Тип топлива
+                        </h5>
+                        <div class="form-calc__row form-calc__row--first">
+                            <div class="form-calc__col">
+                                <label class="radio">
+                                    <input type="radio" 
+                                            id="radio-gas" 
+                                            class="radio__input" 
+                                            name="radio"
+                                            value="1">
+                                    <span class="radio__text">
+                                        Газ
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="form-calc__col">
+                                <label class="radio">
+                                    <input type="radio" 
+                                            id="radio-petrol" 
+                                            class="radio__input" 
+                                            name="radio"
+                                            value="2"
+                                            checked>
+                                    <span class="radio__text">
+                                        Бензин
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="form-calc__col">
+                                <label class="radio">
+                                    <input type="radio" 
+                                            id="radio-diesel" 
+                                            class="radio__input" 
+                                            name="radio"
+                                            value="3">
+                                    <span class="radio__text">
+                                        Дизель
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-calc__row form-calc__row--second">
+                            <div class="form-calc__col">
+                                <div class="range">
+                                    <h5 class="range__title title-s">
+                                        Расход
+                                    </h5>
+                                    <div class="range__box">
+                                        <input class="range__input" type="text" id="amount-volume" readonly value="">
+                                        <label class="range__label" for="amount-volume">литра</label>
+                                        <div id="slider-range-volume" class="range__slider"></div>
+                                    </div>
+                                    <div class="range__footer">
+                                        <div class="range__text">
+                                            1 литр
+                                        </div>
+                                        <div class="range__text">
+                                            2.4 литра
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-calc__col">
+                                <div class="range">
+                                    <h5 class="range__title title-s">
+                                        Кол-во дней
+                                    </h5>
+                                    <div class="range__box">
+                                        <input class="range__input" type="text" id="amount-day" readonly value="">
+                                        <label class="range__label" for="amount-day">дней</label>
+                                        <div id="slider-range-day" class="range__slider"></div>
+                                    </div>
+                                    <div class="range__footer">
+                                        <div class="range__text">
+                                            1 день
+                                        </div>
+                                        <div class="range__text">
+                                            31 день
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-calc__col">
+                                <div class="range">
+                                    <h5 class="range__title title-s">
+                                        Кол-во часов
+                                    </h5>
+                                    <div class="range__box">
+                                        <input class="range__input" type="text" id="amount-time" readonly value="">
+                                        <label class="range__label" for="amount-time">часов</label>
+                                        <div id="slider-range-time" class="range__slider"></div>
+                                    </div>
+                                    <div class="range__footer">
+                                        <div class="range__text">
+                                            1 час
+                                        </div>
+                                        <div class="range__text">
+                                            24 часа
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="block-btn inner-s">
+                <a href="#" class="btn btn--lg">
+                    Начать работу сейчас
+                </a>
+            </div>
+        </div>
+    </section>
+</div>

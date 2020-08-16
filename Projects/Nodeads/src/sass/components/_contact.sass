@@ -1,0 +1,29 @@
+.contact
+    &__title
+        margin-bottom: 24px
+    &__description
+        margin-bottom: 50px
+        text-align: center
+        font-size: 18px
+        color: $black
+    &__row
+        display: flex
+        align-items: center
+        justify-content: space-between
+        max-width: 510px
+        margin: 0 auto
+        +sm
+            flex-direction: column
+            justify-content: flex-start
+    &__col
+        font-family: $montserrat
+        font-size: 24px
+        font-weight: 700
+        line-height: 1.2
+        color: $dark
+        +sm
+            &:not(:last-child)
+                margin-bottom: 50px
+        a
+            color: $dark
+            text-decoration: none    

@@ -1,0 +1,52 @@
+.slider
+    overflow: hidden
+    &__wrap 
+        position: relative
+        height: 235px
+        width: 100%
+        white-space: nowrap
+        opacity: 0
+        visibility: hidden
+        transition: opacity .5s, visibility .5s
+        font-size: 0
+        &.slick-initialized
+            overflow: visible
+            opacity: 1
+            visibility: visible
+    &__prev-button,
+    &__next-button            
+        position: absolute
+        top: 25%
+        width: 20px
+        height: 35px
+        background: none
+        background-image: url(../img/arrow.svg)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: 50% 50%
+        z-index: 10
+        transition: opacity .3s
+        &.slick-disabled
+            opacity: 0
+    &__prev-button
+        left: 0
+        transform: rotate(180deg)
+    &__next-button
+        right: 0    
+.slide
+    text-align: center
+    &__img
+        height: 140px
+        margin-bottom: 60px
+        +sm
+            height: 100px
+            margin-bottom: 16px
+        .icon
+            width: 100%
+            height: 100%
+    &__description
+        font-size: 18px
+        line-height: 1.8
+        +sm
+            font-size: 14px
+                  

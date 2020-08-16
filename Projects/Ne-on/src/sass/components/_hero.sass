@@ -1,0 +1,92 @@
+.hero
+	position: relative
+	width: 100%
+	&__inner
+		padding: 0 40px
+	&__wrap
+		position: relative
+		display: flex
+	&__text
+		max-width: 500px
+		margin: 100px 0 205px auto
+		text-align: center
+		color: $white
+		z-index: 4
+		h2
+			font-weight: 400
+			font-size: 62px
+			margin-bottom: 20px
+			+md
+				font-size: 42px
+		p
+			font-size: 28px
+			line-height: 1.4
+			max-width: 360px
+			margin: 0 auto 20px
+	&__video
+		position: relative
+		margin-top: -800px
+		max-width: 1170px
+		border-radius: 10px
+		box-sizing: border-box
+		z-index: 2
+	&__image
+		position: relative
+		margin-left: -85px
+		z-index: 3
+		max-width: 1170px
+		img
+			width: 100%	
+	&__bg
+		position: relative
+		margin-top: -221px
+		padding: 40px
+		background-color: $white
+		border-radius: 10px
+	&__video-radius
+		border-radius: 10px
+		width: 100%
+		height: 0px
+		padding-bottom: 50%
+		background-color: #000
+		cursor: pointer
+		z-index: 4	
+		&::after
+			position: absolute
+			content: ''
+			top: 50%
+			left: 50%
+			width: 120px
+			height: 120px
+			background-image: url(../img/rounded.png)
+			background-repeat: no-repeat
+			transform: translate(-50%, -50%)
+			transition: opacity .3s
+		&:hover
+			&::after
+				opacity: .7
+	&__left-cube
+		position: absolute
+		display: inline-block
+		top: 272px
+		left: 10%
+		width: 120px
+		z-index: 2
+		transform: translate(-50%, -50%)
+		img
+			width: 100%
+	&__right-cube
+		position: absolute
+		display: inline-block
+		top: 600px
+		right: 22%
+		width: 270px
+		z-index: 2
+		transform: translate(50%, -50%)
+		img
+			width: 100%	
+
+
+
+
+			

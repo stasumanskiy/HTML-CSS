@@ -1,0 +1,69 @@
+<div class="wrapper wrapper--mod">
+	<div class="inner">
+		<header class="header">
+			<div class="header__col header__col--logo">
+				<a href="index.html" class="logo">
+					{{ mixins.icon('logo') }}
+				</a>
+			</div>
+			<div class="header__col header__col--line">
+				<span class="line"></span>
+			</div>
+			<div class="header__col header__col--menu">
+				<nav class="nav js-parent">
+					<div class="nav__toggle">
+						<button class="toggle js-toggle-menu" type="button">
+							<span class="toggle__line"></span>
+							<span class="toggle__line"></span>
+							<span class="toggle__line"></span>
+						</button>
+					</div>
+					<ul class="nav-list">
+						<li class="nav-list__item">
+							<a href="#" class="nav-list__link">Home</a>
+						</li>
+						<li class="nav-list__item">
+							<a href="#" class="nav-list__link is-active">News</a>
+						</li>
+						<li class="nav-list__item">
+							<a href="#" class="nav-list__link">Forum</a>
+						</li>
+						<li class="nav-list__item">
+							<a href="#" class="nav-list__link">Kontakt</a>
+						</li>
+					</ul>
+					<div class="nav__btn-search">
+						<button class="btn-search js-toggle" type="button">
+							{{ mixins.icon('search') }}
+						</button>
+					</div>
+					<div class="overlay js-search"></div>
+					<form action="/" class="search js-form">
+						<label class="search__label">
+							<input type="search" class="search__input" placeholder="Suche:">
+							<button class="search__btn-focus" type="submit">
+								{{ mixins.icon('search') }}
+							</button>
+						</label>
+					</form>
+				</nav>
+				<div class="mob-menu show">
+					<ul class="nav-list js-nav-list ">
+						<li class="nav-list__item">
+							<a href="#" class="nav-list__link">Home</a>
+						</li>
+						<li class="nav-list__item">
+							<a href="#" class="nav-list__link is-active">News</a>
+						</li>
+						<li class="nav-list__item">
+							<a href="#" class="nav-list__link">Forum</a>
+						</li>
+						<li class="nav-list__item">
+							<a href="#" class="nav-list__link">Kontakt</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+	</div>
+</div>

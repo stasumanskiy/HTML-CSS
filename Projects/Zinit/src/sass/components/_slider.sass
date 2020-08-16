@@ -1,0 +1,111 @@
+.slider
+	overflow: hidden
+	&__wrap 
+		position: relative
+		opacity: 0
+		visibility: hidden
+		transition: opacity .5s, visibility .5s
+		&.slick-initialized
+			overflow: visible
+			opacity: 1
+			visibility: visible   
+	&__prev-btn,
+	&__next-btn
+		position: absolute
+		top: 50%
+		width: 34px
+		height: 64px
+		z-index: 2
+		background: none
+		background-image: url(../img/arrow.svg)
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: 50% 50%
+		+sm
+			width: 17px
+			height: 32px
+	&__prev-btn
+		left: 60px
+		transform: translate(-50%, -50%) rotate(180deg)
+	&__next-btn
+		right: 60px
+		transform: translate(50%, -50%)
+	&__slide
+		width: 100%
+		height: 0
+        max-height: 450px
+		padding-bottom: 36.8%
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: 50% 50%
+.slider
+    .slick-list.draggable
+        min-height: 300px 
+    &__slide
+        min-height: 300px
+    &__text
+        position: absolute
+        top: 45.5%
+        left: 50%
+        padding: 0 15px
+        transform: translate(-50%,-50%)
+        text-align: center
+        p
+            font-size: 1em !important
+            line-height: 1.5
+            color: $color-gray
+            +sm
+                font-size: .625em
+    &__title
+        margin-bottom: 20px
+    &__prev-btn,
+    &__next-btn
+        +md
+            width: 17px
+            height: 32px
+        +sm
+            display: none !important              
+    &__slide
+        +sm
+            padding-bottom: 70%
+
+
+.slick-dots
+    position: absolute
+    bottom: 30px
+    left: 50%
+    transform: translateX(-50%)
+    display: flex
+    align-items: center
+    justify-content: center
+    +sm
+        bottom: 10px
+    button
+        font-size: 0
+    li
+        position: relative
+        width: 15px
+        height: 15px
+        border-radius: 50%
+        border: 3px solid $color-gray
+        box-sizing: border-box
+        cursor: pointer
+        background-color: $color-white
+        transition: background-color .3s, border-color .3s
+        &:not(:last-child)
+            margin-right: 10px
+        &:after
+            position: absolute
+            content: ''
+            width: 10px
+            height: 10px
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            border-radius: 50%
+            opacity: 0
+            transition: opacity .3s
+        &.slick-active
+            border-color: $color-cerulean
+            &:after
+                opacity: 1   

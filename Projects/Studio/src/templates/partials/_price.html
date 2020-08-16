@@ -1,0 +1,197 @@
+<div class="wrapper image-bg" style="background-image: url(img/camera-1920.jpg);">
+    <!-- Start header	 -->
+    <header class="header">
+        <div class="header__logo">
+            <a class="header__logo-link" href="home.html">
+                {{ mixins.icon('logo') }}
+            </a>
+        </div>
+        <div class="header__mob-menu-toggle">
+            <span></span>
+        </div>
+        <nav class="header__navigation navigation js-navigation">
+            <ul class="navigation__menu">
+                <li class="navigation__item">
+                    <a href="home.html" class="navigation__link">Главная</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="price.html" class="navigation__link active">Услуги и цены</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="team.html" class="navigation__link">Команда</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="contacts.html" class="navigation__link">Контакты</a>
+                </li>
+                <li class="navigation__item navigation__item-mobile">
+                    <div class="social">
+                        <div class="social__block">
+                            <a href="#" class="social__link social__link--facebook">
+                                {{ mixins.icon('facebook') }}
+                            </a>
+                            <a href="#" class="social__link social__link--instagram">
+                                {{ mixins.icon('instagram') }}
+                            </a>
+                            <a href="#" class="social__link social__link--twitter">
+                                {{ mixins.icon('twitter') }}
+                            </a>
+                            <a href="#" class="social__link social__link--vkontakte">
+                                {{ mixins.icon('vkontakte') }}
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__social">
+            <div class="social">
+                <div class="social__block">
+                    <a href="#" class="social__link social__link--facebook">
+                        {{ mixins.icon('facebook') }}
+                    </a>
+                    <a href="#" class="social__link social__link--instagram">
+                        {{ mixins.icon('instagram') }}
+                    </a>
+                    <a href="#" class="social__link social__link--twitter">
+                        {{ mixins.icon('twitter') }}
+                    </a>
+                    <a href="#" class="social__link social__link--vkontakte">
+                        {{ mixins.icon('vkontakte') }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End header	 -->
+    <!-- Start price -->
+    <div class="price js-parents">
+        <div class="price__wrap js-parent">
+            <div class="price__text">
+                <h2 class="price__title">
+                    СТОИМОСТЬ УСЛУГ ВИДЕОЗАПИСИ
+                </h2>
+                <p>
+                    Мы хотим, чтобы Ваше сотрудничество со студией видеозаписи не было похоже на покупку кота в мешке, поэтому предлагаем
+                    Вам приехать к нам на студию, записать отрывок своего материала и получить на выходе короткий пример результата
+                    совершенно бесплатно! Если наши результаты Вам понравится - мы продолжим работу дальше. Если не понравится... Хотя,
+                    конечно же понравится! Иначе мы бы не предлагали такую услугу как бесплатный тест-драйв студии, если бы не были уверены
+                    в Вашем успехе!
+                </p>
+            </div>
+            <div class="price__container">
+                <h3 class="price__title">Расценки на запись видео</h3>
+                <div class="price__row">
+                    <div class="price__col">
+                        <ul class="price__list">
+                            <li class="price__item">
+                                <span class="price__header-circle">
+                                    {{ mixins.icon('checked') }}
+                                </span>
+                                Отчетные ролики - <span class="strong"> 12 670 грн</span>
+                            </li>
+                            <li class="price__item">
+                                <span class="price__header-circle">
+                                    {{ mixins.icon('checked') }}
+                                </span>
+                                Имиджевые ролики - <span class="strong"> 63 000 грн</span>
+                            </li>
+                            <li class="price__item">
+                                <span class="price__header-circle">
+                                    {{ mixins.icon('checked') }}
+                                </span>
+                                Учебные фильмы - <span class="strong"> 67 560 грн</span>
+                            </li>
+                            <li class="price__item">
+                                <span class="price__header-circle">
+                                    {{ mixins.icon('checked') }}
+                                </span>
+                                Музыкальные клипы - <span class="strong"> 50 600 грн</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="price__col">
+                        <ul class="price__list">
+                            <li class="price__item">
+                                <span class="price__header-circle">
+                                    {{ mixins.icon('checked') }}
+                                </span>
+                                Рекламные ролики - <span class="strong"> 76 000 грн</span>
+                            </li>
+                            <li class="price__item">
+                                <span class="price__header-circle">
+                                    {{ mixins.icon('checked') }}
+                                </span>
+                                Презентационные ролики - <span class="strong"> 80 200 грн</span>
+                            </li>
+                            <li class="price__item">
+                                <span class="price__header-circle">
+                                    {{ mixins.icon('checked') }}
+                                </span>
+                                Документальные фильмы - <span class="strong"> 71 800 грн</span>
+                            </li>
+                            <li class="price__item">
+                                <span class="price__header-circle">
+                                    {{ mixins.icon('checked') }}
+                                </span>
+                                Видеотрансляция - <span class="strong"> 38 000 грн</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="price__button">
+                    <button class="price__btn js-toggle-popup" type="button">
+                        Заказать услуги
+                    </button>
+                </div>
+            </div>
+            <div class="overlay js-overlay"></div>
+            <div class="contact hide js-popup-show">
+                <div class="contact__bg">
+                    <div class="contact__wrap">
+                        <form class="contact__form js-form">
+                            <button class="contact__close js-close" type="button">
+                                {{ mixins.icon('close') }}
+                            </button> 
+                            <div class="contact__title-block">
+                                <span class="left-line-title"></span>
+                                <h2 class="contact__form-title">Контакты</h2>
+                                <span class="right-line-title"></span>
+                            </div>
+                            <div class="contact__form-row">
+                                <input id="name" class="contact__input" type="text" name="name" minlength="3" value="" required
+                                    placeholder="Имя *">
+                            </div>
+                            <div class="contact__form-row">
+                                <input id="email" class="contact__input" type="email" name="email" minlength="3" value="" required
+                                    placeholder="Email *">
+                            </div>
+                            <div class="contact__form-row">
+                                <input id="phone" class="contact__input" type="text" name="phone" minlength="3" value="" required
+                                    placeholder="Телефон *">
+                            </div>
+                            <div class="contact__form-row">
+                                <select class="contact__select">
+                                    <option value="Отчетные ролики">Отчетные ролики</option>
+                                    <option value="Имиджевые ролики">Имиджевые ролики</option>
+                                    <option value="Учебные фильмы">Учебные фильмы</option>
+                                    <option value="Музыкальные клипы">Музыкальные клипы</option>
+                                    <option value="Рекламные ролики">Рекламные ролики</option>
+                                    <option value="Презентационные ролики">Презентационные ролики</option>
+                                    <option value="Документальные фильмы">Документальные фильмы</option>
+                                    <option value="Видеотрансляция">Видеотрансляция</option>
+                                </select>
+                            </div>
+                            <input name="bezspama" type="text" style="display: none;" value="">
+                            <div class="contact__form-row contact__form-row--mod">
+                                <button class="contact__button js-btn-submit" type="submit" disabled>Отправить</button>
+                            </div>
+                            <div class="success js-success">Сообщение успешно отправлено!</div>
+                            <div class="success-error js-success-error">Уупс.. Что-то пошло не так</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End price -->
+</div>

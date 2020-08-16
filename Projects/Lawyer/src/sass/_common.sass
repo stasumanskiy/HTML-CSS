@@ -1,0 +1,154 @@
+body
+	background-color: $white
+	font-family: $roboto
+
+.comtainer
+	background-color: $white
+	max-width: 1920px
+	margin: 0 auto
+
+.wrapper
+	width: 100%
+	background-color: $silver_white
+
+.logo
+	.icon
+		font-size: 70px
+		fill: $blue
+		+sm
+			font-size: 58px
+	&_mod
+		font-size: 70px
+		.icon
+			fill: $blue
+		+sm
+			font-size: 58px		
+
+.inner
+	max-width: 1086px
+	margin: 0 auto
+	padding: 0 15px
+
+.inner-s
+	max-width: 884px
+	margin: 0 auto
+	padding: 0 15px		
+
+.title-lg
+	font-family: $comic
+	font-style: italic
+	font-size: 56px
+	font-weight: 400
+	line-height: 1.3
+	color: $white
+	+md
+		font-size: 30px
+	+sm
+		font-size: 22px
+		font-family: $roboto
+	
+.title-md
+	font-family: $roboto
+	font-style: italic
+	font-size: 60px
+	font-weight: 500
+	line-height: 1.3
+	letter-spacing: 9px
+	color: $white
+	+sm
+		font-size: 30px
+
+.title-sm
+	position: relative
+	font-family: $comic
+	font-style: italic
+	font-size: 40px
+	font-weight: 400
+	line-height: 1.2
+	color: $white
+	&_mod
+		position: relative
+		font-family: $comic
+		font-style: italic
+		line-height: 1.2
+		font-size: 40px
+		font-weight: 400
+		color: $blue
+		&:after
+			position: absolute
+			content: ''
+			left: 50%
+			bottom: -3px
+			width: 63px
+			height: 2px
+			transform: translate(-50%, 0)
+			background: $blue
+			+sm
+				display: none
+	&-mob
+		+sm
+			font-size: 28px
+			color: $black
+			font-family: $roboto				
+	&:after
+		position: absolute
+		content: ''
+		left: 0
+		bottom: -3px
+		width: 63px
+		height: 2px
+		background: $white
+		+sm
+			display: none
+			// left: 50%
+			// transform: translate(-50%, 0)	
+
+.title-m
+	font-family: $roboto
+	font-style: italic
+	font-size: 30px
+	font-weight: 700
+	line-height: 1.1
+	color: $blue
+	+sm
+		font-size: 20px
+
+.title-s
+	font-family: $roboto
+	font-style: italic
+	font-size: 26px
+	font-weight: 700
+	line-height: 1
+	color: $blue
+	+sm
+		font-size: 16px
+
+.title-xs
+	font-family: $roboto
+	font-style: italic
+	font-size: 16px
+	font-weight: 700
+	color: $black
+
+.bg-image
+	position: relative
+	width: 100%
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: 50% 50%
+
+.border_rad
+	border-radius: 0 32px 0 32px 
+	box-shadow: 0 0 15px rgba(0,0,0,.3)
+	+sm
+		border-radius: 0
+		box-shadow: none
+
+.mob-hide
+	+sm
+		display: none
+
+.mob-show
+	display: none
+	+sm
+		display: block

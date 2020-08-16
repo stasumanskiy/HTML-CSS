@@ -1,0 +1,59 @@
+.contacts
+	padding: 70px 0 0
+	position: relative
+	z-index: 2
+	border-top: 2px solid $red
+	+sm
+		padding: 35px 0 0
+	&__title
+		text-align: center
+		margin-bottom: 60px
+		color: $dark
+		+sm
+			margin-bottom: 30px
+	&__wrap
+		display: flex
+		justify-content: space-between
+		// +md
+		+sm
+			flex-wrap: wrap
+			justify-content: center
+			align-items: center
+			flex-direction: column	
+	&__block
+		flex: 0 0 25%
+		margin-right: 20px
+		color: $dark
+		margin-bottom: 25px
+		+sm
+			flex: 0 0 100%
+			margin-right: 0
+			text-align: center
+	&__block-title
+		font-size: 22px
+		font-weight: 400
+		margin-bottom: 20px
+		+sm
+			font-size: 18px
+			margin-bottom: 15px
+	&__block-list
+		padding-left: 30px
+		font-size: 16px
+		+sm
+			font-size: 14px
+	&__block-item
+		position: relative
+		margin-bottom: 10px
+		+sm
+			text-align: center		
+	&__link
+		text-decoration: none
+		color: $dark	
+	&__icon
+		position: absolute
+		top: 0px
+		left: -30px
+		font-size: 22px
+		.icon
+			fill: $red			
+			

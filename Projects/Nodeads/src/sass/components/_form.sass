@@ -1,0 +1,73 @@
+.form
+    &__row
+        display: flex
+        justify-content: space-between
+        margin-bottom: 100px
+        +sm
+            flex-wrap: wrap
+            justify-content: center
+            margin-bottom: 50px
+    &__col
+        position: relative
+        flex: 1 1 380px
+        max-width: 380px
+        &:nth-child(odd)
+            margin-right: 30px
+        +sm
+            flex: 1 1 100%
+            max-width: 100%
+            &:nth-child(odd)
+                margin-right: 0
+                margin-bottom: 24px
+    &__input
+        width: 100%
+        height: 60px
+        border-bottom: 2px solid $gray
+        background-color: transparent
+        padding: 23px 10px 10px 0
+        font-family: $openSans 
+        font-size: 18px
+        font-weight: 400
+        line-height: 1.4
+        color: $dark
+        transition: border-color .3s
+        &:focus ~ .form__label
+            bottom: 40px
+            font-size: 14px
+        &:focus
+             border-color: $dark
+        &.valid ~ .form__label,
+        &.error ~ .form__label      
+            bottom: 40px
+            font-size: 14px
+    &__label
+        position: absolute
+        display: inline-block
+        bottom: 10px
+        left: 0
+        font-family: $openSans 
+        font-size: 18px
+        font-weight: 400
+        line-height: 1.4
+        color: $gray
+        transition: all .3s
+    &__btn
+        text-align: center    
+
+
+#name-error,
+#email-error
+    position: absolute
+    display: inline-block
+    bottom: -22px
+    left: 0
+    font-size: 14px
+    color: $dark
+
+.success,
+.success-error
+    text-align: center
+    display: none
+    font-size: 14px
+    color: $dark
+    margin-top: 20px

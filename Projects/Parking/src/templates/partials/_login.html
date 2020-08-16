@@ -1,0 +1,70 @@
+<form action="/" class="login js-popup-show js-form">
+    <div class="login__wrap">
+        <div class="login__col">
+            <h3 class="login__title border title-sm">
+                Login
+            </h3>
+            <div class="login__row">
+                <input class="input" type="text" name="name" placeholder="Username / Email" required>
+            </div>
+            <div class="login__row">
+                <input class="input" type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="login__row login__row--mod">
+                <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="remember">
+                    <span class="checkbox__text">Remember Me</span>
+                </label>
+                <a href="" class="login__forgot">
+                    Forgot Password
+                    <div class="hint">
+                        <span class="hint__quest">
+                            {{ mixins.icon('question-mark') }}
+                        </span>
+                        <div class="hint__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Non sit expedita modi minima obcaecati?
+                            Nesciunt quae veniam molestias illo! Laborum, ut!
+                            Quos temporibus consectetur aliquam veritatis fugit!
+                            Nulla, iste perferendis.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="login__row">
+                <button class="btn submit" type="submit">
+                    Login now
+                </button>
+            </div>
+            <div class="sige-in">
+                Don't have an account?
+                <a class="sige-in__link" href="#">Signup</a>
+            </div>
+        </div>
+        <div class="login__col login__col--mod">
+            <h3 class="login__title border title-sm">
+                Login With
+            </h3>
+            <div class="buttons">
+                <button class="btn btn--facebook" type="submit">
+                    Facebook
+                </button>
+            </div>    
+            <div class="buttons">
+                <button class="btn btn--twitter" type="submit">
+                    Twitter
+                </button>
+            </div>    
+            <div class="buttons">
+                <button class="btn btn--google" type="submit">
+                    Google+
+                </button>
+            </div>    
+            <div class="buttons">
+                <button class="btn btn--linkedin" type="submit">
+                    LinkedIn
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

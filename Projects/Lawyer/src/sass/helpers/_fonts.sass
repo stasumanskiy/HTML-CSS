@@ -1,0 +1,56 @@
+//FONTS
+
+=fontpath($name, $name1, $file)
+	src: local($name), local($name1),
+	url("../fonts/" + $file + ".woff") format("woff"),
+	url("../fonts/" + $file + ".woff2") format("woff2")
+=fontdefault($style, $weight, $name)
+	font-family: $name
+	font-style: $style
+	font-weight: $weight
+
+//START
+
+@font-face
+	+fontdefault(normal, 200, 'Roboto')
+	+fontpath('Roboto-Light', 'Roboto-Light', 'Roboto-Light')
+
+@font-face
+	+fontdefault(italic, 200, 'Roboto')
+	+fontpath('Roboto-LightItalic', 'Roboto-LightItalic', 'Roboto-LightItalic')	
+
+@font-face
+	+fontdefault(normal, 400, 'Roboto')
+	+fontpath('Roboto-Regular', 'Roboto-Regular', 'Roboto-Regular')
+
+@font-face
+	+fontdefault(italic, 400, 'Roboto')
+	+fontpath('Roboto-Italic', 'Roboto-Italic', 'Roboto-Italic')
+
+@font-face
+	+fontdefault(normal, 500, 'Roboto')
+	+fontpath('Roboto-Medium', 'Roboto-Medium', 'Roboto-Medium')
+
+@font-face
+	+fontdefault(italic, 500, 'Roboto')
+	+fontpath('Roboto-MediumItalic', 'Roboto-MediumItalic', 'Roboto-MediumItalic')
+
+@font-face
+	+fontdefault(normal, 700, 'Roboto')
+	+fontpath('Roboto-Bold', 'Roboto-Bold', 'Roboto-Bold')
+
+@font-face
+	+fontdefault(italic, 700, 'Roboto')
+	+fontpath('Roboto-BoldItalic', 'Roboto-BoldItalic', 'Roboto-BoldItalic')	
+
+@font-face
+	+fontdefault(normal, 800, 'Roboto')
+	+fontpath('Roboto-Black', 'Roboto-Black', 'Roboto-Black')
+
+@font-face
+	+fontdefault(italic, 800, 'Roboto')
+	+fontpath('Roboto-BlackItalic', 'Roboto-BlackItalic', 'Roboto-BlackItalic')
+
+@font-face
+	+fontdefault(italic, 400, 'ComicSans')
+	+fontpath('ComicSansMS-Italic', 'ComicSansMS-Italic', 'ComicSansMS-Italic')

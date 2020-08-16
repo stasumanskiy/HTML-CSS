@@ -1,0 +1,20 @@
+.questionnaire {
+    max-width: 662px;
+    margin: 0 auto;
+}
+
+.avatar {
+    max-width: 140px;
+    max-height: 140px;
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+    
+    @media (min-width: 640px) {
+        .avatar {
+            margin: 0 auto 20px;
+        }
+    }
+}

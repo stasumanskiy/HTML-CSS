@@ -1,0 +1,11 @@
+mixin checkbox(options)
+    .checkbox&attributes(attributes)
+        label.checkbox__label
+            input.checkbox__input(
+                class=options.class
+                id=options.id
+                type=options.type
+                name=options.name
+                checked=options.checked
+            )
+            span.checkbox__text=options.text

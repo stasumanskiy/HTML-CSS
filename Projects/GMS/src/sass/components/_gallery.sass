@@ -1,0 +1,111 @@
+.gallery
+	&__wrap
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		padding: 100px 0 160px
+		+sm
+			padding: 50px 0 80px
+	&__row
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		&.gallery__row_position
+			position: relative
+			margin-top: -70px
+			+sm
+				margin-top: 50px
+	&__col
+		position: relative	
+		&.gallery__col_flex
+			flex: 1 1 65%	
+	&__title
+		position: relative
+		padding: 20px
+		padding-left: 0
+		max-width: 290px
+		text-transform: uppercase
+		letter-spacing: -1px
+		color: $black
+		z-index: 3
+	&__button
+		.btn
+			color: $black
+			transition: color .3s
+			white-space: nowrap
+			text-align: center
+	&__logo
+		z-index: 1
+		.icon-logo
+			fill: $silver
+			font-size: 140px
+		+xs
+			display: none	
+	&__slider
+		position: relative
+		top: -20px
+		width: 860px
+		margin: 0 0 0 auto
+		box-shadow: 0 10px 25px rgba(0,0,0,.3)
+		font-size: 0
+		background-color: $white
+		z-index: 3
+		+md
+			width: 600px
+		+sm
+			width: 560px
+			top: 20px
+			margin: auto 0 0 0
+		+xs
+			width: 280px
+			height: 150px	
+
+				
+
+.animate-bg-yellow
+	position: absolute
+	right: -100px
+	bottom: 0
+	display: block
+	background-color: $yellow
+	width: 320%
+	height: 100%
+	transform: translateX(-100%)
+	z-index: 1	
+
+.slider
+	max-width: 100%
+	&__image
+		width: 100%
+		height: 0
+		padding-bottom: 45%
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: 50% 50%
+		z-index: 2
+		+xs
+			padding-bottom: 55%
+		&:after
+			position: absolute
+			top: 0
+			left: 0
+			content: ''
+			width: 100%
+			height: 100%
+			background-color: rgba(0,0,0,.2)
+	.dots-custom	
+		position: absolute
+		top: 25px
+		right: 15px
+		li
+			margin-bottom: 14px
+			button
+				font-size: 0
+				width: 12px
+				height: 12px
+				background: none
+				border: 2px solid $yellow
+				transition: background-color .3s
+			&.slick-active
+				button
+					background-color: $yellow

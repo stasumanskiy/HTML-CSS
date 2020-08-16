@@ -1,0 +1,111 @@
+<div class="container container--mod js-start-animation">
+    <section class="service">
+        <div class="service__wrap">
+            <h3 class="service__title title-m">
+                Lorem Ipsum is simply dummy text of the printing and typesetting.
+            </h3>
+            <div class="btn-block btn-block--mod">
+                <div class="btn-block__btn">
+                    <button type="button" class="btn toggleMenu">
+                        Get Demo
+                    </button>
+                </div>
+                <a href="#" class="btn-block__btn-pdf btn btn--pdf" data-toggle="modal" data-target="#exampleModal">
+                    Download datasheet
+                    {{ mixins.icon('pdf') }}
+                </a>
+            </div>
+            <div class="service__table">
+                <table>
+                    <thead>
+                    <tr>
+                        <th scope="col">Service Name</th>
+                        <th scope="col">Count status</th>
+                        <th scope="col">Value of Service</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td data-label="Account">Sec one/ For the first example</td>
+                        <td data-label="Due Date">1215</td>
+                        <td data-label="Amount">
+                            <span class="percent">
+                                <span class="percent__text">
+                                    <span class="js-score" data-counter="80">80</span>%
+                                </span>
+                                <span class="percent__progress js-box">
+                                    <span class="percent__progress-inside first" style="width: 80%;"></span>
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row" data-label="Account">Sec two for example in the middle</td>
+                        <td data-label="Due Date">1563</td>
+                        <td data-label="Amount">
+                            <span class="percent">
+                                <span class="percent__text">
+                                    <span class="js-score" data-counter="30">30</span>%
+                                </span>
+                                <span class="percent__progress js-box">
+                                    <span class="percent__progress-inside second" style="width: 30%;"></span>
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row" data-label="Account">More than just a Sec</td>
+                        <td data-label="Due Date">15653</td>
+                        <td data-label="Amount">
+                            <span class="percent">
+                                <span class="percent__text">
+                                    <span class="js-score" data-counter="70">70</span>%
+                                </span>
+                                <span class="percent__progress js-box">
+                                    <span class="percent__progress-inside third" style="width: 70%;"></span>
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Lorem Ipsum is simply dummy text of the printing and typesetting</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="slider">
+                            <div class="slider__wrap owl-carousel owl-theme js-sliderInitModal">
+                                <div class="slide" style="background-image: url(./img/slide2.jpg);"></div>
+                                <div class="slide" style="background-image: url(./img/slide3.jpg);"></div>
+                                <div class="slide" style="background-image: url(./img/slide2.jpg);"></div>
+                                <div class="slide" style="background-image: url(./img/slide1.jpg);"></div>
+                                <div class="slide" style="background-image: url(./img/slide2.jpg);"></div>
+                                <div class="slide" style="background-image: url(./img/slide1.jpg);"></div>
+                            </div>
+                        </div>
+                        <div class="modal-description">
+                            <p>
+                                Fundamental transformation of support, confidence,
+                                operations and reliability of cyber security products.
+                                The platform to increase effectiveness of your security team
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn--pdf" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

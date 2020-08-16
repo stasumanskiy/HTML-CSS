@@ -1,0 +1,103 @@
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <div class="header-inside">
+                    <a href="#" class="logo">
+                        {{ mixins.icon('logo') }}
+                    </a>
+                    <div class="header-inside__toggle">
+                        <button class="toggle toggleMenu">
+                            <span class="toggle__line"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="header-col col-md-8">
+                <div class="btn-block">
+                    <a href="./img/cv_stas_umanskiy_frontend-en.pdf" download="cv_stas_umanskiy_frontend-en.pdf" class="btn-block__btn-pdf btn btn--pdf">
+                        Download datasheet
+                        {{ mixins.icon('pdf') }}
+                    </a>
+                    <div class="btn-block__btn">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalHeader">
+                            Get Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal header -->
+    <div class="modal fade" id="exampleModalHeader" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Lorem Ipsum is simply dummy text of the printing and typesetting</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="slider">
+                        <div class="slider__wrap owl-carousel owl-theme js-sliderInitModal">
+                            <div class="slide" style="background-image: url(./img/slide2.jpg);"></div>
+                            <div class="slide" style="background-image: url(./img/slide3.jpg);"></div>
+                            <div class="slide" style="background-image: url(./img/slide2.jpg);"></div>
+                            <div class="slide" style="background-image: url(./img/slide1.jpg);"></div>
+                            <div class="slide" style="background-image: url(./img/slide2.jpg);"></div>
+                            <div class="slide" style="background-image: url(./img/slide1.jpg);"></div>
+                        </div>
+                    </div>
+                    <div class="modal-description">
+                        <p>
+                            Fundamental transformation of support, confidence,
+                            operations and reliability of cyber security products.
+                            The platform to increase effectiveness of your security team
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn--pdf" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal nav -->
+    <div class="modal fade" id="exampleModalNavigation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Lorem Ipsum is simply dummy text of the printing and typesetting</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="slider">
+                        <div class="slider__wrap owl-carousel owl-theme js-sliderInitModal">
+                            <div class="slide" style="background-image: url(./img/slide2.jpg);"></div>
+                            <div class="slide" style="background-image: url(./img/slide3.jpg);"></div>
+                            <div class="slide" style="background-image: url(./img/slide2.jpg);"></div>
+                            <div class="slide" style="background-image: url(./img/slide1.jpg);"></div>
+                            <div class="slide" style="background-image: url(./img/slide2.jpg);"></div>
+                            <div class="slide" style="background-image: url(./img/slide1.jpg);"></div>
+                        </div>
+                    </div>
+                    <div class="modal-description">
+                        <p>
+                            Fundamental transformation of support, confidence,
+                            operations and reliability of cyber security products.
+                            The platform to increase effectiveness of your security team
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn--pdf" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,49 @@
+.btn-search
+	position: relative
+	width: 42px
+	height: 42px
+	background: none
+	background-color: $red
+	z-index: 3
+	&.is-open
+		background-color: transparent
+		transition-delay: .5s
+		z-index: -1
+	&:hover
+		.icon
+			fill: $black
+	.icon
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 19px
+		height: 20px
+		fill: $white
+		transition: fill .3s
+
+.toggle 
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	background: none
+	cursor: pointer
+	&__line
+		display: block
+		width: 20px
+		height: 2px
+		background-color: #fff
+		box-shadow: 0 1px 2px rgba(0,0,0, .2)
+		transition: .5s
+		&:not(:last-child)
+			margin-bottom: 5px
+	&.is-active .toggle__line:nth-child(2) 
+		transform: translateX(-50px)
+		opacity: 0
+
+	&.is-active .toggle__line:nth-child(1) 
+		transform: rotateY(180deg) rotateZ(45deg) translate(5px,5px)
+
+	&.is-active .toggle__line:nth-child(3) 
+		transform: rotateY(180deg) rotateZ(-45deg) translate(5px,-5px)

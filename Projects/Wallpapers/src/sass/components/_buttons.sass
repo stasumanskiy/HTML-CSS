@@ -1,0 +1,113 @@
+.btn
+	background: none
+	outline: none
+	border: none
+	text-decoration: none
+	font-family: $proximaNova
+	font-size: 13px
+	font-weight: 700
+	line-height: 1.1
+	color: $white
+	border-radius: 3px
+	padding: 7px 10px 8px
+	background-image: repeating-linear-gradient(to bottom,rgb(253, 112, 72) 0%,rgb(255, 80, 88) 99.2%);
+	background-image: -ms-repeating-linear-gradient(top,rgb(253, 112, 72) 0%,rgb(255, 80, 88) 99.2%);
+	transition: opacity .3s
+	&:hover
+		color: $white
+		text-decoration: none
+		opacity: .85	
+	&-border
+		padding: 11px 16px 9px
+		text-transform: uppercase
+		font-size: 23px
+		border: 2px solid $white
+		+sm
+			font-size: 14px
+			padding: 8px 13px 6px
+
+.toggle
+	display: none
+	position: absolute
+	top: 35px
+	right: 10px
+	transform: translate(-50%, -50%)
+	width: 36px
+	height: 36px
+	cursor: pointer
+	transition: background-color .3s
+	z-index: 20
+	+md
+		display: block
+	+sm
+		top: 20px
+		width: 24px
+		height: 24px	
+	&__line
+		position: absolute
+		display: block
+		width: 50%
+		height: 4px
+		background-color: $white
+		transition: .5s
+	&.is-active
+		.toggle__line
+			background-color: $black	
+	&__line:nth-child(even)
+		left: 50%
+	&__line:nth-child(1),
+	&__line:nth-child(2)
+		top: 0
+	&__line:nth-child(3),
+	&__line:nth-child(4)
+		top: 12px
+		+sm
+			top: 8px
+	&__line:nth-child(5),
+	&__line:nth-child(6)
+		top: 24px
+		+sm
+			top: 16px
+.toggle.is-active .toggle__line:nth-child(3)
+	transform: translateX(-50px)
+	opacity: 0
+
+.toggle.is-active .toggle__line:nth-child(4)
+	transform: translateX(50px)
+	opacity: 0
+
+.toggle .toggle__line:nth-child(1)
+	transform-origin: top left
+
+.toggle .toggle__line:nth-child(2)
+	transform-origin: top right
+
+.toggle.is-active .toggle__line:nth-child(1)
+	transform: rotate(45deg)
+	top: -3px
+	left: 7px
+	+sm
+		left: 4px
+
+.toggle.is-active .toggle__line:nth-child(2)
+	transform: rotate(-45deg)
+	top: -3px
+	left: calc(50% - 3px)
+
+.toggle .toggle__line:nth-child(5)
+	transform-origin: bottom left
+
+.toggle .toggle__line:nth-child(6)
+	transform-origin: bottom right
+
+.toggle.is-active .toggle__line:nth-child(5)
+	transform: rotate(-45deg)
+	bottom: -3px
+	left: 7px	
+	+sm
+		left: 4px
+
+.toggle.is-active .toggle__line:nth-child(6) 
+	transform: rotate(45deg)
+	bottom: -3px
+	left: calc(50% - 3px)			

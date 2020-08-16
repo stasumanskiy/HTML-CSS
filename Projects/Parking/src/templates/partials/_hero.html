@@ -1,0 +1,53 @@
+<div class="wrapper wrapper--mod">
+    <div class="inner">
+        <div class="hero">
+            <h1 class="hero__title title-lg">
+                PARKPLATZ FINDEN
+            </h1>
+            <form action="/" class="hero__form">
+                <div class="hero__select">
+                    <select class="select js-select" name="airport" id="airport" style="width: 100%">
+                        <option value="Flughafen auswählen">Flughafen auswählen</option>
+                        <option value="Flughafen auswählen">Flughafen auswählen</option>
+                        <option value="Flughafen auswählen">Flughafen auswählen</option>
+                        <option value="Flughafen auswählen">Flughafen auswählen</option>
+                        <option value="Flughafen auswählen">Flughafen auswählen</option>
+                    </select>
+                </div>
+                <div class="datepicker">
+                    <input 
+                        id="von" 
+                        class="datepicker__input"
+                        autocomplete="off" 
+                        data-toggle="datepicker" 
+                        type="text" 
+                        placeholder="Von"
+                        name="von"
+                        >
+                    <label for="von" class="datepicker__label">
+                        {{ mixins.icon('calendar') }}
+                    </label>
+                </div>
+                <div class="datepicker datepicker--mod">
+                    <input 
+                        id="bis" 
+                        class="datepicker__input"
+                        autocomplete="off"
+                        data-toggle="datepicker" 
+                        type="text" 
+                        placeholder="Bis"
+                        name="bis"
+                        >
+                    <label for="bis" class="datepicker__label">
+                        {{ mixins.icon('calendar') }}
+                    </label>
+                </div>
+                <div class="hero__button">
+                    <button class="button" type="submit">
+                        JETZT SUCHEN
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

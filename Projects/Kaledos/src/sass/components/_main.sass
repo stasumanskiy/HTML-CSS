@@ -1,0 +1,322 @@
+.main
+    overflow: hidden
+    &__inner    
+        position: relative
+        z-index: 2
+    &__wrap    
+        padding: 50px 0
+        +sm
+            padding: 25px 0
+    &__img
+        position: absolute
+        top: -80px
+        left: calc(50% + 257px)
+        width: 500px
+        z-index: -1
+        img
+            width: 100%
+        +sm
+            top: -70px
+    &__text
+        max-width: 676px
+        margin-bottom: 30px
+    &__title
+        margin-bottom: 20px        
+    &__descript
+        font-size: 14px
+        font-weight: 400    
+        color: $gray
+    &__row
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+
+.card
+    width: 100%
+    max-width: 520px
+    padding: 40px 50px
+    border-radius: 25px        
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07)
+    background-color: $white
+    margin-bottom: 20px    
+    &:not(:last-child)
+        margin-right: 20px
+        +md
+            &:not(:last-child)
+                margin-right: 0
+    +sm
+        padding: 20px 25px            
+    &__title
+        text-align: center
+        padding-bottom: 22px
+        margin-bottom: 25px
+        border-bottom: 1px solid $alto
+    &__text
+        font-size: 14px
+        font-weight: 300
+        line-height: 1.2    
+        color: #777777
+        margin-bottom: 33px
+        +sm
+            margin-bottom: 20px
+    &__btn
+        text-align: center           
+
+.slider
+    position: relative
+    overflow: hidden
+    margin-bottom: 40px
+    +sm
+        margin-bottom: 20px
+    &__wrap 
+        position: relative
+        opacity: 0
+        visibility: hidden
+        transition: opacity .5s, visibility .5s
+        &.slick-initialized
+            overflow: visible
+            opacity: 1
+            visibility: visible 
+    &__slide-for
+        position: relative
+        display: block
+        max-width: 340px
+        max-height: 255px
+        min-width: 255px
+        text-align: center
+        img
+            display: inline-block
+            max-width: 100%
+            max-height: 255px
+            min-height: 255px
+        &::before
+            position: absolute
+            left: 60%
+            top: 50%
+            transform: translate(-50%,-50%)
+            width: 40px
+            height: 40px
+            content: ''
+            border-radius: 10px
+            background-color: rgba($black,.5)
+            opacity: 0
+            transition: opacity .3s
+            cursor: pointer
+        &::after
+            position: absolute
+            left: 60%
+            top: 50%
+            transform: translate(-50%,-50%)
+            width: 20px
+            height: 20px
+            content: ''
+            background-image: url(../img/search.png)
+            background-repeat: no-repeat
+            background-position: 50% 50%
+            background-size: cover
+            opacity: 0
+            transition: opacity .3s
+            cursor: pointer
+        &:hover    
+            &::before,
+            &::after
+                opacity: 1
+        +sm
+            max-width: 100%
+            height: 350px
+            &::before,
+            &::after
+                left: 50%
+        +xs
+            min-height: auto             
+    &__nav
+        position: absolute
+        top: 0
+        right: 0
+        width: 70px
+        +sm
+            width: 100%
+            position: static
+    &__slide-nav
+        position: relative
+        width: 69px
+        height: 70px
+        border-radius: 10px
+        border: 1px solid $alto
+        background-color: $white
+        cursor: pointer
+        transition: border-color .3s
+        overflow: hidden
+        margin-bottom: 15px
+        font-size: 0
+        text-align: center
+        img
+            display: inline-block
+            max-width: 100%
+        +sm
+            line-height: 95px
+            margin-bottom: 0
+            width: 100%
+            height: 95px
+            img
+                max-width: 70px
+                height: 70px
+                vertical-align: middle
+        +xs
+            height: 70px
+            line-height: 70px        
+        &::after
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            border-radius: 10px
+            content: ''
+            background-color: rgba($white,.5)
+            opacity: 1
+            transition: opacity .3s
+    .slick-slide.slick-current.slick-active
+        .slider__slide-nav
+            border-color: $black
+            &::after
+                opacity: 0
+    &__slides
+        padding-right: 15px            
+
+.overlay 
+    z-index: 99
+    position: fixed
+    background-color: $black
+    opacity: 0.8
+    filter: alpha(opacity=80)
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    cursor: pointer
+    display: none
+
+.popup
+    display: none
+    position: fixed
+    min-width: 280px 
+    min-height: 0px
+    max-width: 826px
+    width: 100%
+    border-radius: 25px
+    background-color: $white
+    top: 50%
+    left: 50%
+    z-index: 100
+    transform: translate(-50%, -50%)
+    +sm
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        transform: translate(0,0)
+        border-radius: 0
+    &__wrap
+        position: relative
+        border-radius: 25px
+        width: 100%
+        height: 100%
+        overflow: hidden
+        padding: 40px 50px
+        -webkit-overflow-scrolling: touch
+        &::after
+            position: absolute
+            top: -50px
+            left: -40px
+            width: 250px
+            height: 250px
+            content: ''
+            background-image: url(../img/smart1.png)
+            background-repeat: no-repeat
+            background-position: 50% 50%
+            z-index: -1
+        +sm
+            padding: 45px 25px 30px
+            overflow-y: scroll
+            &::after
+                display: none
+    &__close
+        position: absolute
+        top: 30px
+        right: 30px
+        transform: translate(50%,-50%) 
+    &__title
+        margin-bottom: 5px
+        text-align: center
+    &__descript
+        padding-bottom: 10px
+        margin-bottom: 30px
+        font-size: 13px
+        font-weight: 300    
+        color: $gray
+        text-align: center
+        border-bottom: 1px solid $alto
+    &__row
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        margin-bottom: 25px
+        +sm
+            flex-wrap: wrap
+    &__col
+        flex: 1 1 50%
+        &:not(:last-child)
+            margin-right: 30px
+        +sm
+            flex: 1 1 100%
+            &:not(:last-child)
+                margin-right: 0
+                margin-bottom: 30px
+    &__col-title
+        text-align: center
+        margin-bottom: 30px        
+    &__col-img
+        width: 100%
+        margin: 0 auto
+        img
+            width: 100%    
+    &__btn
+        text-align: center
+        .btn
+            min-width: 186px
+
+
+.form
+    &__row
+        &:not(:last-child)
+            margin-bottom: 15px
+    &__row--mod
+        font-size: 12px
+        font-weight: 300    
+        color: $gray
+    &__input
+        width: 100%    
+        height: 46px
+        padding: 13px 24px 12px
+        border-radius: 23px
+        border: 1px solid rgba(218, 218, 218, 0.7)
+        box-sizing: border-box
+        font-family: 'Roboto'
+        font-size: 15px
+        font-weight: 300
+        color: $scorpion
+        transition: background-color .3s
+        box-shadow: inset -2px 2px 7px rgba(0, 0, 0, 0.05)
+        +placeholder
+	        font-family: 'Roboto'
+            font-size: 15px
+            font-weight: 300    
+            color: $scorpion
+        &:focus
+            background-color: $bg
+        &:valid
+            background-color: $bg    
+
+

@@ -1,0 +1,7 @@
+ProjectTitle: IQTaxi
+
+PageList:
+- file: page.html
+  ready: 100
+- file: page-driver.html
+  ready: 50  

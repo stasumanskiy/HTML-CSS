@@ -1,0 +1,110 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #f43684;
+}
+
+.toggle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+
+.toggle span {
+	position: absolute;
+	display: block;
+	width: 50%;
+	height: 6px;
+	background-color: #fff;
+	transition: .5s;
+}
+
+.toggle span:nth-child(even) {
+	left: 50%;
+}
+
+.toggle span:nth-child(1),
+.toggle span:nth-child(2) {
+	top: 0;
+}
+
+.toggle span:nth-child(3),
+.toggle span:nth-child(4) {
+	top: 15px;
+}
+
+.toggle span:nth-child(5),
+.toggle span:nth-child(6) {
+	top: 30px;
+}
+
+
+.toggle.active span:nth-child(3) {
+	transform: translateX(-50px);
+	opacity: 0;
+}
+
+.toggle.active span:nth-child(4) {
+	transform: translateX(50px);
+	opacity: 0;
+}
+
+.toggle span:nth-child(1) {
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-o-transform-origin: top left;
+	transform-origin: top left;
+}
+
+.toggle span:nth-child(2) {
+	-webkit-transform-origin: top right;
+	-moz-transform-origin: top right;
+	-ms-transform-origin: top right;
+	-o-transform-origin: top right;
+	transform-origin: top right;
+}
+
+.toggle.active span:nth-child(1) {
+	transform: rotate(45deg);
+	top: 1;
+	left: 7px;
+}
+
+.toggle.active span:nth-child(2) {
+	transform: rotate(-45deg);
+	top: 1;
+	left: calc(50% - 7px);
+}
+
+.toggle span:nth-child(5) {
+	-webkit-transform-origin: bottom left;
+	-moz-transform-origin: bottom left;
+	-ms-transform-origin: bottom left;
+	-o-transform-origin: bottom left;
+	transform-origin: bottom left;
+}
+
+.toggle span:nth-child(6) {
+	-webkit-transform-origin: bottom right;
+	-moz-transform-origin: bottom right;
+	-ms-transform-origin: bottom right;
+	-o-transform-origin: bottom right;
+	transform-origin: bottom right;
+}
+
+.toggle.active span:nth-child(5) {
+	transform: rotate(-45deg);
+	bottom: 1;
+	left: 7px;	
+}
+
+.toggle.active span:nth-child(6) {
+	transform: rotate(45deg);
+	bottom: 1;
+	left: calc(50% - 7px);
+}

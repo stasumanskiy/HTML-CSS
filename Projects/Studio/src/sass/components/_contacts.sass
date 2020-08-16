@@ -1,0 +1,198 @@
+/*Contact page*/
+
+.wrapper    
+    &.image-bg
+        width: 100%
+        height: 100vh
+        background-repeat: no-repeat
+        background-position: 50% 50%
+        background-size: cover
+        +sm
+            height: auto
+            padding-bottom: 40px
+
+.right-line-title,
+.left-line-title 
+	display: block
+	width: 20%
+	height: 1px
+	background-color: $black
+
+.right-line-title 
+	margin-left: 15px
+
+.left-line-title 
+	margin-right: 15px    
+
+.contact 
+	margin: 0 auto
+	max-width: 550px
+	padding: 125px 0 0
+	overflow: auto
+	font-family: $openSans
+
+.contact    
+    +sm
+        padding: 120px 0 0
+    &__bg 
+        padding: 25px 20px 30px 
+        background-color: rgba(255,255,255,.75)
+        box-shadow: 0 0 15px rgba(0,0,0,.3)
+        border-radius: 4px
+        z-index: -2
+    &__wrap 
+        width: 100%
+    &__form
+        position: relative
+        font-family: $openSans
+    &__title-block    
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 20px 
+    &__form-title 
+        position: relative
+        font-size: 25px
+        font-weight: 700
+        white-space: nowrap
+    &__castom-font 
+        font-size: 16px
+        margin-bottom: 15px
+        text-align: center
+    &__text
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        margin-bottom: 15px
+        .social
+            margin-bottom: 15px
+            &__block
+                z-index: 5
+    &__phone,
+    &__email
+        font-size: 16px
+        font-weight: 700
+        margin-bottom: 5px
+    &__phone-number
+        font-size: 16px
+        font-weight: 400
+    &__email
+        margin-top: 10px
+    &__form-row 
+        position: relative
+        width: 80%
+        margin: 0 auto 15px
+        transition: .3s
+        margin-bottom: 25px
+    &__form-row--mod
+        margin-bottom: 0    
+    &__input 
+        z-index: 1
+        width: 100%
+        padding: 5px 10px 5px
+        background-color: inherit
+        border: none
+        border-bottom: 1px solid rgba(0,0,0,.5)
+        outline: none
+        transition: .3s
+        font-size: 16px
+        +placeholder
+            font-size: 15px
+            font-weight: 400
+            color: $black
+        &:hover 
+            border-bottom: 1px solid rgba(0,0,0,1)
+        &:focus 
+            border-bottom: 1px solid rgba(0,0,0,1)
+    &__textarea.error,
+    &__input.error 
+        border-bottom-color: red
+    &__textarea.valid,
+    &__input.valid 
+	    border-bottom-color: rgba(87,193,71,1)
+    &__textarea
+        width: 100%
+        height: 60px
+        border: none
+        outline: none
+        background-color: inherit
+        border-bottom: 1px solid rgba(0,0,0,1)
+        resize: none
+        font-size: 16px
+        font-family: sans-serif
+        padding: 5px 10px 5px
+        +placeholder
+            font-size: 15px
+            font-weight: 400
+            color: $black
+    &__button 
+        position: relative
+        border: none
+        background: none
+        color: $black
+        font-size: 16px
+        border: 1px solid $black
+        border-radius: 4px
+        padding: 15px
+        width: 100%
+        cursor: pointer
+        transition: color .3s
+        outline: none
+        z-index: 0
+        &:before 
+            position: absolute
+            content: ''
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: rgba(0,0,0,.9)
+            transform: scaleX(0)
+            transition: transform .3s
+            z-index: -1
+        &:hover 
+            color: #fff
+            &:before
+                transform: scaleX(1)
+            &:disabled
+                color: $black
+                cursor: default
+                &:before
+                    transform: scaleX(0)
+
+#name-error,
+#email-error,
+#phone-error 
+	position: absolute
+	left: 15px
+	bottom: -20px
+	font-size: 12px
+	color: red
+	transition: color .3s
+
+#message-error 
+	position: absolute
+	left: 15px
+	bottom: -12px
+	font-size: 12px
+	color: red
+	transition: color .3s
+
+
+.success,
+.success-error 
+	position: absolute
+	display: none
+	bottom: -18px
+	left: 0
+	width: 100%
+	text-align: center
+	font-size: 12px
+	font-family: sans-serif
+
+.success 
+	color: $black
+
+.success-error 
+	color: red

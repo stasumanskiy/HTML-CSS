@@ -1,0 +1,35 @@
+.social
+    &__block
+        position: relative
+        z-index: 10
+    &__link
+        display: inline-block
+        text-decoration: none
+        font-size: 0
+        &:not(:last-child)
+            margin-right: 10px
+            +md
+                margin-right: 15px
+        .icon
+            width: 25px
+            height: 25px
+            fill: $black
+            transition: fill .3s, background-color .3s
+            border-radius: 5px 
+        &:hover
+            &.social__link--facebook
+                .icon
+                    background-color: $white
+                    fill: $blue
+            &.social__link--instagram
+                .icon
+                    background-color: $white
+                    fill: $insta
+            &.social__link--twitter
+                .icon
+                    background-color: $white
+                    fill: $whiteBlue
+            &.social__link--vkontakte
+                .icon
+                    background-color: $white
+                    fill: $silverBlue

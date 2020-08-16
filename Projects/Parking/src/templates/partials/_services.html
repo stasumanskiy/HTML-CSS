@@ -1,0 +1,44 @@
+{% set card = [
+{
+img: "star.png",
+title: "TOP BEWERTET",
+text: "WER EIN MAL BEI UNS BUCHT BLEIBT FÜR IMMER"
+},
+{
+img: "check.png",
+title: "SICHERE BUCHUNGEn",
+text: "WIR PRÜFEN ALLE PARKANBIETER PERSÖNLICH"
+},
+{
+img: "cloud.png",
+title: "SUPER LEISTUNG",
+text: "NOCH EIN PUNKT DENWIR HERVORHEBEN KÖNNEN"
+},
+{
+img: "mobile.png",
+title: "SMARTPHONE OPTIMIERT",
+text: "BUCHEN SIE BEQUEM VOM HANDYODER TABLET"
+}
+]
+%}
+<!-- Start services -->
+<div class="wrapper">
+    <div class="services">
+        <div class="services__inner inner-s">
+            <div class="services__wrap">
+                {% for item in card %}
+                <div class="box">
+                    <img src="./img/{{ item.img }}" alt="">
+                    <h3 class="box__title title-sm border">
+                        {{ item.title }}
+                    </h3>
+                    <p>
+                        {{ item.text }}
+                    </p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End services -->

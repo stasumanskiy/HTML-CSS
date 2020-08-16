@@ -1,0 +1,9 @@
+ProjectTitle: Profy Lawyer
+
+PageList:
+- file: home.html
+  ready: 50
+- file: index-ru.html
+  ready: 50
+- file: index-en.html
+  ready: 50

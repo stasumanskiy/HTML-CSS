@@ -1,0 +1,64 @@
+.requirements
+    &__inner
+        padding-bottom: 30px
+    &__wrap
+        padding: 50px 0 0
+        +sm
+            padding: 40px 0 0
+    &__title
+        max-width: 1126px
+        margin: 0 auto
+        border-bottom: 1px solid $gray
+        padding-bottom: 20px
+        margin-bottom: 51px
+        text-align: center
+        +sm
+            margin-bottom: 20px
+    &__row
+        display: flex
+        align-items: flex-start
+        flex-wrap: wrap
+        margin-bottom: 58px
+        +sm
+            margin-bottom: 6px
+    &__col
+        flex: 1 1 33.33%  
+        +md
+            flex: 1 1 50%
+        +xs      
+            flex: 1 1 100%
+            padding-right: 0 
+
+.card
+    display: flex
+    align-items: center
+    margin-bottom: 42px
+    +sm
+        margin-bottom: 24px
+    &__circle
+        position: relative
+        width: 61px
+        height: 61px
+        border-radius: 50%
+        background-color: $gray
+    &__col--left  
+        margin-right: 10px
+    &__number
+        position: absolute
+        display: block
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        font-size: 23px
+        font-weight: 700
+        color: $purple
+    &__col--right
+        max-width: 292px
+        padding-right: 30px
+        font-family: $roboto
+        font-size: 15px
+        font-weight: 300
+        line-height: 1.69
+        color: $dark
+        +xs
+            padding-right: 0 

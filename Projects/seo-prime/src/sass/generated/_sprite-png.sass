@@ -1,0 +1,74 @@
+$icons: (0:0)
+$icons: map-merge($icons,('facebook': (X: -100px, Y:0px, W: 20px, H: 37px, TW: 120px, TH: 79px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('in': (X: -52px, Y:-42px, W: 32px, H: 36px, TW: 120px, TH: 79px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('insta': (X: 0px, Y:-43px, W: 36px, H: 36px, TW: 120px, TH: 79px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('twitter': (X: -52px, Y:0px, W: 38px, H: 32px, TW: 120px, TH: 79px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('youtube': (X: 0px, Y:0px, W: 42px, H: 33px, TW: 120px, TH: 79px, IMG: '../img/sprite.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+    $icon: map-get($icons, $icon)
+    @return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+    background-image: url(icon-attr($iconName, IMG))
+    width: icon-attr($iconName, W)
+    height: icon-attr($iconName, H)
+    background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+    display: inline-block
+@mixin sprite-position($iconName)
+    background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+    background-image: url(icon-attr($iconName, IMG))
+    $width: icon-attr($iconName, W)
+    $height: icon-attr($iconName, H)
+    width: $width/2
+    height: floor($height/2)
+    $x: icon-attr($iconName, X)
+    $y: icon-attr($iconName, Y)
+    background-position: $x/2 $y/2
+    $tw: icon-attr($iconName, TW)
+    $th: icon-attr($iconName, TH)
+    background-size: $tw/2 $th/2
+
+
+@mixin s($i)
+    +sprite($i)
+@mixin sp($i)
+    +sprite-position($i)
+@mixin sr($i)
+    +sprite-retina($i)
+    display: inline-block
+
+//
+//.icon-facebook
+//  width: 20px
+//  height: 37px
+//  background-image: url('../img/sprite.png')
+//  background-position: -100px 0px
+//
+//.icon-in
+//  width: 32px
+//  height: 36px
+//  background-image: url('../img/sprite.png')
+//  background-position: -52px -42px
+//
+//.icon-insta
+//  width: 36px
+//  height: 36px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -43px
+//
+//.icon-twitter
+//  width: 38px
+//  height: 32px
+//  background-image: url('../img/sprite.png')
+//  background-position: -52px 0px
+//
+//.icon-youtube
+//  width: 42px
+//  height: 33px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px 0px
+//

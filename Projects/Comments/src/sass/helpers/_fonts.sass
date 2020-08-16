@@ -1,0 +1,33 @@
+//FONTS
+
+=fontpath($name, $name1, $file)
+	src: local($name), local($name1),
+	url("../fonts/" + $file + ".woff") format("woff"),
+	url("../fonts/" + $file + ".woff2") format("woff2")
+=fontdefault($style, $weight, $name)
+	font-family: $name
+	font-style: $style
+	font-weight: $weight
+
+//START Montserrat
+@font-face
+	+fontdefault(normal, 300, 'StagBook')
+	+fontpath('Stag-Book', 'Stag-Book', 'Stag-Book')
+
+@font-face
+	+fontdefault(italic, 300, 'StagBookItalic')
+	+fontpath('Stag-BookItalic', 'Stag-BookItalic', 'Stag-BookItalic')
+
+@font-face
+	+fontdefault(normal, 400, 'MyriadPro')
+	+fontpath('MyriadPro-Regular', 'MyriadPro-Regular', 'MyriadPro-Regular')
+
+@font-face
+	+fontdefault(normal, 500, 'StagBook')
+	+fontpath('Stag-Medium', 'Stag-Medium', 'Stag-Medium')
+
+@font-face
+	+fontdefault(normal, 600, 'StagBook')
+	+fontpath('Stag-Semibold', 'Stag-Semibold', 'Stag-Semibold')
+
+

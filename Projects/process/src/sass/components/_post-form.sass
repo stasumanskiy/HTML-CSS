@@ -1,0 +1,113 @@
+.post-form
+	max-width: 580px
+	position: absolute
+	top: 44.3%
+	left: 50%
+	transform: translate(-50%, -50%)
+	font-family: $circe
+	padding: 20px 30px
+	text-align: center
+	z-index: -100
+	opacity: 0
+	transition: opacity .3s
+	+sm
+		top: 51%
+	&__close-btn
+		position: relative
+		display: block
+		width: 16px
+		height: 16px
+		margin: 0 0 123px auto
+		background: none
+		border: none
+		outline: none
+		transition: fill .3s
+		.icon
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			fill: rgba(#fbd179,.7)
+		&:hover
+			fill: rgba(#c68a43,.4)
+		&.is-press
+			fill: $white
+		+sm
+			margin: 0 0 30px auto		
+	&__title
+		text-align: center
+		margin-bottom: 33px
+	&__row
+		display: flex
+		align-items: flex-start
+		+sm
+			display: block
+	&__col
+		&:first-child
+			margin-right: 19px
+			+sm
+				margin-right: 0
+	&__line
+		position: relative
+		margin-bottom: 19px
+		z-index: 1
+	&__input,
+	&__textarea
+		resize: none
+		border: none
+		outline: none
+		background: none
+		font-size: 16px	
+		color: $white
+		padding: 14px 20px 16px
+		border: 2px solid rgba(#fbd179,.7)
+		background-color: rgba(#fbd179,.02)
+		transition: background-color .3s, color .3s, opacity .3s, border-color .3s
+		&:focus
+			background-color: rgba(#fbd179,.07)
+		&.error
+			border: 2px solid rgba(#ff5a5a,.7)
+			color: #ff5a5a
+			.post-form__label
+				z-index: -1
+				opacity: 0
+		+sm
+			padding: 9px
+			font-size: 12px		
+	&__textarea
+		height: 193px
+		+sm
+			height: 88px
+	&__label
+		position: absolute
+		left: 20px
+		top: 15px
+		color: rgba(#fbd179,.4)
+		+sm
+			top: 10px
+			left: 10px
+			font-size: 12px	
+		
+
+
+.post-form__input,
+.post-form__textarea
+	&:focus ~ .post-form__label,
+	&:valid ~ .post-form__label
+		z-index: -1
+		opacity: 0		
+
+
+#name-error,
+#email-error,
+#phone-error,
+#message-error
+	position: absolute
+	left: 0
+	top: 0
+	color: transparent
+	z-index: -20
+
+.show
+	opacity: 1
+	z-index: 5	

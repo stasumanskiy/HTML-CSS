@@ -1,0 +1,74 @@
+.page-nav
+	margin: 43px 0
+	+md
+		margin: 20px 0
+	&__list
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		+sm
+			justify-content: center
+	&__item
+		+sm
+			display: none
+			&:first-child,
+			&:last-child,	
+			&:nth-child(2),
+			&:nth-child(3)	
+				display: block
+		&:not(:last-child)
+			margin-right: 8px
+		&.is-active
+			.page-nav__link
+				color: $white
+				background-color: $purple	
+	&__btn,
+	&__link
+		background: none
+		outline: none
+		border: none
+		width: 40px
+		height: 40px
+		background-color: transparent
+		font-size: 15px
+		font-weight: 700
+		color: $dark
+		transition: background-color .3s, color .3s
+		text-align: center
+	&__link
+		&:hover
+			background-color: $purple
+			color: $white
+	&__btn
+		position: relative
+		margin-left: 37px
+		font-size: 0
+		&:disabled
+			cursor: default
+			.icon
+				opacity: .4
+			&:hover
+				.page-nav__icon--mod
+					opacity: 1	
+		&:hover
+			.page-nav__icon--mod
+				opacity: 0
+		.icon
+			width: 12px		
+			height: 24px
+			fill: $red
+	&__icon--mod
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		opacity: 1
+		transition: opacity .3s			
+		.icon
+			width: 7px
+			height: 18px
+			fill: $white
+	&__btn--mod
+		margin-left: 0
+		margin-right: 37px
+		transform: rotate(180deg)

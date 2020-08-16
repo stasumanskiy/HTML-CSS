@@ -1,0 +1,11 @@
+ProjectTitle: Form
+
+PageList:
+- file: start.html
+  ready: 50
+- file: step1.html
+  ready: 50
+- file: step2.html
+  ready: 50
+- file: step3.html
+  ready: 50

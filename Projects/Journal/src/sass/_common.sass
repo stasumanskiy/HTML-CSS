@@ -1,0 +1,74 @@
+body
+	background: $white
+	min-width: 320px
+	line-height: 1.4
+	font-family: $openSans
+	font-weight: 400
+
+.wrapper
+	position: relative
+	z-index: 1
+	&:before
+		position: absolute
+		width: 40%
+		top: 0
+		bottom: 0
+		left: 0
+		content: ''
+		background-color: $silverGray
+		z-index: -1
+	+md
+		&:before	
+			width: 32.5%
+	+sm
+		&:before	
+			display: none
+
+.wrapper--mod
+	z-index: 2
+
+.inner
+	max-width: 1560px
+	padding: 0 15px
+	margin: 0 auto
+	+md
+		padding: 0 24px
+	+sm
+		padding: 0 15px
+
+.show
+	display: none
+	+sm
+		display: block
+
+.hide
+	+md
+		display: none		
+
+.border
+	border-top: 2px solid $darkRed				
+	border-bottom: 2px solid $darkRed
+
+.title-md
+	font-family: $openSans
+	font-weight: 700
+	font-size: 44px
+	color: $dark
+	+md
+		font-size: 26px
+
+.title-sm
+	font-family: $openSans
+	font-weight: 700
+	font-size: 25px
+	color: $dark
+	+md
+		font-size: 15px
+
+.title-m
+	font-family: $openSans
+	font-weight: 700
+	font-size: 20px
+	color: $purple
+	+md
+		font-size: 16px

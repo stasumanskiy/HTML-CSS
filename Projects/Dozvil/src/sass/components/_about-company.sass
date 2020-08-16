@@ -1,0 +1,94 @@
+.about-company
+	padding: 70px 0 100px
+	+sm
+		padding: 35px 0 50px
+	&__title
+		text-align: center
+		margin-bottom: 30px
+	&__wrap
+		padding: 70px 45px
+		+sm
+			padding: 0
+
+.about-list
+	&__item
+		position: relative
+		font-size: 17px
+		font-weight: 500
+		line-height: 1.3
+		color: $black
+		padding-left: 30px
+		margin-bottom: 30px
+		+sm
+			font-size: 14px
+			margin-bottom: 15px
+	&__icon
+		position: absolute
+		top: 0px
+		left: 0
+		font-size: 20px
+		.icon
+			fill: $red
+		+sm
+			z-index: 1	
+	&__item-dscpt
+		display: block
+		text-align: center
+		font-style: italic
+		font-weight: 600
+		font-size: 20px
+		color: $red
+		+sm
+			font-size: 16px		
+
+.box
+	position: relative
+	&__line
+		overflow: hidden
+		position: absolute
+		display: block
+		&.box__line_top 
+			top: 0
+			left: 0
+			height: 4px
+			width: 100%
+		&.box__line_right 
+			right: 0
+			top: 0
+			height: 100%
+			width: 4px
+		&.box__line_bottom 
+			bottom: 0
+			right: 0
+			height: 4px
+			width: 100%
+		&.box__line_left 
+			left: 0
+			bottom: 0
+			width: 4px
+			height: 100%
+	&__top-side,
+	&__right-side,
+	&__bottom-side,
+	&__left-side
+		position: absolute
+		height: 4px
+		background-color: $red
+		+sm
+			display: none
+	&__top-side
+		transform: translateX(-100%)
+		height: 4px
+		width: 100%
+	&__right-side
+		transform: translateY(-100%)
+		height: 100%
+		width: 4px
+	&__bottom-side
+		transform: translateX(100%)
+		height: 4px
+		width: 100%
+	&__left-side
+		transform: translateY(100%)
+		width: 4px
+		height: 100%	

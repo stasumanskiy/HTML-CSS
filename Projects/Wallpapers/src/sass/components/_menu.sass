@@ -1,0 +1,51 @@
+.menu
+	position: relative
+	background-color: rgba($black,.3)
+	&__container
+		padding: 0	
+		+md
+			display: none
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			background-color: $white
+			z-index: 10
+			padding-bottom: 15px
+	&__list	
+		display: flex
+		align-items: center
+		justify-content: space-between
+		flex-wrap: wrap
+		+md
+			flex-direction: column
+			justify-content: flex-start
+	&__item
+		width: 120px
+		text-align: center
+		list-style: none
+		&.is-active
+			.menu__link
+				font-weight: 700
+
+	&__link
+		font-size: 14px
+		font-weight: 400
+		font-family: $proximaNova
+		color: $white
+		text-transform: uppercase	
+		text-decoration: none
+		padding: 7px 10px 9px
+		display: inline-block
+		+md
+			color: $black
+		&:hover
+			font-weight: 700
+			color: $white
+			+md
+				color: $black
+	&__line
+		font-size: 22px
+		color: $white
+		+md
+			display: none

@@ -1,0 +1,36 @@
+.message
+    padding-bottom: 116px
+    padding-top: 41px
+    +md
+        padding-top: 25px
+    +sm
+        margin-bottom: 100px    
+    &__title
+        margin-bottom: 20px
+    &__wrap
+        display: flex
+        justify-content: space-between
+        +md
+            flex-wrap: wrap
+            justify-content: center
+    &__col--left
+        flex: 1 1 670px
+        max-width: 670px
+        padding-right: 40px
+        font-size: 20px
+        font-weight: 300
+        line-height: 1.55
+        color: $dark
+        +md
+            flex: 1 1 100%
+            max-width: 100%
+            margin-bottom: 30px
+            padding-right: 0
+    &__col--right
+        flex: 0 0 374px
+        max-width: 374px 
+        text-align: center
+        +sm
+            flex: 1 1 374px  
+    &__text
+        text-align: left        

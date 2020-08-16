@@ -1,0 +1,53 @@
+.works
+	position: relative
+	padding-bottom: 120px
+	z-index: 3
+	&__title
+		margin-bottom: 30px
+		color: $blue
+	&__container
+		padding: 80px 95px
+		border-radius: 10px
+		background-color: $white
+		+md
+			padding: 35px 40px
+	&__row
+		display: flex
+		justify-content: space-between
+		+md
+			flex-wrap: wrap
+	&__col
+		flex: 50%
+		&:not(:last-child)
+			margin-right: 40px
+		+md
+			flex: 100%		
+
+.item
+	&__block
+		display: flex
+		align-items: flex-start
+		&:not(:last-child)
+			margin-bottom: 35px
+		span
+			margin-right: 30px
+		p
+			color: $blue
+			font-size: 18px
+			line-height: 1.7
+			+sm
+				font-size: 14px
+				
+
+
+.icon-Shape39,
+.icon-Shape40,
+.icon-Shape41,
+.icon-Shape42,
+.icon-Shape43,
+.icon-Shape44,
+.icon-Shape51
+	fill: $blue-light
+	width: 50px
+	height: 50px
+

@@ -1,0 +1,66 @@
+.about
+	position: relative
+	margin-top: -5px
+	padding: 115px 25px 135px
+	+sm
+		padding: 57px 15px 67px 
+
+.box
+	display: flex
+	align-items: flex-start
+	padding: 25px 22px
+	background-image: repeating-linear-gradient(to bottom,rgb(61, 109, 144) 0%,rgb(75, 74, 123) 58.5%,rgb(46, 60, 72) 100%);
+	+sm
+		flex-wrap: wrap
+		background-image: none
+		padding: 0
+
+	&:not(:last-child)
+		margin-bottom: 140px
+		+sm
+			margin-bottom: 50px
+	&__col-lef
+		font-size: 0
+		position: relative
+		z-index: 2
+		min-width: 405px
+		+md
+			min-width: 250px
+		+sm
+			min-width: 294px
+			margin: 0 auto 30px
+			text-align: center
+		img
+			max-width: 100%
+
+	&__title
+		margin-top: 13px
+		margin-bottom: 26px
+		margin-left: 33px
+		+sm
+			margin-left: 0
+			margin-top: 0
+	&__list
+		position: relative
+		margin-right: -45px
+		margin-bottom: -60px
+		margin-left: -81px
+		padding: 36px 66px 32px 106px
+		background: $white
+		z-index: 1
+		+sm
+			margin: 0
+			padding: 0
+			background: transparent
+		p
+			font-style: italic
+			line-height: 500
+			font-size: 15px
+			line-height: 1.5
+			color: $black
+			&:not(:last-child)
+				margin-bottom: 20px
+			span
+				color: $blue	
+	&__btn
+		text-align: right			

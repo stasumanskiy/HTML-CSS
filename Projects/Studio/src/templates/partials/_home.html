@@ -1,0 +1,67 @@
+<div class="container">
+	<!--  Start header	 -->
+	<header class="header">
+		<div class="header__logo">
+			<a class="header__logo-link" href="home.html">
+				{{ mixins.icon('logo') }}
+			</a>
+		</div>
+		<div class="header__mob-menu-toggle">
+			<span></span>
+		</div>
+		<nav class="header__navigation navigation js-navigation">
+			<ul class="navigation__menu">
+				<li class="navigation__item">
+					<a href="home.html" class="navigation__link active">Главная</a>
+				</li>
+				<li class="navigation__item">
+					<a href="price.html" class="navigation__link">Услуги и цены</a>
+				</li>
+				<li class="navigation__item">
+					<a href="team.html" class="navigation__link">Команда</a>
+				</li>
+				<li class="navigation__item">
+					<a href="contacts.html" class="navigation__link">Контакты</a>
+				</li>
+				<li class="navigation__item navigation__item-mobile">
+					<div class="social">
+						<div class="social__block">
+							<a href="#" class="social__link social__link--facebook">
+								{{ mixins.icon('facebook') }}
+							</a>
+							<a href="#" class="social__link social__link--instagram">
+								{{ mixins.icon('instagram') }}
+							</a>
+							<a href="#" class="social__link social__link--twitter">
+								{{ mixins.icon('twitter') }}
+							</a>
+							<a href="#" class="social__link social__link--vkontakte">
+								{{ mixins.icon('vkontakte') }}
+							</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div class="header__social">
+			<div class="social">
+				<div class="social__block">
+					<a href="#" class="social__link social__link--facebook">
+						{{ mixins.icon('facebook') }}
+					</a>
+					<a href="#" class="social__link social__link--instagram">
+						{{ mixins.icon('instagram') }}
+					</a>
+					<a href="#" class="social__link social__link--twitter">
+						{{ mixins.icon('twitter') }}
+					</a>
+					<a href="#" class="social__link social__link--vkontakte">
+						{{ mixins.icon('vkontakte') }}
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- End header	 -->
+	{% include "partials/_slider.html" %}
+</div>

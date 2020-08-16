@@ -1,0 +1,309 @@
+.roadmap
+	background-color: $blue-light
+	padding-bottom: 200px
+	&__container
+		padding-top: 100px
+
+.icon-Shape45,
+.icon-Shape46,
+.icon-Shape47,
+.icon-Shape48,
+.icon-Shape49,
+.icon-Shape50
+	fill: $white
+	width: 40px
+	height: 40px
+	+md
+		width: 38px
+		height: 38px
+
+.point
+	position: relative	
+	&__icon
+		margin-right: 20px
+		+sm
+			display: none	
+	&__col-left
+		display: flex
+		align-items: flex-start
+		justify-content: flex-end
+		position: relative
+		flex: 1 1 50%
+		+sm
+			justify-content: flex-start
+		&.point__col-left_padding
+			justify-content: flex-start
+			padding-top: 160px
+			+md
+				padding-top: 60px
+
+	&__col-right
+		display: flex
+		align-items: flex-start
+		justify-content: flex-start
+		position: relative
+		flex: 1 1 50%
+		&.margin
+			margin: 0
+		.point__line_right
+			width: 290px
+	&__block
+		&:nth-child(3)
+			+sm
+				padding-top: 90px
+		&:nth-child(4)
+			+sm
+				margin-top: 140px					
+	&__row
+		display: flex
+		position: relative	
+		height: 376px
+		+sm
+			height: 220px
+	&__line
+		&.point__line_up
+			position: relative
+			margin-top: -100px
+	&__text
+		max-width: 380px
+		+sm
+			max-width: 340px
+		h3
+			margin-bottom: 10px
+			+md
+				font-size: 26px
+		p
+			font-size: 18px
+			line-height: 1.6
+			color: $white
+			+md
+				font-size: 14px
+	&__title
+		&.title-md
+			line-height: 0.8
+			+md
+				font-size: 54px
+			+sm
+				font-size: 36px		
+	&__title-mod
+		font-size: 40px
+		+md
+			font-size: 36px
+		+sm
+			font-size: 24px
+	&__circle
+		+sm
+			left: -60px		
+	&__box1
+		position: absolute
+		width: 195px
+		top: -287px
+		right: -280px
+		z-index: 2
+		img
+			width: 100%
+		+md
+			width: 145px
+			top: -255px
+			right: -280px
+		+sm
+			top: -275px
+			right: -245px	
+	&__box2
+		position: absolute
+		width: 105px
+		top: -4px
+		left: 87px
+		z-index: 2
+		img
+			width: 100%
+		+md
+			width: 75px
+			top: 5px
+			left: 75px
+		+sm
+			top: 175px
+			left: calc(100% + 20px)
+			right: -20px
+	&__box3
+		position: absolute
+		width: 105px
+		top: 10px
+		right: 115px
+		z-index: 2
+		img
+			width: 100%
+		+md
+			width: 75px
+			top: 20px
+			right: 105px
+		+sm
+			top: -137px
+			right: -95px	
+	&__box4
+		position: absolute
+		width: 115px
+		top: 85px
+		left: 117px
+		z-index: 2
+		img
+			width: 100%
+		+md
+			width: 85px
+			top: 120px
+			left: 90px
+		+sm
+			top: -345px
+			left: auto
+			right: -173px		
+	&__box5
+		position: absolute
+		width: 150px
+		top: 200px
+		left: 488px
+		z-index: 2
+		img
+			width: 100%
+		+md
+			width: 110px
+			top: 75px
+			left: 235px
+		+sm
+			width: 87px
+			top: 178px
+			left: auto
+			right: -130px	
+	&__box6
+		position: absolute
+		width: 100px
+		top: 280px
+		left: 577px
+		z-index: 3
+		img
+			width: 100%
+		+md
+			width: 70px
+			top: 135px
+			left: 300px
+		+sm
+			top: 214px
+			right: -162px
+			left: auto	
+
+.point__row_height
+	+sm
+		height: 180px
+
+.point__line_up
+	position: absolute
+	top: -175px
+	right: -280px
+	+sm
+		top: -175px
+		right: -215px
+.point__line_second
+	+sm
+		position: absolute
+		width: 150px
+		top: 60px
+		right: -227px
+.point__line_third
+	+sm
+		position: absolute
+		top: -340px
+		right: -183px		
+.point__line_right-bottom
+	position: absolute
+	top: 0
+	left: 0
+	+sm
+		left: auto
+		top: 20px
+		right: -218px
+.margin-left
+	padding-top: 50px
+	padding-left: 35px
+	+md
+		padding-left: 30px
+	+sm
+		padding-top: 10px
+		padding-left: 0
+.margin-left_mod
+	// +sm
+	// 	margin-left: -20px
+.date_position
+	+sm
+		left: 100%
+		right: 60px			
+.margin-right
+	padding-top: 50px
+	padding-right: 35px
+	+md
+		padding-right: 30px
+	+sm
+		padding-top: 10px
+		padding-right: 0	
+.hide-image
+	+sm
+		display: none		
+.show-image
+	display: none
+	+sm
+		display: block
+.width
+	+sm
+		flex: 1 1 10%
+
+.order1
+	+sm
+		order: -1				
+
+.date
+	position: absolute
+	top: -10px
+	left: 0
+	transform: translate(-50%, -50%)
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	width: 70px
+	height: 70px
+	background-color: $white
+	border-radius: 50% 50% 5px 50%
+	z-index: 2
+	+md
+		width: 55px
+		height: 55px
+	+sm
+		top: 30px
+	&.posit-right
+		left: 100%
+		right: 0
+		+sm
+			left: -60px
+			right: 100%
+	&.date_mod
+		border-radius: 50% 50% 50% 5px
+		+sm
+			border-radius: 50% 50% 5px 50%
+	&.date_mod-color
+		background-color: $blue_gray
+		color: $white
+	&.position
+		+sm
+			left: 255px
+			border-radius: 50% 50% 50% 5px
+	&__up-line
+		font-size: 24px
+		line-height: 0.8
+		+md
+			font-size: 18px
+		+sm
+			font-size: 16px
+	&__down-line
+		font-size: 12px
+		+md
+			font-size: 9px
+		+sm
+			font-size: 8px

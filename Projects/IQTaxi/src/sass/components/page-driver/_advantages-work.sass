@@ -1,0 +1,73 @@
+.advantages-work
+    position: relative
+    padding: 50px 0 50px
+    z-index: 1
+    +sm
+        padding: 30px 0 30px
+    &::before
+        position: absolute
+        top: 0
+        right: 0
+        left: 0
+        height: 74%
+        content: ''
+        background-color: $white
+        z-index: -1
+        +sm
+            height: 100%
+    &__title
+        text-align: center
+        margin-bottom: 50px
+        +sm
+            margin-bottom: 30px
+    &__row
+        display: flex
+        align-items: flex-start
+        flex-wrap: wrap
+    &__col
+        flex: 1 1 50%
+        +sm
+            flex: 1 1 100%
+
+.card-work
+    border: 1px solid $gray
+    background-color: $white
+    margin-bottom: 10px
+    padding: 30px 20px 30px 30px
+    &:nth-child(odd)
+        margin-right: 10px
+    +md
+        min-height: 224px
+        padding: 30px 20px 30px 25px
+    +sm
+        padding: 20px 15px        
+        &:nth-child(odd)
+            margin-right: 0
+    &__row
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 30px
+        +sm
+            flex-wrap: wrap
+            justify-content: center
+            margin-bottom: 20px
+    &__col--left
+        font-size: 21px
+        font-weight: 400
+        color: $purple
+        margin-right: 20px
+        +sm
+            width: 100%
+            text-align: center
+    &__col--right
+        +sm
+            order: -1
+            margin-bottom: 20px
+    &__text
+        font-size: 15px
+        font-weight: 300
+        line-height: 1.47
+        color: $dark
+        +sm
+            text-align: center    

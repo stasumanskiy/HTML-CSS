@@ -1,0 +1,168 @@
+.wrapper
+    .questionnaire
+        form.form(action="/")
+            .form__block.grid-x
+                .cell.medium-3
+                    .avatar
+                        img(src="/images/avatar.jpg", alt="avatar")
+                .cell.medium-9
+                    .form__wrap
+                        span.form__icon
+                            +svg("approved")
+                        +input({
+                            type: 'text',
+                            name: 'name',
+                            placeholder: 'Имя',
+                            value: 'Станислав',
+                            required,
+                            autocomplete: 'on'
+                        })
+
+                        +input({
+                            type: 'text',
+                            name: 'date',
+                            placeholder: 'Дата рождения',
+                            value: '25.03.1989',
+                            required,
+                            autocomplete: 'on'
+                        })
+
+                        +input({
+                            type: 'text',
+                            name: 'city',
+                            placeholder: 'Город',
+                            value: 'Киев',
+                            required,
+                            autocomplete: 'on'
+                        })
+
+                        +input({
+                            type: 'text',
+                            name: 'contact',
+                            placeholder: 'Контактные данные',
+                            value: 'stasumanskiy@gmail.com',
+                            required,
+                            autocomplete: 'on'
+                        })
+                        
+            .form__block.js-parent
+                .form__title
+                    +title-s({
+                        text: 'Навыки'
+                    })
+                .grid-x
+                    .grid-y.small-6.medium-3
+                        .cell
+                            +checkbox({
+                                type: 'checkbox',
+                                name: 'html5',
+                                text: 'html5',
+                                checked: 'checked'
+                            })
+
+                        .cell
+                            +checkbox({
+                                type: 'checkbox',
+                                name: 'css3',
+                                text: 'css3',
+                                checked: 'checked'
+                            })
+                            
+                        .cell
+                            +checkbox({
+                                type: 'checkbox',
+                                name: 'bem',
+                                text: 'бэм',
+                                checked: 'checked'
+                            })
+
+                    .grid-y.small-6.medium-3
+                        .cell
+                            +checkbox({
+                                id: 'sass',
+                                class: 'js-checked',
+                                type: 'checkbox',
+                                name: 'sass',
+                                text: 'sass'
+                            })
+
+                        .cell
+                            +checkbox({
+                                class: 'js-checked',
+                                type: 'checkbox',
+                                name: 'less',
+                                text: 'less'
+                            })
+
+                        .cell
+                            +checkbox({
+                                class: 'js-checked',
+                                type: 'checkbox',
+                                name: 'gulp',
+                                text: 'gulp'
+                            })
+                    
+                    .grid-y.small-6.medium-3
+                        .cell
+                            +checkbox({
+                                class: 'js-checked',
+                                type: 'checkbox',
+                                name: 'vanillajs',
+                                text: 'vanillajs'
+                            })
+
+                        .cell
+                            +checkbox({
+                                class: 'js-checked',
+                                type: 'checkbox',
+                                name: 'angular',
+                                text: 'angular'
+                            })
+
+                        .cell
+                            +checkbox({
+                                class: 'js-checked',
+                                type: 'checkbox',
+                                name: 'jquery',
+                                text: 'jquery'
+                            })
+                    
+                    .grid-y.small-6.medium-3
+                        .cell
+                            +checkbox({
+                                type: 'checkbox',
+                                name: 'git',
+                                text: 'git',
+                                checked: 'checked'
+                            })
+
+                        .cell
+                            +checkbox({
+                                type: 'checkbox',
+                                name: 'foundation',
+                                text: 'foundation',
+                                checked: 'checked'
+                            })
+
+                        .cell
+                            +checkbox({
+                                type: 'checkbox',
+                                name: 'bootstrap',
+                                text: 'bootstrap',
+                                checked: 'checked'
+                            })
+            .form__block
+                .rating
+                    .grid-x
+                        .rating__col.cell.medium-6               
+                            span.rating__bg
+                                +svg("level")
+                                span.rating__icon.js-arrow
+                                    +svg("rating-arrow")
+                        .rating__col.cell.medium-6
+                            .rating__text
+                                +title-s({
+                                    text: 'Мой уровень владения Java Script'
+                                })
+                            .rating__counter.js-counter
+                                | 0    

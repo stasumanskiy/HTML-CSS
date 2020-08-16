@@ -1,0 +1,9 @@
+ProjectTitle: app
+
+PageList:
+- file: page1.html
+  ready: 50
+- file: page2.html
+  ready: 50
+- file: page3.html
+  ready: 50

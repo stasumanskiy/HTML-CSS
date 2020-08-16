@@ -1,0 +1,7 @@
+ProjectTitle: test
+
+PageList:
+- file: page.html
+  ready: 50
+- file: tokens.html
+  ready: 50

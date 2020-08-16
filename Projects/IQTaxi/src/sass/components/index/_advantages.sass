@@ -1,0 +1,58 @@
+.advantages
+    &__wrap
+        padding: 50px 0 0
+        +sm
+            padding: 25px 0 0
+    &__title
+        max-width: 1126px
+        margin: 0 auto
+        border-bottom: 1px solid $gray
+        padding-bottom: 20px
+        margin-bottom: 51px
+        text-align: center
+        +sm
+            margin-bottom: 20px
+    &__row
+        display: flex
+        align-items: flex-start
+        flex-wrap: wrap
+        +sm
+            align-items: center
+    &__col
+        flex: 1 1 33.33%  
+        +md
+            flex: 1 1 50%
+        +sm      
+            flex: 1 1 100%  
+
+.card
+    display: flex
+    align-items: center
+    margin-bottom: 100px
+    +sm
+        margin-bottom: 24px
+    &__circle
+        position: relative
+        width: 61px
+        height: 61px
+        border-radius: 50%
+        background-color: $gray
+    &__col--left    
+        margin-right: 30px
+    &__number
+        position: absolute
+        display: block
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        font-size: 23px
+        font-weight: 700
+        color: $purple
+    &__col--right
+        max-width: 292px
+        padding-right: 30px
+        font-family: $roboto
+        font-size: 13px
+        font-weight: 300
+        line-height: 1.69
+        color: $dark

@@ -1,0 +1,40 @@
+body
+	background: $white
+	min-width: 320px
+	line-height: 1.4
+	font-family: $openSans
+	font-weight: 400
+
+.container
+	position: relative
+	width: 100%
+	height: 100vh
+	&--mod
+		background-color: $silverDark
+
+.bg-positions
+	position: absolute
+	top: 50%
+	left: 0
+	width: 100%
+	transform: translateY(-50%)
+	z-index: 2
+
+.inner
+	max-width: 1236px
+	margin: 0 auto
+	padding: 0 15px
+
+.inner-s
+	max-width: 860px
+	margin: 0 auto
+	padding: 0 15px
+
+.title-md
+	text-align: center
+	font-size: 48px
+	font-family: $montserrat
+	line-height: 1.2
+	color: $dark
+	+sm
+		font-size: 36px	

@@ -1,0 +1,280 @@
+.header
+    padding: 12px 11px 12px 5px
+    background-color: $colorBlue
+    min-height: 56px
+    +sm
+        padding: 12px 8px 12px 4px
+    &__row
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        +md
+            flex-wrap: wrap
+        +sm
+            position: relative
+    &__col
+        &--left
+            width: 100%
+            max-width: 194px
+            margin-right: 20px
+            +lg
+                max-width: 146px
+            +md
+                order: -1
+            +sm
+                position: absolute
+                top: 6px
+                left: 35px
+                right: 0
+        &--center
+            width: 100%
+            max-width: 830px
+            +lg
+                max-width: 624px
+            +md
+                order: 2
+                margin: 12px auto 0
+                max-width: 700px
+            +sm
+                min-height: 40px
+                margin-top: 0
+                margin-bottom: 6px
+                order: 1
+                min-width: 100%
+        &--right
+            max-width: 150px
+            +md
+                order: 1
+            +sm
+                max-width: 280px
+                flex: 1 1 100%
+                margin: 0 auto
+                order: 2
+    &__logo
+        width: 100%
+        max-width: 194px
+
+.nav-list
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+    z-index: 11
+    +sm
+        display: none
+        position: absolute
+        top: 90px
+        left: -19px
+        right: -23px
+        flex-wrap: wrap
+        background-color: $colorBlue
+        padding: 10px 23px 10px 19px
+    &__item
+        position: relative
+        margin: -12px 12px -12px 0
+        min-height: 56px
+        +sm
+            min-height: 20px
+            margin: 0
+            &:not(:last-child)
+                margin-bottom: 10px
+        &.arrow
+            &::after
+                content: ''
+                position: absolute
+                top: 26px
+                right: 0
+                border-top: 5px solid $colorWhite
+                border-right: 5px solid transparent
+                border-left: 5px solid transparent
+                transition: transform .2s
+            +lg
+                &::after
+                    border-top: 3px solid $colorWhite
+                    border-right: 3px solid transparent
+                    border-left: 3px solid transparent
+                .nav-list__link
+                    padding-right: 12px
+            +sm
+                &::after
+                    top: 11px
+            .nav-list__link
+                padding-right: 20px
+
+        .dropdown-list
+            position: absolute
+            top: 56px
+            left: -9000px
+            min-width: 90px
+            opacity: 0
+            transition: opacity .2s
+            z-index: -1
+            +sm
+                position: static
+                width: 100%
+                display: none
+        &:hover
+            .dropdown-list
+                top: 56px
+                left: 0
+                opacity: 1
+                +sm
+                    display: block
+
+            &.arrow
+                &::after
+                    transform: rotate(180deg)
+    &__link
+        font-size: 16px
+        font-weight: 500
+        color: $colorWhite
+        line-height: 55px
+        text-decoration: none
+        cursor: pointer
+        +lg
+            font-size: 14px
+        +sm
+            line-height: 20px
+
+.nav
+    position: relative
+    padding-right: 85px
+    padding-left: 4px
+    z-index: 9
+    &.is-open
+        z-index: 10
+    +md
+        padding-right: 44px
+    +sm
+        min-height: 40px
+        padding-right: 0
+        &__toggle
+            position: absolute
+            top: 12px
+            left: 4px
+            z-index: 10
+
+.search-block,
+.add-block
+    position: absolute
+    top: 0
+    bottom: 0
+    text-align: center
+    line-height: 2.4
+    cursor: pointer
+    +sm
+        line-height: 1.4
+    &__btn
+        font-size: 0
+        background: none
+        outline: none
+        +sm
+            padding-top: 11px
+        .icon
+            width: 20px
+            height: 20px
+            fill: $colorWhite
+            &.icon-search
+                width: 18px
+                height: 18px
+
+.search-block
+    right: 44px
+    left: 0
+    text-align: right
+    padding-right: 12px
+    z-index: 9
+    .search-btn
+        position: relative
+        z-index: 10
+    &.is-open
+        z-index: 12
+    +md
+        right: 0
+    +sm
+        padding-right: 0
+
+.add-block
+    width: 44px
+    right: 0
+
+.form-block
+    overflow: hidden
+    position: absolute
+    top: -4px
+    right: 0
+    left: 0
+    width: 100%
+    max-width: 788px
+    border-radius: 3px
+    z-index: 9
+    &.is-open
+        z-index: 11
+        .form
+            z-index: 11
+            transform: translateX(0)
+    +sm
+        top: 0
+
+.dropdown-list
+    background-color: $colorBlue
+    &__item
+        +sm
+            font-size: 14px
+        &:not(:last-child)
+            border-bottom: 1px solid $colorWhite
+    &__link
+        display: block
+        padding: 5px 10px
+        color: $colorWhite
+        text-decoration: none
+        background-color: transparent
+        transition: background-color .2s
+        &:hover
+            background-color: rgba($colorWhite, .2)
+
+.account-list
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +sm
+        padding-left: 4px
+    &__item
+        position: relative
+        &:not(:last-child)
+            margin-right: 27px
+        &.counter
+            .account-list__text
+                display: block
+        &.image
+            .account-list__link
+                width: 32px
+                height: 32px
+                border-radius: 50%
+                overflow: hidden
+                background: no-repeat 50% 50%
+                background-size: cover
+
+    &__link
+        display: block
+        font-size: 0
+        .icon
+            fill: $colorWhite
+            &.icon-mail
+                width: 20px
+                height: 18px
+            &.icon-bell
+                width: 16px
+                height: 20px
+    &__text
+        display: none
+        position: absolute
+        top: -6px
+        right: -8px
+        padding: 1px 2px 0 1px
+        border-radius: 2px
+        background-color: $colorRed
+        font-size: 10px
+        font-weight: 400
+        color: $colorWhite

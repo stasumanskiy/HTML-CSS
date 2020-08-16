@@ -1,0 +1,57 @@
+.admin
+    display: flex
+    margin-left: 20px
+    +sm
+        order: -1
+
+.login,
+.basket
+    display: block
+    text-align: center
+    text-decoration: none
+    font-family: $montserrat
+    &__icon
+        display: block
+        font-size: 0
+        margin-bottom: 7px
+        .icon
+            fill: $color-mine-shaft
+            width: 44px
+            height: 44px
+            +sm   
+                width: 30px
+                height: 30px
+        svg
+            width: 44px
+            height: 44px
+            +sm   
+                width: 30px
+                height: 30px
+    &__text
+        font-size: .875em
+        font-weight: 500
+        color: $color-gray
+        +sm
+            font-size: .750em
+    
+.basket
+    margin-left: 30px
+    +sm
+        margin-left: 20px
+    position: relative
+    margin-right: 13px
+    &__quantity
+        position: absolute
+        top: -8px
+        right: -8px
+        display: block
+        content: ''
+        width: 18px
+        height: 18px
+        border-radius: 50%
+        font-size: .625em
+        font-weight: 700
+        text-align: center
+        line-height: 1.8
+        color: $color-white
+        background-color: $color-cerulean                 

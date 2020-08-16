@@ -1,0 +1,37 @@
+//FONTS
+
+=fontpath($name, $name1, $file)
+	src: local($name), local($name1),
+	url("../fonts/" + $file + ".woff") format("woff"),
+	url("../fonts/" + $file + ".woff2") format("woff2")
+=fontdefault($style, $weight, $name)
+	font-family: $name
+	font-style: $style
+	font-weight: $weight
+
+//START
+
+@font-face
+	+fontdefault(normal, 400, 'SourceSansPro')
+	+fontpath('SourceSansPro-Regular', 'SourceSansPro-Regular', 'SourceSansPro-Regular')
+
+@font-face
+	+fontdefault(normal, 400, 'Montserrat')
+	+fontpath('Montserrat-Regular', 'Montserrat-Regular', 'Montserrat-Regular')	
+
+@font-face
+	+fontdefault(normal, 400, 'OpenSans')
+	+fontpath('OpenSans-Regular', 'OpenSans-Regular', 'OpenSans-Regular')	
+
+@font-face
+	+fontdefault(normal, 700, 'OpenSans')
+	+fontpath('OpenSans-Bold', 'OpenSans-Bold', 'OpenSans-Bold')	
+
+@font-face
+	+fontdefault(normal, 600, 'Montserrat')
+	+fontpath('Montserrat-Medium', 'Montserrat-Medium', 'Montserrat-Medium')
+
+@font-face
+	+fontdefault(normal, 700, 'Montserrat')
+	+fontpath('Montserrat-Bold', 'Montserrat-Bold', 'Montserrat-Bold')
+

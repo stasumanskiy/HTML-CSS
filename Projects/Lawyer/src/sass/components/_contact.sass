@@ -1,0 +1,114 @@
+.contact
+	padding: 78px 15px 72px
+	+sm
+		padding: 39px 15px 36px
+	&__wrap
+		background-color: $white
+		padding: 70px 110px 80px
+		+sm
+			padding: 0
+			background-color: transparent
+	&__row
+		display: flex
+		justify-content: space-between
+	&__title
+		text-align: center
+		margin-bottom: 50px
+		+sm
+			margin-bottom: 25px
+	&__col
+		max-width: 355px
+		&:first-child
+			margin-right: 15px
+		&:last-child
+			margin-left: 15px		
+	&__title-form
+		font-family: $roboto
+		color: $blue
+		font-weight: 600
+		letter-spacing: 10px
+		&:after
+			display: none	
+	&__description
+		display: block
+		font-size: 16px
+		font-style: italic
+		margin-bottom: 40px
+		font-weight: 500
+		color: $blue
+	&__description_mod
+		color: $yellow		
+	
+	.post-form__input
+		color: #858687
+		border-bottom-color: #858687
+	.post-form__label
+		color: #858687
+
+.address
+	&__item
+		position: relative
+		padding-left: 30px
+		font-size: 16px
+		font-style: italic
+		margin-bottom: 20px
+		font-weight: 500
+		&:first-child
+			font-size: 18px
+			font-weight: 600
+			+sm
+				font-size: 16px
+		+sm
+			font-size: 15px		
+		span
+			display: block
+	&__icon
+		position: absolute
+		left: 0
+		top: 0px
+		font-size: 18px
+		.icon
+			fill: $blue		
+
+.success,
+.success-error
+	position: absolute
+	display: none
+	bottom: -18px
+	left: 0
+	width: 100%
+	text-align: center
+	font-size: 12px
+	font-family: sans-serif
+
+.success
+	color: #000
+
+.success-error
+	color: red
+
+.post-form__col textarea:focus ~ .post-form__label,
+.post-form__col textarea:valid ~ .post-form__label,
+.post-form__col input:focus ~ .post-form__label,
+.post-form__col input:valid ~ .post-form__label,
+.post-form__col input.error ~ .post-form__label,
+.post-form__col input.error ~ .post-form__label
+	opacity: 0
+
+.post-form__textarea.error,
+.post-form__input.error
+	border-bottom-color: red
+
+.post-form__textarea.valid,
+.post-form__input.valid
+	border-bottom-color: rgba(87,193,71,1)
+
+#name-error,
+#email-error,
+#phone-error
+	position: absolute
+	left: 15px
+	bottom: -17px
+	font-size: 12px
+	color: red
+	transition: color .3s

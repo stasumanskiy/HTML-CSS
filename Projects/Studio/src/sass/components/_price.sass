@@ -1,0 +1,177 @@
+.price 
+	width: 100%
+
+.price
+    padding: 150px 0 0
+    font-family: $openSans
+    +md
+        padding: 120px 0 0
+    &__wrap
+        max-width: 800px
+        margin: 0 auto 
+        padding: 25px 20px 30px 
+        background-color: rgba(255,255,255,.75)
+        box-shadow: 0 0 15px rgba(0,0,0,.3)
+        border-radius: 4px
+    &__title
+        text-align: center
+        margin-bottom: 20px
+        +md
+            margin-bottom: 10px   
+    &__text
+        text-align: center 
+        margin-bottom: 20px  
+        +md
+            margin-bottom: 10px
+    &__header
+        display: flex
+        -ms-align-items: center
+        align-items: center
+        justify-content: space-between
+        max-width: 100%
+        margin: 0 auto 15px
+    &__header-circle 
+        position: relative
+        display: block
+        margin: 0 20px
+        border: 2px solid gold
+        border-radius: 50%
+        background-color: inherit
+        font-size: 0
+        margin-top: 2px
+        min-width: 16px
+        height: 16px
+        flex: none
+        .icon 
+            position: absolute
+            width: 10px
+            height: 10px
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            opacity: .8
+            fill: $black
+    &__row 
+        display: flex
+        justify-content: center
+        margin-bottom: 20px
+        +sm
+            flex-direction: column
+    &__col 
+        +md 
+            margin: 10px
+        margin: 20px
+        &:first-child 
+            margin-right: 20px
+            +md 
+                margin-right: 10px
+        &:last-child
+            margin-left: 20px
+            +md
+                margin-left: 10px
+        &.price__item 
+            line-height: 1.6
+    &__item
+        display: flex
+        align-items: flex-start
+        justify-content: flex-start
+        margin-bottom: 5px
+        .strong
+            display: inline-block
+            margin-left: 3px
+            font-weight: 700
+    &__button
+        text-align: center        
+    &__btn 
+        position: relative
+        border: none
+        background: none
+        color: $black
+        font-size: 16px
+        border: 1px solid $black
+        border-radius: 4px
+        padding: 15px
+        cursor: pointer
+        transition: color .3s
+        outline: none
+        z-index: 0
+        &:before 
+            position: absolute
+            content: ''
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: rgba(0,0,0,.9)
+            transform: scaleX(0)
+            transition: transform .3s
+            z-index: -1
+        &:hover 
+            color: #fff
+            &:before
+                transform: scaleX(1)
+            &:disabled
+                color: $black
+                cursor: default
+                &:before
+                    transform: scaleX(0)
+
+.contact
+    &.hide
+        position: fixed
+        min-width: 280px 
+        min-height: 0px
+        max-width: 600px
+        width: 100%
+        border-radius: 5px
+        background: $white
+        top: 50%
+        left: 50%
+        display: none
+        opacity: 1
+        z-index: 100
+        transform: translate(-50%, -50%)
+        padding: 0
+    &__bg
+        padding: 50px 30px    
+    &__form
+        position: relative    
+    &__close   
+        background: none
+        position: absolute
+        width: 20px
+        height: 20px
+        top: -30px
+        right: -10px
+        text-align: right
+        .icon
+            transition: fill .3s
+            width: 20px
+            height: 20px
+            fill: gray
+        &:hover    
+            .icon
+                fill: $black
+    &__select            
+        width: 100%
+        border: none
+        border-bottom: 1px solid rgba(0,0,0,.5)
+        padding: 5px 8px
+        outline: none
+        font-size: 15px
+        font-weight: 400
+        color: $black
+
+
+.overlay
+	z-index: 90
+	position: fixed
+	background-color: $black
+	opacity: 0.8
+	filter: alpha(opacity=80)
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	cursor: pointer
+	display: none                

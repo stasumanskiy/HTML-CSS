@@ -1,0 +1,46 @@
+.header
+    background-color: $crimson
+    padding: 20px 0
+    +sm
+        padding: 15px 0
+    &__wrap
+        display: flex
+        align-items: center
+        justify-content: space-between
+        // +sm
+        //     flex-wrap: wrap
+    &__logo
+        width: 122px
+        max-height: 45px
+        svg
+            width: 100%   
+        +sm
+            width: 90px
+
+
+.logo
+    display: block
+
+.clock
+    display: flex
+    align-items: flex-start
+    margin-left: 15px
+    +sm
+        // flex-wrap: wrap
+        margin-left: 10px
+    &__icon
+        margin-right: 10px
+        font-size: 0
+        svg 
+            width: 17px
+            height: 17px
+            fill: $white
+    &__text
+        font-size: 14px
+        font-weight: 300
+        line-height: 24px
+        color: $white
+        span
+            font-weight: 700
+        +sm
+            font-size: 11px    

@@ -1,0 +1,43 @@
+.callback
+	&__bg
+		position: relative
+		width: 100%
+		height: 0
+		padding-bottom: 80%
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		background-size: cover
+		+md
+			min-height: 700px
+		+sm	
+			min-height: 540px
+
+	&__wrap
+		// max-width: 1200px
+		width: 100%
+		position: absolute
+		top: 55%
+		left: 50%
+		transform: translate(-50%, -50%)
+		text-align: center
+		padding: 0 15px
+		+md
+			top: 50%
+	&__title
+		width: 100%
+		margin-bottom: 72px
+		transition: opacity .3s
+		+md
+			font-size: 60px
+			line-height: 1
+			font-size: 50px
+		+sm
+			margin-bottom: 39px
+
+.hide
+	opacity: 0
+				
+.show
+	opacity: 1
+	z-index: 5
+	

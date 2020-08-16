@@ -1,0 +1,38 @@
+.rating {
+    padding: 42px 0 32px;
+
+    &__bg {
+        display: block;
+        max-width: 255px;
+        position: relative;
+        svg {
+            width: 100%;
+            max-height: 128px;
+        }
+    }
+
+    &__icon {
+        display: block;
+        max-width: 65px;
+        height: 40px;
+        position: absolute;
+        bottom: -22px;
+        right: 47%;
+        transition: transform 1s;
+        transform-origin: 90% 10px;
+        svg {
+            width: 100%;
+            height: 19px;
+        }
+    }
+
+    &__text {
+        max-width: 230px;
+    }
+
+    &__counter {
+        font-size: 50px;
+        font-weight: 900;
+        color: $color-cerulean;
+    }
+}

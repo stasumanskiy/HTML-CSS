@@ -1,0 +1,74 @@
+body
+	background: $white
+	min-width: 320px
+	line-height: 1.4
+	font-family: $montserrat
+	font-weight: 400
+	&.is-hidden
+		overflow: hidden
+
+.wrapper
+	width: 100%
+	&.wrapper--mod
+		background-color: $green
+
+
+.inner		
+	max-width: 1410px
+	margin: 0 auto
+	padding: 0 15px
+
+.inner-s		
+	max-width: 1200px
+	margin: 0 auto
+	padding: 0 15px
+
+.title-lg
+	text-transform: uppercase
+	font-family: $montserrat
+	font-size: 100px
+	font-weight: 600
+	line-height: 1.1
+	color: $white
+	+sm
+		font-size: 45px
+
+.title-md
+	text-transform: uppercase
+	font-family: $montserrat
+	font-size: 36px
+	font-weight: 700
+	line-height: 1.1
+	color: $dark
+	+sm
+		font-size: 20px
+
+.title-sm
+	text-transform: uppercase
+	font-family: $montserrat
+	font-size: 18px
+	font-weight: 700
+	line-height: 1.1
+	color: $dark
+	+sm
+		font-size: 16px
+	&--mod
+		color: $white
+		+sm
+			font-size: 16px
+
+.border
+	position: relative
+	margin-bottom: 35px
+	&:after
+		position: absolute
+		left: 0
+		bottom: -15px
+		width: 70px
+		height: 1px
+		content: ''
+		background-color: $dark
+
+.hide
+	+sm
+		display: none			

@@ -1,0 +1,182 @@
+.company
+	background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,.9) 100%)
+	&__inner
+		height: 100%
+	&__wrap
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		padding: 70px 0 90px
+		+sm
+			padding: 40px 0
+	&__row
+		display: flex
+		justify-content: space-between
+		&.company__row_margin
+			margin-top: 60px
+		+md
+			flex-wrap: wrap
+		+sm
+			&.company__row_margin
+				margin-top: 90px
+		+xs
+			&.company__row_margin
+				margin-top: 15px			
+	&__col
+		position: relative
+		&.company__col_flex
+			flex: 1 1 65%
+			+md
+				flex: 1 1 100%
+		&.col-flex
+			display: flex
+			flex-wrap: wrap
+			+sm
+				margin-bottom: 20px
+	&__title
+		max-width: 290px
+		text-transform: uppercase
+		letter-spacing: -1px
+		color: $yellow
+	&__image
+		position: absolute
+		top: 130px
+		left: 25%
+		width: 55%
+		height: 0
+		padding-bottom: 35%
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: 50% 50%
+		z-index: 1
+		&:after
+			position: absolute
+			top: 0
+			left: 0
+			content: ''
+			width: 100%
+			height: 100%
+			background-color: rgba(0,0,0,.4)
+		+md
+			top: 20px
+			left: 50%
+			transform: translate(-50%,0)
+		+sm
+			width: 100%
+			min-height: 200px	
+	&__contain
+		position: relative
+		max-width: 650px
+		margin: 180px auto 0
+		z-index: 2
+		+sm
+			margin-top: 40px
+.block
+	max-width: 300px
+	p
+		font-size: 14px
+		color: #d4d4d4
+		padding: 15px
+		+sm
+			font-size: 12px
+			padding: 10px
+
+
+.box
+	margin-bottom: 50px
+	p
+		display: inline-block
+		padding: 20px 15px
+		font-size: 16px
+		font-weight: 600
+		color: $white
+		+sm
+			font-size: 14px
+			padding: 15px 10px
+	+sm
+		margin-bottom: 25px
+		margin-right: 10px		
+
+.box
+	position: relative
+	&__line
+		overflow: hidden
+		position: absolute
+		display: block
+		&.box__line_top 
+			top: 0
+			left: 0
+			height: 4px
+			width: 100%
+		&.box__line_right 
+			right: 0
+			top: 0
+			height: 100%
+			width: 4px
+		&.box__line_bottom 
+			bottom: 0
+			right: 0
+			height: 4px
+			width: 100%
+		&.box__line_left 
+			left: 0
+			bottom: 0
+			width: 4px
+			height: 100%
+	&__top-side,
+	&__right-side,
+	&__bottom-side,
+	&__left-side
+		position: absolute
+		height: 4px
+		background-color: $yellow
+	&__top-side
+		transform: translateX(-100%)
+		height: 4px
+		width: 100%
+	&__right-side
+		transform: translateY(-100%)
+		height: 100%
+		width: 4px
+	&__bottom-side
+		transform: translateX(100%)
+		height: 4px
+		width: 100%
+	&__left-side
+		transform: translateY(100%)
+		width: 4px
+		height: 100%
+
+.button
+	position: relative
+	overflow: hidden
+	display: block
+	min-width: 250px
+	&__btn
+		position: relative
+		display: block
+		text-transform: uppercase
+		padding: 13px 15px 11px
+		color: $white
+		z-index: 2
+		border-bottom: 4px solid $yellow
+		box-sizing: border-box
+		transition: color .3s
+		white-space: nowrap
+		text-align: center
+	&.is-show
+		.button__btn
+			color: black
+			transition-delay: 1.2s
+	&__bg
+		position: absolute
+		left: 0
+		bottom: 0
+		display: block
+		background-color: $yellow
+		width: 100%
+		height: 100%
+		transform: translateY(100%)
+		z-index: 1
+
+

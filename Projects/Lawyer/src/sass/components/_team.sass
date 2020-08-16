@@ -1,0 +1,73 @@
+.team
+	padding: 92px 0 52px
+	+sm
+		padding: 46px 0 40px
+	&__title
+		text-align: center
+		padding-bottom: 9px
+		margin-bottom: 45px
+		+sm
+			margin-bottom: 25px
+	&__wrap
+		padding: 0 25px
+		+md
+			padding: 0	
+	&__row
+		display: flex
+		+md
+			flex-wrap: wrap
+			justify-content: center
+		+xs	
+			align-items: center
+			flex-direction: column
+	&__col
+		display: flex
+		+xs
+			flex-direction: column
+.team__col:last-child,
+.team__col .card-lawyer:last-child
+	margin-left: 24px
+	+md
+		margin-left: 0
+
+.card-lawyer
+	max-width: 233px
+	margin-bottom: 50px
+	background-color: $white
+	border: 1px solid #cdcdcd
+	+md
+		margin: 0 12px 50px
+	+sm
+		margin: 0 12px 30px
+	+xs
+		margin: 0 0 30px
+	&__header
+		width: 100%
+		img
+			display: block
+			max-width: 100%
+	&__text
+		padding: 15px
+		font-size: 15px
+		color: $black
+	&__title
+		margin-bottom: 10px
+	p
+		font-size: 14px
+		font-weight: 500
+		font-style: italic
+
+
+.team__row_mod
+	position: relative
+	&:after
+		position: absolute
+		content: ''
+		left: 50%
+		bottom: -3px
+		width: 68px
+		height: 2px
+		transform: translate(-50%, -50%)
+		background: $blue
+		+sm
+			display: none

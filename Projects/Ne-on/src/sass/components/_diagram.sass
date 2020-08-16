@@ -1,0 +1,105 @@
+.diagram
+	position: relative
+	padding-top: 150px
+	color: $white
+	&:before
+		position: absolute
+		top: 63.5%
+		left: 50%
+		content: ''
+		width: 2000px
+		height: 500%
+		background-color: $blue
+		transform: translate(-50%, -50%) rotate(-60deg)
+		z-index: 1
+	&__container
+		position: relative
+		z-index: 2
+	&__chart
+		position: relative	
+	&__left-cube
+		position: absolute
+		display: inline-block
+		top: 330px
+		left: 0
+		width: 265px
+		z-index: 2
+		transform: translate(0, -50%)
+		img
+			width: 100%
+	&__right-cube
+		position: absolute
+		display: inline-block
+		top: 120px
+		right: 13%
+		width: 100px
+		z-index: 2
+		transform: translate(50%, -50%)
+		img
+			width: 100%
+
+.charts-tabs
+	&__title
+		font-weight: 500
+	&__block
+		header
+			p
+				font-size: 24px
+				line-height: 1.5
+				font-weight: 500
+				margin-bottom: 30px			
+	&__list
+		display: flex
+		align-items: flex-start
+		justify-content: flex-start
+		margin-bottom: 35px
+	&__item
+		padding: 10px 22px
+		text-transform: uppercase
+		font-weight: 500
+		font-size: 24px
+		color: $white
+		border: 5px solid $blue_border
+		border-radius: 5px
+		transition: background-color .3s, border-color .3s
+		&:not(:first-child)
+			margin-left: 24px
+		&:hover
+			background-color: $blue_light
+			border-color: $blue_light
+		&.is-active
+			background-color: $blue_light
+			border-color: $blue_light
+				
+.chart
+	height: 560px
+	&__wrap
+		height: 100%
+
+.highcharts-background
+	fill: $blue
+
+.highcharts-point.highcharts-color-0
+	fill: $blue_light
+	stroke: $blue_light
+	height: 20px
+	width: 8px
+	// border-radius: 10px
+
+.bar
+	fill: red /* changes the background */
+	height: 21px
+	transition: fill .3s ease
+	cursor: pointer
+	font-family: Helvetica, sans-serif
+
+.bar text
+	color: black
+
+.bar:hover,
+.bar:focus 
+	fill: black
+
+.bar:hover text,
+.bar:focus text
+	fill: red

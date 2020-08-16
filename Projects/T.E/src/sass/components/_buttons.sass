@@ -1,0 +1,51 @@
+.btn
+    border: none
+    outline: none
+    font-family: $roboto
+    font-size: 13px
+    font-weight: 400
+    color: $colorWhite
+    text-transform: uppercase
+    &--y
+        background: $colorYellow
+
+.toggle
+    display: none
+    position: relative
+    width: 18px
+    height: 16px
+    background: none
+    outline: none
+    overflow: hidden
+    +sm
+        display: block
+    &__line
+        display: block
+        position: absolute
+        width: 100%
+        height: 2px
+        left: 0
+        border-radius: 3px
+        background-color: $colorWhite
+        transition: opacity .2s, transform .3s
+        &.first
+            top: 2px
+        &.second,
+        &.third
+            top: 7px
+            left: 0
+            transform: rotate(0)
+        &.four
+            bottom: 2px
+    &.is-active
+        .toggle__line
+            &.first
+                opacity: 0
+                transform: translateY(-6px)
+            &.four
+                opacity: 0
+                transform: translateY(6px)
+            &.second
+                transform: rotate(45deg)
+            &.third
+                transform: rotate(-45deg)

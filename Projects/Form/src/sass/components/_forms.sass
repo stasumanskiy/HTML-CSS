@@ -1,0 +1,295 @@
+.form
+	max-width: 457px
+	&__row
+		max-width: 384px
+		margin-bottom: 17px
+		text-align: center
+		+md
+			max-width: 214px
+			margin-bottom: 11px
+	&__row--mod
+		margin-bottom: 54px
+		+md
+			margin-bottom: 25px
+	&__btn
+		position: relative
+		font-size: 26px
+		opacity: 0
+		z-index: -4
+		&.is-show
+			z-index: 2
+			opacity: 1
+		+md
+			margin-left: 0		
+
+.label
+	position: relative
+	display: block
+	max-width: 384px
+	min-width: 282px
+	text-align: center
+	z-index: 3
+	+md
+		max-width: 214px
+		min-width: auto
+	&__input
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		&:checked ~ .label__text.label__text--pink
+			color: $white
+			background-color: transparent
+			&:hover
+				border: 1px solid $gray
+			&:after
+				background-color: $pink
+
+		&:checked ~ .label__text.label__text--orange
+			color: $white
+			background-color: transparent
+			&:hover
+				border: 1px solid $gray
+			&:after
+				background-color: $orange
+		&:checked ~ .label__text.label__text--yellow
+			color: $white
+			background-color: transparent
+			&:hover
+				border: 1px solid $gray
+			&:after
+				background-color: $yellow
+		&:checked ~ .label__text.label__text--blue
+			color: $white
+			background-color: transparent
+			&:hover
+				border: 1px solid $gray
+			&:after
+				background-color: $blue
+		&:checked ~ .label__icon .icon
+			fill: $white
+	&__text
+		display: block
+		width: 100%
+		height: 80px
+		padding: 20px 20px 22px
+		border: 1px solid $gray
+		border-radius: 12px
+		font-size: 26px
+		font-weight: 600
+		letter-spacing: 1px
+		color: $dark
+		cursor: pointer
+		background-color: $white
+		transition: border-color .3s, color .3s
+		+md
+			height: 47px
+			padding: 11px 20px 13px
+			font-size: 16px
+		&:hover
+			&.label__text--pink
+				border: 1px solid $pink
+			&.label__text--orange
+				border: 1px solid $orange
+			&.label__text--yellow
+				border: 1px solid $yellow
+			&.label__text--blue
+				border: 1px solid $blue
+		&:after
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			content: ''
+			border-radius: 12px
+			z-index: -1
+			background-color: transparent
+			transition: color .3s, background-color .3s
+	&__icon
+		position: absolute
+		display: inline-block
+		top: 50%
+		left: 50%
+		margin-left: -100px
+		transform: translate(-50%, -50%)
+		+md
+			margin-left: -60px
+		.icon
+			width: 36px
+			height: 46px
+			fill: $dark
+			transition: fill .3s
+			+md
+				width: 16px
+				height: 26px
+
+.contact-form
+	&__row--mod
+		display: flex
+		.label
+			min-width: auto
+	&__col
+		flex: 1 1 50%
+		+md
+			max-width: 130px
+	&__col--mod
+		margin-right: 15px
+		+md
+			margin-right: 8px	
+	&__row
+		position: relative
+		margin-top: 34px
+		max-width: 460px
+		+md
+			margin-top: 19px
+		input[type="password"]
+			-webkit-text-security: square !important
+		&.margin--top
+			margin-top: 19px
+	&__box
+		position: relative
+		display: block
+		&.error
+			.contact-form__error
+				z-index: 1
+				opacity: 1
+		&.valid
+			.contact-form__error
+				z-index: -1
+				opacity: 0			
+	&__label
+		position: absolute
+		left: 4px
+		top: -26px
+		font-size: 18px
+		font-weight: 600
+		color: $dark
+		+md
+			top: -17px
+			font-size: 11px
+	&__input
+		display: block
+		height: 80px
+		width: 100%
+		padding: 20px 17px 22px
+		border: 1px solid $gray
+		border-radius: 12px
+		font-size: 18px
+		font-weight: 200
+		color: $dark
+		box-sizing: border-box
+		&:focus ~ .contact-form__error
+			z-index: -1
+			opacity: 0
+		+md
+			border-radius: 10px
+			padding: 15px 17px 16px
+			font-size: 11px
+			height: 47px	
+	&__error
+		position: absolute
+		display: block
+		top: 1px
+		right: 1px
+		left: 1px
+		bottom: 1px
+		padding-left: 17px
+		border-radius: 12px
+		font-size: 18px
+		font-weight: 200
+		letter-spacing: 1px
+		color: $red
+		vertical-align: middle
+		line-height: 76px
+		background-color: $white
+		overflow: hidden
+		z-index: -1
+		opacity: 0
+		transition: opacity .3s
+		+md
+			line-height: 45px
+			font-size: 11px
+	&__btn
+		font-size: 26px
+		height: 80px
+		box-sizing: border-box
+		+md
+			height: 47px
+			border-radius: 20px
+			padding: 14px 20px 16px
+		&:disabled
+			padding: 20px 33px 22px
+			cursor: default
+			+md
+				padding: 15px 21px 14px
+			&.btn--pink
+				border: 1px solid $pink
+				background-color: transparent
+				color: $silver	
+			&.btn--orange
+				border: 1px solid $orange
+				background-color: transparent
+				color: $silver	
+			&.btn--yellow
+				border: 1px solid $yellow
+				background-color: transparent
+				color: $silver	
+			&.btn--blue
+				border: 1px solid $blue
+				background-color: transparent
+				color: $silver	
+
+.checkbox
+	position: relative
+	&__input
+		position: absolute
+		left: 0
+		top: 0
+		opacity: 0
+		&:checked ~ .checkbox__label-text:after
+			opacity: 1
+			z-index: 2
+	&__label-text
+		display: block
+		padding-left: 26px
+		font-family: $museo
+		font-weight: 300
+		font-size: 13px
+		color: #000
+		+md
+			padding-left: 18px
+			font-size: 8px
+		&:before
+			position: absolute
+			top: 5px
+			left: 2px
+			width: 13px
+			height: 13px
+			content: ''
+			border: 1px solid $black
+			border-radius: 2px
+			cursor: pointer
+			+md
+				top: 2px
+				width: 8px
+				height: 8px
+		&:after
+			position: absolute
+			top: 6px
+			left: 4px
+			width: 10px
+			height: 10px
+			content: ''
+			background-image: url(../img/check-symbol.png)
+			background-repeat: no-repeat
+			background-size: cover
+			background-position: 50% 50%
+			opacity: 0
+			z-index: -1
+			cursor: pointer
+			transition: opacity .3s
+			+md
+				top: 3px
+				width: 5px
+				height: 5px

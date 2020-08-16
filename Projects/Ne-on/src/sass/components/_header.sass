@@ -1,0 +1,76 @@
+.header
+	position: relative
+	z-index: 3
+	&__inner
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 60px
+		+md
+			padding: 40px 40px 100px		
+.logo
+	margin-right: 20px
+	&__link
+		display: flex
+		align-items: center
+	&__text-block
+		margin-left: 10px	
+	&__title
+		font-size: 24px
+		line-height: .9
+		color: $white
+		font-weight: 500
+	&__title--color
+		color: $blue_middle
+		margin-left: -5px
+	&__title--size
+		font-size: 12px
+
+.nav
+	position: relative
+	// padding-right: 80px
+	+sm
+		display: none
+	&__menu
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+	&__item
+		&:not(:first-child)
+			margin-left: 5px
+	&__link
+		font-size: 16px
+		font-weight: 400
+		line-height: .9
+		color: $white
+		transition: color .3s, background-color .3s
+		padding: 8px 20px
+		border-radius: 15px
+		&.is-active
+			color: $dark_blue
+			background-color: $white
+		+md
+			font-size: 14px
+			padding: 6px 10px
+.lenguage
+	// position: absolute
+	// top: -8px
+	// right: 0
+	background-color: $white
+	padding: 8px 20px
+	border-radius: 15px
+	margin-left: 10px
+	+md
+			padding: 6px 10px
+	&__link
+		font-size: 16px
+		font-weight: 400
+		line-height: .9
+		color: $dark_blue
+		transition: color .3s, background-color .3s, border-color .3s, opacity .3s
+		border-bottom: transparent
+		&:hover
+			border-bottom: 1px solid $dark_blue
+		&.is-hide
+			opacity: 0
+			display: none

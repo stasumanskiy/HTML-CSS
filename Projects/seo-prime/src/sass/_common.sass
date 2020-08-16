@@ -1,0 +1,108 @@
+body
+	background-color: $colorWhite
+	min-width: 320px
+	font-size: 14px
+	font-weight: 400
+	font-family: $roboto
+	line-height: 1.4
+	&.is-open
+		position: fixed
+		width: 100%
+		height: 100%
+		overflow: hidden
+		padding-right: 17px
+		+md
+			padding-right: 0
+
+.out
+	position: relative
+	max-width: 1920px
+	margin: 0 auto
+	overflow: hidden
+
+.overlay
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	width: 100%
+	background-color: rgba(0, 0, 0, .75)
+	cursor: pointer
+	transform: translateX(-100%)
+	transition: transform .8s ease-in-out
+	z-index: 9
+	&.is-open
+		transform: translateX(0)
+
+.title-lg
+	font-size: 61px
+	font-weight: 700
+	line-height: 1
+	color: $colorWhite
+	+sm
+		font-size: 37px
+
+.title-m
+	font-size: 25px
+	font-weight: 400
+	line-height: 1.2
+	color: $colorDark
+	+sm
+		font-size: 19px
+
+.container
+	&--mod
+		+sm
+			padding: 0
+
+.modal
+	border-radius: 0
+	border-top-right-radius: .3em
+	border-top-left-radius: .3em
+	&-title
+		font-weight: 400
+	&-content
+		border-radius: 0
+		border-top-right-radius: .3em
+		border-top-left-radius: .3em
+	&-header
+		padding: 20px 30px
+		border-bottom: 1px solid rgba(112,112,112,.58)
+	&-dialog
+		max-width: 1108px !important
+	&-body
+		padding-top: 30px
+	&-description
+		margin-bottom: 90px
+		padding: 0 15px
+		font-size: 21px
+		color: $colorBlack
+		+sm
+			margin-bottom: 36px
+	&-footer
+		padding: 31px 39px 27px
+		border-bottom-right-radius: 0
+		border-bottom-left-radius: 0
+		border-top: 1px solid rgba(112,112,112,.58)
+		.btn
+			padding: 13px 30px
+			border-color: $colorYellow
+			&--pdf
+				color: $colorYellow
+	.close
+		font-weight: 400
+		font-size: 30px
+		text-shadow: none
+		opacity: 1
+		&:hover
+			span
+				color: $colorYellow
+		span
+			color: #808080
+			transition: color .3s
+	.slider
+		margin-bottom: 75px
+		.owl-dots
+			bottom: -55px
+			+sm
+				bottom: -65px

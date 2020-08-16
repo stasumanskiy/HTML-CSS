@@ -1,0 +1,130 @@
+.calculator
+    padding: 80px 15px 50px
+    +md
+        padding: 80px 0 50px
+    &__title
+        +md
+            margin-right: 15px
+            margin-left: 15px
+    &__wrap
+        max-width: 1126px
+        margin-bottom: 50px
+        padding: 0
+        background-color: $white  
+        border: 1px solid $gray
+        +sm
+            padding: 0 15px
+            margin-bottom: 30px
+
+.sum
+    position: relative
+    display: inline-block
+    padding-right: 35px
+    margin-left: 73px
+    font-weight: 600
+    &::after
+        position: absolute
+        right: 10px
+        top: 47%
+        transform: translate(50%, -50%)
+        width: 20px
+        height: 40px
+        content: ''
+        background-image: url(../img/currency.png)
+        background-repeat: no-repeat
+        background-position: 50% 50%
+    +sm
+        display: block
+        margin-left: 0
+        margin-top: 31px
+        &::after
+            top: 47%
+            right: 50%
+            margin-right: -47px
+
+.sign
+    display: inline-block
+    margin-left: 10px
+    font-weight: 300  
+    font-family: $SFUIDisplay          
+
+.form-calc
+    padding-bottom: 50px
+    &__wrap
+        padding: 0 73px
+        +sm
+            padding: 0
+    &__title
+        +sm
+            padding: 0 0 41px
+            margin-bottom: 20px
+    &__wrap-title
+        margin-bottom: 30px
+        +sm
+            text-align: center          
+    &__sum-block         
+        padding-top: 23px
+    &__row
+        display: flex
+        justify-content: space-between
+    &__row--first
+        margin-bottom: 71px
+        .form-calc__col
+            text-align: center
+    &__row--second
+        .form-calc__col:not(:last-child)    
+            margin-right: 30px       
+        +sm
+            flex-wrap: wrap
+            .form-calc__col
+                flex: 1 1 100%
+                max-width: 100%
+                &:not(:last-child)
+                    margin-right: 0
+                    margin-bottom: 50px 
+    &__col
+        flex: 1 1 33.33%
+        max-width: 268px
+
+.range
+    &__title
+        margin-bottom: 9px   
+    &__box    
+        font-family: $roboto
+        font-size: 20px
+        font-weight: 300
+        color: $dark
+    &__input         
+        max-width: 35px
+        font-family: $roboto
+        font-size: 20px
+        font-weight: 300
+        color: $dark
+    &__slider
+        margin-top: 17px
+        margin-bottom: 15px  
+    &__footer
+        display: flex
+        justify-content: space-between
+    &__footer
+        font-size: 15px
+        font-weight: 300
+        color: $dark    
+
+.ui-slider
+    height: 4px
+    border-radius: 2px
+    background-color: $gray 
+    .ui-slider-handle
+        top: -11px
+        width: 23px
+        height: 23px
+        border-radius: 50%
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.26)
+        background-color: $white
+        cursor: pointer
+        outline: none 
+    .ui-slider-range
+        background-color: $purple
+    .ui-state-active
+        border: 1px solid $purple

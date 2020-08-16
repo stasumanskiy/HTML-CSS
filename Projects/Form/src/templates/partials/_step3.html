@@ -1,0 +1,111 @@
+<div class="wrapper js-page-parent">
+	<div class="container step3 blue">
+		<main class="main bg-image" style="background-image: url(./img/bg-image.jpg);">
+			<div class="main__list">
+				<ul class="list">
+					<li class="list__item">
+						Название1
+					</li>
+					<li class="list__item">
+						Название2
+					</li>
+					<li class="list__item">
+						Название3
+					</li>
+					<li class="list__item">
+						Название4
+					</li>
+					<li class="list__item">
+						Очень длинное название5
+					</li>
+					<li class="list__item">
+						Очень очень длинное название6
+					</li>
+					<li class="list__item">
+						Длинное название7
+					</li>
+					<li class="list__item">
+						Длинное название8
+					</li>
+				</ul>
+			</div>
+		</main>
+		<aside class="aside blue">
+			<div class="aside__wrap">
+				<div class="aside__content">
+					<div class="heart">
+						<span class="heart__icon">
+							{{ mixins.icon('heart') }}
+						</span>
+					</div>
+					<h4 class="aside__title title-s title-s--blue">
+						Lorem ipsum dolor sit amet, 
+						consectetur adipiscing elit, 
+						sed do eiusmod 
+					</h4>
+					<form action="/" class="contact-form js-form">
+						<div class="contact-form__row contact-form__row--mod ">
+							<span class="contact-form__label">Я ищу:</span>
+							<div class="contact-form__col contact-form__col--mod">
+								<label class="label">
+									<input id="optionFirst" type="radio" class="label__input" name="option">
+									<span class="label__text label__text--blue">
+										Вариант 1
+									</span>
+									<span class="label__icon">
+										{{ mixins.icon('boy') }}
+									</span>
+								</label>
+							</div>
+							<div class="contact-form__col">
+								<label class="label">
+									<input id="optionSecond" type="radio" class="label__input" name="option">
+									<span class="label__text label__text--blue">
+										Вариант 2
+									</span>
+									<span class="label__icon">
+										{{ mixins.icon('girl') }}
+									</span>
+								</label>
+							</div>
+						</div>
+						<div class="contact-form__row">
+							<label class="contact-form__box js-parent" for="name" >
+								<span class="contact-form__label">Ваше имя:</span>
+								<input id="name" type="text" class="contact-form__input" name="name">
+								<span class="contact-form__error js-error"></span>
+							</label>
+						</div>
+						<div class="contact-form__row">
+							<label class="contact-form__box js-parent" for="email">
+								<span class="contact-form__label">Email:</span>
+								<input id="email" type="text" class="contact-form__input" name="email">
+								<span class="contact-form__error js-error"></span>
+							</label>	
+						</div>
+						<div class="contact-form__row">
+							<label class="contact-form__box js-parent" for="password">
+								<span class="contact-form__label">Придумайте пароль:</span>
+								<input id="password" type="password" class="contact-form__input" name="password">
+								<span class="contact-form__error js-error"></span>
+							</label>	
+						</div>
+						<div class="contact-form__row margin--top">
+							<label for="checkbox" class="checkbox">
+								<input type="checkbox" class="checkbox__input" name="checkbox" id="checkbox">
+								<span class="checkbox__label-text">
+									Регистрируясь, вы подтверждаете, что вам уже исполнилось 18 лет и вы ознакомились с условиями пользования сайтом.
+								</span>
+							</label>
+						</div>
+						<div class="contact-form__row margin--top">
+							<button type="submit" class="contact-form__btn btn btn--blue btn--border js-submit" disabled="disabled">
+								Продолжить
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</aside>
+	</div>	
+</div>

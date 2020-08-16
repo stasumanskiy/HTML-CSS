@@ -1,0 +1,180 @@
+.header
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding: 53px 0
+	+md
+		padding: 30px 0
+	+sm
+		position: relative
+		padding: 0
+		margin: 0 -15px 30px	
+	&__col--logo
+		flex: 1 1 298px
+		margin-right: 25px
+		+sm
+			position: absolute
+			top: 0
+			right: 42px
+			left: 42px
+			margin-right: 0
+	&__col--line
+		flex: 1 1 280px
+		margin-right: 61px
+		+md
+			display: none
+	&__col--menu
+		flex: 1 1 750px
+		+sm
+			position: relative
+		.mob-menu
+			position: absolute
+			top: 42px
+			left: 0
+			right: 0
+			z-index: 2
+
+.logo
+	display: block
+	width: 100%
+	font-size: 0
+	.icon
+		width: 100%
+		height: 80px
+		fill: $red
+	+sm
+		width: 132px
+		padding-top: 5px
+		margin: 0 auto	
+		.icon
+			height: 36px
+
+.line
+	display: block
+	height: 2px
+	max-width: 280px
+	background-color: $purple
+	margin: 0 0 0 auto
+	+md
+		display: none
+
+.nav
+	position: relative
+	width: 100%
+	+md
+		overflow: hidden
+	&.is-open
+		.overlay
+			display: block	
+	&__btn-search
+		display: none
+		position: absolute
+		right: 0
+		top: 0
+		width: 42px
+		height: 42px
+		+md
+			display: block
+	&__toggle
+		display: none
+		position: relative
+		width: 42px
+		height: 42px
+		background-color: $purple
+		+sm
+			display: block
+
+.nav-list
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	+md
+		padding-right: 47px
+	+sm
+		display: none
+		flex-wrap: wrap
+		padding-right: 0
+	&__item
+		flex: 2 2 188px
+		max-width: 188px
+		+sm
+			flex: 2 2 100%
+			max-width: 100%
+	&__link
+		display: block
+		max-width: 100%
+		padding: 19px 15px 19px
+		background-color: $purple
+		font-size: 15px
+		font-weight: 700
+		line-height: 1.1
+		color: $white
+		text-align: center
+		text-transform: uppercase
+		text-decoration: none
+		transition: background-color .3s
+		+md
+			height: 42px
+			padding: 14px 10px 15px
+			font-size: 13px
+		&:hover
+			background-color: $red
+		&.is-active
+			background-color: $red	
+
+.overlay
+	width: 100%	
+	height: 100%
+	position: fixed
+	z-index: 5
+	display: none
+
+.search
+	display: none
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 42px
+	transform: translateX(100%)
+	transition: transform .5s
+	z-index: 6
+	&.is-open
+		transform: translateX(0)
+	+md
+		display: block	
+	&__label
+		display: block
+		position: relative
+	&__input
+		width: 100%
+		height: 42px
+		padding: 10px 62px 10px 15px
+		border: 1px solid #d2d2d2
+		box-sizing: border-box
+		font-size: 14px
+		font-weight: 700
+		color: $black
+		+placeholder
+			font-size: 14px
+			font-weight: 700
+			color: #9b9b9b
+	&__btn-focus
+		position: absolute
+		top: 0
+		right: 0
+		display: block
+		width: 42px
+		height: 42px
+		background: none
+		background-color: transparent
+		cursor: pointer
+		.icon
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 19px
+			height: 20px
+			fill: $black
+			transition: fill .3s

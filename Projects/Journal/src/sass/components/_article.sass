@@ -1,0 +1,137 @@
+.article
+	margin-bottom: 60px
+	+md
+		margin-bottom: 30px
+		&:not(:last-child)
+			padding-bottom: 30px
+			border-bottom: 1px solid $borderColor
+	.link
+		display: none
+		margin-top: 10px
+		+md
+			display: block
+		+sm
+			margin-left: 0	
+	&:hover
+		.article__img
+			&:after
+				opacity: 1
+		.article__title
+			color: $brown
+		.article__img-text
+			opacity: 1		
+	&__row
+		display: grid
+		grid-template-columns: 43.5% 1fr 1fr
+		text-decoration: none
+		+sm
+			grid-template-columns: 100%
+	&__col
+		margin-left: 30px
+		+md
+			margin-left: 10px
+		+sm
+			margin-left: 0
+	&__col--img
+		grid-row-start: 1
+		grid-row-end: 3
+		grid-column-start: 1
+		grid-column-end: 2
+		margin-left: 0
+		+lg
+			margin-bottom: 15px
+		+sm
+			grid-row-start: 1
+			grid-row-end: 3
+			grid-column-start: 1
+			grid-column-end: 4
+	&__col--counter
+		grid-row-start: 1
+		grid-column-start: 2
+		grid-column-end: 4
+		+sm
+			grid-row-start: 3
+			grid-column-start: 1
+			grid-column-end: 4
+
+	&__img
+		position: relative
+		width: 100%
+		height: 0
+		padding-bottom: 60%
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: 50% 50%
+		background-color: $silver
+		&:after
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			content: ''
+			background-color: rgba($brown,.5)
+			opacity: 0
+			transition: opacity .3s
+			z-index: 1
+	&__img-text
+		position: absolute
+		display: inline-block
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		font-size: 27px
+		font-weight: 700
+		color: $white
+		text-transform: uppercase
+		z-index: 2
+		opacity: 0
+		transition: opacity .3s
+		white-space: nowrap
+		+md
+			font-size: 16px
+	&__title
+		font-size: 27px
+		margin-bottom: 15px
+		transition: color .3s
+	&__text
+		grid-column-start: 2
+		grid-column-end: 4
+		line-height: 1.7
+		font-size: 15px
+		color: $gray
+		margin-left: 30px
+		+lg
+			grid-row-start: 3
+			grid-row-end: 4
+			grid-column-start: 1
+			grid-column-end: 4
+		+md
+			margin-left: 10px
+			font-size: 14px
+		+sm
+			grid-row-start: 4
+			// grid-row-end: 5
+			grid-column-start: 1
+			// grid-column-end: 4
+			margin-left: 0
+
+.counter
+	display: flex
+	font-size: 15px
+	color: $silver
+	margin-bottom: 12px
+	+md
+		font-size: 12px
+		margin-bottom: 6px
+	&__date
+		margin-right: 38px
+	&__views-icon
+		.icon
+			width: 19px
+			height: 11px
+			fill: $red
+	+md
+		.icon
+			width: 15px
+			height: 9px	

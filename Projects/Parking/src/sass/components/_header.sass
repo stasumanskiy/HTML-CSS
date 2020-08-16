@@ -1,0 +1,151 @@
+.header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 25px 52px 29px 28px
+    +md
+        padding: 15px 15px 40px
+        position: relative
+    &__col--mod
+        display: flex
+        align-items: center
+    &__menu
+        position: relative  
+
+.logo
+    display: block
+    width: 350px
+    font-size: 0
+    +md
+        width: 280px
+    +sm
+        width: 240px    
+    .icon 
+        height: 60px
+        width: 100%
+
+.list-menu        
+    display: flex
+    +md
+        position: absolute
+        right: 15px
+        bottom: 5px
+    +sm
+        flex-wrap: wrap
+        justify-content: flex-start    
+    &__item
+        .overlay
+            display: none
+        &:not(:last-child)
+            margin-right: 14px
+    &__link
+        text-decoration: none
+        text-transform: uppercase
+        font-size: 14px
+        line-height: 1.4
+        font-weight: 700
+        border-bottom: 1px solid transparent
+        color: $dark
+        transition: border-color .3s
+        &:hover
+            border-color: $dark
+        +md
+            &:hover
+                border-color: transparent    
+        +sm        
+            font-size: 11px
+            font-weight: 600
+    &__link--mod
+        position: relative
+        padding-left: 17px
+        color: $green 
+        &:hover
+            border-color: $green
+        &:after
+            position: absolute
+            top: 8px
+            left: 0
+            content: ''
+            width: 11px
+            height: 1px
+            background-color: $green
+        &:before
+            position: absolute
+            top: 3px
+            left: 5px
+            content: ''
+            width: 1px
+            height: 11px
+            background-color: $green
+        +sm
+            padding-left: 0
+            &:after,
+            &:before
+                display: none    
+    &__line
+        display: block
+        height: 10px
+        width: 2px
+        margin-top: 6px
+        background-color: $dark 
+
+.overlay--mod
+    position: fixed
+    display: none
+    opacity: 0
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 2
+
+.nav
+    display: none
+    position: absolute
+    right: 30px
+    top: 30px
+    background-color: $white
+    z-index: 3
+
+.nav-list    
+    &__link
+        position: relative
+        display: block
+        min-width: 170px
+        padding: 14px 27px
+        border: 1px solid $dark
+        white-space: nowrap
+        text-decoration: none
+        text-transform: uppercase
+        line-height: 1.6
+        color: $dark
+        +sm
+            font-size: 12px
+        &:after
+            position: absolute
+            content: ''
+            top: -1px
+            left: -1px
+            bottom: -1px
+            width: 3px
+            background-color: $red
+            transition: opacity .3s
+            opacity: 0
+        &:before
+            content: ''
+            position: absolute
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
+            border: 7px solid transparent
+            border-left: 7px solid $red   
+            transition: opacity .3s
+            opacity: 0
+        &:hover
+            &:before,
+            &:after
+                opacity: 1  
+    &__item
+        &:not(:last-child)
+            .nav-list__link  
+                border-bottom: 1px solid transparent

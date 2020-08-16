@@ -1,0 +1,138 @@
+.nav
+    position: fixed
+    top: 0
+    right: -643px
+    width: 643px
+    height: 100vh
+    background-color: $colorWhite
+    transform: translateX(20%)
+    transition: transform 1s ease-in-out
+    z-index: 10
+    +sm
+        position: fixed
+        right: -320px
+        width: 320px
+    &.is-open
+        transform: translateX(-100%)
+    &__wrap
+        position: relative
+        width: 100%
+        &-inside
+            padding: 46px 40px 46px 70px
+            height: 100vh
+            overflow-y: auto
+            +sm
+                padding: 20px 15px
+            .btn-block
+                +sm
+                    flex-wrap: wrap
+                    &__btn
+                        order: -1
+                        &-pdf
+                            order: 1
+                            margin-top: 20px
+                            margin-right: 0
+                            flex: 1 1 100%
+    &__toggle
+        position: absolute
+        top: 34px
+        left: -80px
+        transition: transform .3s
+        +sm
+            display: none
+            top: 28px
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 62px
+        +sm
+            margin-bottom: 30px
+    .logo
+        .icon
+            fill: $colorDarkBlack
+        +sm
+            width: 70px
+            height: 50px
+            .icon
+                width: 70px
+                height: 50px
+
+#body
+    &.is-open
+        .nav__toggle
+            +sm
+                transform: translate(20px)
+
+.form-group
+    &__label
+        font-size: 16px
+        padding-right: 54px
+
+.close-btn
+    margin-right: 14px
+    font-size: 17px
+    font-weight: 400
+    color: $colorYellow
+    &:hover
+        color: $colorYellow
+        text-decoration: none
+
+.nav-list
+    margin-bottom: 40px
+    &__item
+        &:not(:last-child)
+            padding-bottom: 12px
+        &.is-active
+            .nav-list__link
+                &::after
+                    transform: rotate(90deg)
+    &__link
+        position: relative
+        display: inline-block
+        margin-bottom: 24px
+        min-width: 160px
+        font-size: 21px
+        font-weight: 400
+        color: $colorBlack
+        +sm
+            margin-bottom: 15px
+            font-size: 16px
+            width: 100%
+        &:hover
+            color: $colorBlack
+            text-decoration: none
+        &::after
+            display: block
+            content: ''
+            position: absolute
+            right: 0
+            top: 7px
+            border: 8px solid transparent
+            border-left: 8px solid $colorGreySilver
+            transition: transform .3s
+            transform-origin: 3px center
+            +sm
+                border: 4px solid transparent
+                border-left: 4px solid $colorGreySilver
+                transform-origin: 1px center
+
+.submenu
+    display: none
+    &__list
+        padding: 24px 44px
+        background-color: $colorGrey
+        +sm
+            padding: 20px 15px
+    &__item
+        &:not(:last-child)
+            margin-bottom: 10px
+    &__link
+        font-size: 21px
+        font-weight: 400
+        color: $colorBlack
+        +sm
+            font-size: 16px
+        &:hover
+            color: $colorBlack
+            text-decoration: none

@@ -1,0 +1,273 @@
+.header
+	padding-bottom: 70px
+	+sm
+		padding-bottom: 40px
+	&__inner
+		position: relative
+		z-index: 2
+	&__nav-block
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 20px 0
+		// &.is-fixed
+		// 	position: fixed
+		// 	width: 100%	
+	&__logo
+		position: relative
+		top: -190px
+	&__logo-link
+		display: block	
+		max-width: 130px
+		max-height: 130px
+		svg
+			width: 130px
+			height: 130px
+		+sm
+			width: 80px
+			height: 80px
+			svg
+				width: 80px
+				height: 80px
+	&__nav-block
+		position: relative
+		margin-bottom: 170px
+		+sm
+			margin-bottom: 50px	
+	&__nav
+		+md
+			display: none
+			position: absolute
+			top: 0
+			left: -15px	
+			right: -15px
+			background-color: rgba(255,255,255,1)
+			padding-top: 10px
+			padding-bottom: 40px
+			z-index: 4
+		+sm
+			padding-top: 10px	
+	&__phone
+		display: flex
+		align-items: center
+		justify-content: flex-end	
+	&__title-block
+		margin-bottom: 90px
+		+sm
+			margin-bottom: 45px	
+	&__title
+		margin-bottom: 70px
+		z-index: 5
+		color: $white
+		+sm
+			margin-bottom: 35px
+		span
+			font-weight: 600
+	&__title-descr
+		font-size: 34px
+		color: $white
+		font-style: italic
+		+sm
+			font-size: 17px	
+
+.phone-list			
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	margin-bottom: 20px
+	+md
+		justify-content: center
+		flex-wrap: wrap
+	&__icon
+		font-size: 20px
+		+sm
+			font-size: 17px
+		.icon
+			fill: $red
+	&__item
+		&:first-child
+			margin-right: 35px		
+	&__link
+		padding: 2px
+		text-decoration: none
+		font-size: 17px
+		font-weight: 500
+		color: $white
+		+md
+			font-size: 15px
+			color: $dark
+		+sm
+			font-size: 14px
+
+.menu			
+	display: flex
+	align-items: center
+	+md
+		flex-direction: column
+	&__item
+		position: relative
+		// overflow: hidden
+		+md
+			text-align: center
+			&:not(:last-child)
+				margin-bottom: 10px
+		.menu-hide
+			position: absolute
+			top: 27px
+			left: -9999px
+			opacity: 0
+			transition: .3s linear opacity
+			background-color: rgba($black,.8)
+			+md
+				position: static
+				background-color: transparent
+				opacity: 1
+		&:hover
+			.menu-hide
+				left: 0
+				opacity: 1		
+			.menu__icon
+				transform: rotate(-180deg)
+		&:not(:last-child)
+			margin-right: 30px
+			+md
+				margin-right: 0
+	&__item--mod
+		display: block
+		padding: 12px 10px
+		margin-right: 0 !important
+		&:not(:last-child)
+			border-bottom: 1px solid $white
+		+md
+			padding: 2px	
+	&__icon
+		position: absolute
+		top: 3px
+		right: -15px
+		transition: transform .3s
+		.icon
+			width: 10px
+			height: 8px
+			fill: $white
+		+md
+			display: none		
+	&__link
+		position: relative
+		display: inline-block
+		padding: 2px
+		text-decoration: none
+		font-size: 17px
+		font-weight: 500
+		color: $white
+		// transition: color .5s
+		+md
+			font-size: 15px
+			color: $dark
+		+sm
+			font-size: 14px	
+		// &:after
+		// 	position: absolute
+		// 	top: 0
+		// 	left: 0
+		// 	content: ''
+		// 	width: 100%
+		// 	height: 100%
+		// 	background-color: $red
+		// 	transform: translateX(-101%)
+		// 	transition: transform .5s
+		// 	+md
+		// 		display: none
+		&:before
+			position: absolute
+			bottom: 0
+			left: 0
+			content: ''
+			width: 100%
+			height: 3px
+			background-color: $red
+			transform: scaleX(0)
+			transition: transform .3s	
+		&:hover
+			// color: $red
+			&:before
+				transform: scaleX(1)
+				// transform: translateX(100%)
+	&__item
+		&.is-active
+			.menu__link
+				&:before
+					transform: scaleX(1)
+		.menu__item--mod						
+			.menu__link
+				&:before
+					transform: scaleX(0)
+				&:hover
+					&:before
+						transform: scaleX(1)			
+
+.scroll
+	&__down
+		position: relative
+		width: 50px
+		height: 80px
+		border-radius: 25px
+		background: transparent
+		border: 4px solid #fff
+		overflow: hidden
+		margin: 0 auto
+		z-index: -1
+		+sm
+			width: 40px
+			height: 65px
+		&:before
+			content: ''
+			position: absolute
+			width: 6px
+			height: 6px
+			border-radius: 50%
+			background: $white
+			left: 50%
+			top: 10px
+			transform: translate(-50%, 0)
+			animation: animate 1s linear infinite
+		&:after
+			content: ''
+			position: absolute
+			width: 6px
+			height: 15px
+			background: $red
+			left: 50%
+			top: 10px
+			transform: translate(-50%, 0)
+			border-radius: 3px
+
+@keyframes animate
+	0%
+		transform: translate(-50%, 10px)
+		opacity: 0
+	80%
+		transform: translate(-50%, 60px)
+		opacity: 1
+	100%
+		transform: translate(-50%, 100px)
+		opacity: 0	
+
+
+.list-animation
+	&__item--first
+		position: relative
+		display: block
+		right: -2000px
+		opacity: 0 
+	&__item--second
+		position: relative
+		right: 0px
+		opacity: 0
+		color: $red
+		white-space: nowrap
+	&__item--third
+		position: relative
+		right: -220px	
+		opacity: 0
+		+md
+			right: 0

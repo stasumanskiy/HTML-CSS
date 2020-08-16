@@ -1,0 +1,45 @@
+.news
+	padding-bottom: 110px
+	&__title
+		margin-bottom: 30px
+	&__row
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+		+md
+			flex-wrap: wrap
+	&__col
+		flex: 1 1 33.3%
+		max-width: 300px
+		margin-bottom: 40px
+		&:not(:last-child)
+			margin-right: 35px			
+		p
+			font-size: 14px
+			line-height: 1.7
+			color: $white
+		+sm
+			flex: 1 1 100%
+			max-width: 100%
+			&:not(:last-child)
+				margin-right: 0
+	&__link
+		text-align: center			
+	&__btn
+		padding: 14px 110px						
+			
+
+.box
+	&__image
+		max-width: 300px
+		height: 300px
+		background-color: #000
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		background-size: cover
+		border-radius: 7px
+		margin-bottom: 20px
+		+sm
+			max-width: 100%
+	&__title
+		margin-bottom: 15px

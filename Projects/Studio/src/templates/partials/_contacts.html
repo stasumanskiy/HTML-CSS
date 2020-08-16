@@ -1,0 +1,123 @@
+<div class="wrapper image-bg" style="background-image: url(img/photo-1920.jpg);">
+<!-- Start header	 -->
+	<header class="header">
+		<div class="header__logo">
+			<a class="header__logo-link" href="home.html">
+				{{ mixins.icon('logo') }}
+			</a>
+		</div>
+		<div class="header__mob-menu-toggle">
+			<span></span>
+		</div>
+		<nav class="header__navigation navigation js-navigation">
+			<ul class="navigation__menu">
+				<li class="navigation__item">
+					<a href="home.html" class="navigation__link">Главная</a>
+				</li>
+				<li class="navigation__item">
+					<a href="price.html" class="navigation__link">Услуги и цены</a>
+				</li>
+				<li class="navigation__item">
+					<a href="team.html" class="navigation__link">Команда</a>
+				</li>
+				<li class="navigation__item">
+					<a href="contacts.html" class="navigation__link active">Контакты</a>
+				</li>
+				<li class="navigation__item navigation__item-mobile">
+					<div class="social">
+						<div class="social__block">
+							<a href="#" class="social__link social__link--facebook">
+								{{ mixins.icon('facebook') }}
+							</a>
+							<a href="#" class="social__link social__link--instagram">
+								{{ mixins.icon('instagram') }}
+							</a>
+							<a href="#" class="social__link social__link--twitter">
+								{{ mixins.icon('twitter') }}
+							</a>
+							<a href="#" class="social__link social__link--vkontakte">
+								{{ mixins.icon('vkontakte') }}
+							</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div class="header__social">
+			<div class="social">
+				<div class="social__block">
+					<a href="#" class="social__link social__link--facebook">
+						{{ mixins.icon('facebook') }}
+					</a>
+					<a href="#" class="social__link social__link--instagram">
+						{{ mixins.icon('instagram') }}
+					</a>
+					<a href="#" class="social__link social__link--twitter">
+						{{ mixins.icon('twitter') }}
+					</a>
+					<a href="#" class="social__link social__link--vkontakte">
+						{{ mixins.icon('vkontakte') }}
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+    <div class="contact">
+        <div class="contact__bg">
+            <div class="contact__wrap">
+                <form class="contact__form js-form">
+                    <div class="contact__title-block">
+                        <span class="left-line-title"></span>
+                        <h2 class="contact__form-title">Контакты</h2>
+                        <span class="right-line-title"></span>
+					</div>
+					<div class="contact__text">
+						<span class="contact__castom-font">
+							Вы можете позвонить нам, или отправить заявку 
+							и в течении 30 минут Вам перезвонит наш сотрудник.
+						</span>
+						<div class="social">
+							<div class="social__block">
+								<a href="#" class="social__link social__link--facebook">
+									{{ mixins.icon('facebook') }}
+								</a>
+								<a href="#" class="social__link social__link--instagram">
+									{{ mixins.icon('instagram') }}
+								</a>
+								<a href="#" class="social__link social__link--twitter">
+									{{ mixins.icon('twitter') }}
+								</a>
+								<a href="#" class="social__link social__link--vkontakte">
+									{{ mixins.icon('vkontakte') }}
+								</a>
+							</div>
+						</div>
+						<span class="contact__phone">Телефон</span>
+						<span class="contact__phone-number">+38 (067) 123 45 67</span>
+						<span class="contact__email">Email</span>
+						<span class="">provasilich@gmail.com</span>
+					</div>
+                    <div class="contact__form-row">
+                        <input id="name" class="contact__input" type="text" name="name" minlength="3" value="" required placeholder="Имя *">
+                    </div>
+                    <div class="contact__form-row">
+                        <input id="email" class="contact__input" type="email" name="email" minlength="3" value="" required placeholder="Email *">
+                    </div>
+                    <div class="contact__form-row">
+                        <input id="phone" class="contact__input" type="tel" name="phone" minlength="3" value="" required placeholder="Телефон *">
+                    </div>
+                    <div class="contact__form-row">
+                        <textarea id="message" class="contact__textarea" name="message" minlength="3" placeholder="Сообщение *"></textarea>
+                    </div>
+                    <input name="bezspama" type="text" style="display: none;" value="">
+                    <div class="contact__form-row contact__form-row--mod">
+                        <button class="contact__button js-btn-submit" type="submit" disabled>Отправить</button>
+                    </div>
+                    <div class="success js-success">Сообщение успешно отправлено!</div>
+                    <div class="success-error js-success-error">Уупс.. Что-то пошло не так</div>
+                </form>
+            </div>
+        </div>
+	</div>
+	<!-- End header	 -->
+</div>

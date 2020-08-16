@@ -1,0 +1,74 @@
+body
+	background: $color-white
+	min-width: 320px
+	font-family: $montserrat
+	font-size: 1em
+	font-weight: 400
+	line-height: 1.4
+	&.first
+		font-size: 1em		
+	&.second
+		font-size: 1.075em
+	&.third
+		font-size: 1.125em
+
+.title-md
+	font-size: 2.250em
+	font-weight: 800
+	font-family: $montserrat
+	line-height: 1.3
+	letter-spacing: -1px
+	color: $color-mine-shaft
+	text-align: center
+	+sm
+		font-size: 1.375em
+				
+.title-m
+	font-size: 1.250em
+	font-weight: 600
+	font-family: $montserrat
+	line-height: 1.3
+	letter-spacing: -0.5px
+	color: $color-mine-shaft
+	text-transform: uppercase
+	text-align: center
+	+sm
+		font-size: .875em		
+
+.title-sm
+	font-size: .875em
+	font-weight: 700
+	font-family: $montserrat
+	line-height: 1.3
+	color: $color-mine-shaft
+	text-transform: uppercase
+	+sm
+		font-size: 1.375em		
+
+.wrapper
+	width: 100%
+	background-color: $color-gallery
+
+.inner
+	max-width: 1230px
+	margin: 0 auto
+
+.inner-s
+	max-width: 500px
+	margin: 0 auto
+	+sm
+		width: 100%	
+
+.bg-image
+	width: 100%
+	height: 0
+	padding-bottom: 100%
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	background-size: cover
+
+.js-box
+	transition: opacity 1s
+	opacity: 0
+	&.is-show
+		opacity: 1			

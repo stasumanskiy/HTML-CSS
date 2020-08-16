@@ -1,0 +1,49 @@
+.form
+    position: relative
+    width: 100%
+    max-width: 788px
+    padding-left: 4px
+    transform: translateX(100%)
+    transition: transform .3s ease
+    z-index: 11
+
+.configuration
+    display: none
+    position: relative
+    width: 100%
+    max-width: 422px
+    padding: 6px 4px
+    margin-left: -4px
+    z-index: 11
+    cursor: default
+    &__wrap
+        padding: 20px
+        border-radius: 0 0 3px 3px
+        background-color: $colorWhite
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25)
+    &__row
+        display: flex
+        align-items: center
+        &:not(:last-child)
+            margin-bottom: 14px
+        &--mod
+            +xs
+                flex-wrap: wrap
+                flex-direction: column
+                align-items: flex-start
+                .checkbox
+                    margin-bottom: 5px
+    &__col
+        &--left
+            flex: 0 0 70px
+        &--right
+            flex: 1 1 auto
+        &--select
+            flex: 1 1 100%
+        .search
+            &__input
+                height: 37px
+                padding: 10px
+                border-radius: 2px
+                border: 1px solid $colorSilverWhite
+

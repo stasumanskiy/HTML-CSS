@@ -1,0 +1,48 @@
+.certificate
+	background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,.8) 100%)
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: center
+		position: relative
+		padding: 150px 0 200px
+		+sm
+			padding: 70px 0 80px
+		+xs
+			padding: 70px 0 180px	
+	&__image
+		max-width: 500px
+		img
+			max-width: 100%
+	&__contain
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		+sm
+			padding-top: 70px
+	&__row
+		display: flex
+		justify-content: flex-start
+		&.certificate__row-mod
+			margin-top: 250px
+			justify-content: flex-end
+			align-items: flex-end
+			+sm
+				margin-top: 60px
+	&__col-left,
+	&__col-right
+		max-width: 40%
+		.box_mod
+			margin-bottom: 0
+			p
+				line-height: 1.7
+				padding: 30px 20px
+				+sm
+					font-size: 14px
+					padding: 15px 10px
+		+md
+			max-width: 70%
+		+sm
+			max-width: 100%
+			

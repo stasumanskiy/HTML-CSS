@@ -1,0 +1,24 @@
+@font-face {
+	font-family: 'OpenSans';
+	src: url(../fonts/OpenSans-SemiBold.ttf)
+}
+
+@font-face {
+	font-family: 'Ubuntu';
+	src: url(../fonts/Ubuntu-Bold.ttf)
+}
+
+@font-face {
+	font-family: 'Lobster-Regular';
+	src: url(../fonts/Lobster-Regular.ttf)
+}
+
+@font-face {
+	font-family: 'PT Sans';
+	src: url(../fonts/PT_Sans-Web-Bold.ttf)
+}
+
+@font-face {
+	font-family: 'Belinda';
+	src: url(../fonts/Belinda-Regular.ttf)
+}

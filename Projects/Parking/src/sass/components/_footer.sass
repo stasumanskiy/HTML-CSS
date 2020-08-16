@@ -1,0 +1,158 @@
+.footer
+    padding: 75px 0 85px
+    background-color: $grayBlack
+    +md
+        padding: 35px 0 40px
+    &__wrap
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        +md
+            flex-wrap: wrap
+            justify-content: center
+        +sm
+            flex-direction: column
+            align-items: center    
+    &__col
+        position: relative
+        +sm
+            flex: 1 1 100%  
+            max-width: 100%
+            text-align: center
+            padding-right: 0
+        &:not(:last-child)
+            &:after
+                position: absolute
+                content: ''
+                right: -1px
+                bottom: 0
+                width: 1px
+                height: 172px
+                background-color: $grayDark
+            +md
+                margin-bottom: 30px
+                &:after
+                    display: none
+            +sm
+                margin-right: 0
+                padding-right: 0        
+        &:first-child
+            &:after
+                bottom: -13px        
+        .logo
+            max-width: 250px
+            margin-bottom: 15px
+            +sm
+                margin: 0 auto 20px
+        &--first,
+        &--second
+            flex: 1 1 270px
+            max-width: 270px
+            padding-right: 20px
+            margin-right: 30px
+        &--second
+            +sm
+                .list__link-arrow
+                    display: none
+        &--third
+            flex: 1 1 170px 
+            max-width: 170px
+            padding-right: 20px
+            margin-right: 30px
+        &--four
+            // flex: 1 1 275px
+            // max-width: 275px
+            padding-right: 20px      
+    &__col-title
+        color: $white        
+        &:after
+            background-color: $white
+        +sm     
+            &:after
+                left: 50%
+                transform: translateX(-50%)   
+
+.list
+    width: 100%
+    &--mod
+        .list__item
+            &:first-child
+                margin-bottom: 26px
+            &:nth-child(2)
+                margin-bottom: 10px    
+    &__item
+        position: relative
+        padding-left: 30px
+        font-family: $openSans
+        font-size: 14px
+        color: $white
+        +sm
+            padding-left: 0
+        .icon   
+            fill: $white
+            height: 12px
+            &.icon-right-arrow
+                transform: rotate(-45deg)    
+        &:not(:last-child)        
+            margin-bottom: 20px
+        .input
+            padding-right: 45px    
+    &__item--mod        
+        padding-left: 0
+    &__icon
+        position: absolute
+        display: block
+        left: 0
+        top: 1px
+        +sm
+            display: none
+    &__link
+        display: block
+        font-size: 14px
+        text-decoration: none
+        color: $white
+        transition: color .3s
+        &:hover
+            color: $red
+            .icon
+                fill: $red
+    &__link-arrow
+        position: absolute
+        display: block
+        top: 0
+        left: 0
+        transform: rotate(-90deg)
+        .icon
+            height: 9px      
+            transition: fill .3s
+        &--mod
+            transform: rotate(0)
+            .icon   
+                height: 14px
+    &__btn
+        background: none
+        outline: none
+        border: none
+        position: absolute
+        right: 18px
+        top: 50%
+        transform: translateY(-50%)
+        .icon
+            transition: fill .3s
+            fill: $dark
+            width: 15px
+            height: 20px
+        &:hover
+            .icon
+                fill: $red
+.reserved
+    padding: 15px 0
+    background-color: $green
+    &__inner
+        text-align: center                   
+    &__text
+        font-size: 14px
+        font-weight: 700
+        color: $white
+
+

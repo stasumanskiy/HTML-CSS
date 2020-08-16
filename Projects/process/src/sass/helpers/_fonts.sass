@@ -1,0 +1,32 @@
+//FONTS
+
+=fontpath($name, $name1, $file)
+	src: local($name), local($name1),
+	url("../fonts/" + $file + ".woff") format("woff"),
+	url("../fonts/" + $file + ".woff2") format("woff2")
+=fontdefault($style, $weight, $name)
+	font-family: $name
+	font-style: $style
+	font-weight: $weight
+
+//START
+
+@font-face
+	+fontdefault(normal, 400, 'Cabin')
+	+fontpath('Cabin-Regular', 'Cabin-Regular', 'Cabin-Regular')
+
+@font-face
+	+fontdefault(normal, 300, 'Circe')
+	+fontpath('Circe-Light', 'Circe-Light', 'Circe-Light')
+
+@font-face
+	+fontdefault(normal, 400, 'Circe')
+	+fontpath('Circe-Regular', 'Circe-Regular', 'Circe-Regular')
+
+@font-face
+	+fontdefault(normal, 700, 'Circe')
+	+fontpath('Circe-Bold', 'Circe-Bold', 'Circe-Bold')
+
+@font-face
+	+fontdefault(normal, 900, 'Circe')
+	+fontpath('Circe-ExtraBold', 'Circe-ExtraBold', 'Circe-ExtraBold')		

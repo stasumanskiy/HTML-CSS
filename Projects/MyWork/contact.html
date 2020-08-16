@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact</title>
+	<!-- CSS -->
+	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
+<body>
+	<div class="image-bg" style="background-image: url(img/contact-bg.jpg);">
+		<header class="header">
+			<div class="header__logo">
+				<a class="header__logo-link" href="index.html">
+					<img src="img/senkov-logo2.svg" alt="logo">
+				</a>
+			</div>
+			<div class="header__mob-menu-toggle">
+				<span></span>
+			</div>
+			<nav class="header__navigation navigation js-navigation">
+				<ul class="navigation__menu">
+					<li class="navigation__item">
+						<a href="index.html" class="navigation__link">Главная</a>
+					</li>
+					<li class="navigation__item">
+						<a href="about-me.html" class="navigation__link">Обо мне</a>
+					</li>
+					<li class="navigation__item">
+						<a href="portfolio.html" class="navigation__link">Портфолио</a>
+					</li>
+					<li class="navigation__item">
+						<a href="studios.html" class="navigation__link">Фотостудии</a>
+					</li>
+					<li class="navigation__item">
+						<a href="polygraphy.html" class="navigation__link">Фотопечать</a>
+					</li>
+					<li class="navigation__item">
+						<a href="price.html" class="navigation__link">Услуги и цены</a>
+					</li>
+					<li class="navigation__item">
+						<a href="contacts.html" class="navigation__link active">Контакты</a>
+					</li>
+					<li class="navigation__item navigation__item-mobile">
+						<a href="#" class="navigation__link"><i class="fab fa-facebook-square"></i></a>
+					</li>
+				</ul>
+			</nav>
+			<div class="header__social social">
+				<div class="social__block">
+					<a href="#" class="social__link">
+						<i class="fab fa-facebook-square"></i>
+					</a>
+				</div>
+			</div>
+		</header>
+		<div class="contact">
+			<div class="contact__bg">
+				<div class="contact__wrap">
+					<div class="contact__head">
+						<div class="contact__title-block">
+							<span class="left-line-title"></span>
+							<h2 class="contact__form-title">Контакты</h2>
+							<span class="right-line-title"></span>
+						</div>
+						<span class="contact__castom-font">Доброго времени суток!</span>
+						<span class="contact__castom-font">Меня зовут Виктор. И я рад приветствовать Вас на своем сайте.</span>
+						<p class="contact__text">
+							По вопросам бронирования съемок пишите на почту, а по срочным вопросам я смогу проконсультировать в телефонном режиме.
+						</p>
+						<span class="contact__castom-font">Приятного просмотра.</span>
+						<span class="contact__phone">Телефон</span>
+						<span class="contact__phone-number">+38 (050) 353 57 56</span>
+						<!-- <span class="contact__phone-number">+38 (099) 123 45 67</span> -->
+						<span class="contact__email">Email</span>
+						<span class="">provasilich@gmail.com</span>
+						<div class="contact__title-block margin-top">
+							<span class="left-line-title"></span>
+							<h2 class="contact__form-title ">Написать мне</h2>
+							<span class="right-line-title"></span>
+						</div>
+					</div>
+					<form class="contact__form js-form">
+						<div class="contact__form-row">
+							<input id="name" class="contact__input" type="text" name="name" minlength="3" value="" required>
+							<label class="contact__label" for="name">Имя *</label>
+						</div>
+						<div class="contact__form-row">
+							<input id="email" class="contact__input" type="email" name="email" minlength="3" value="" required>
+							<label class="contact__label" for="email">Email *</label>
+						</div>
+						<div class="contact__form-row">
+							<input id="phone" class="contact__input" type="text" name="phone" minlength="3" value="" required>
+							<label class="contact__label" for="phone">Телефон *</label>
+						</div>
+						<div class="contact__form-row">
+							<textarea id="message" class="contact__textarea" name="message" minlength="3" value="" required=""></textarea>
+							<label class="contact__label" for="tel">Сообщение *</label>
+						</div>
+						<input name="bezspama" type="text" style="display: none;" value="">
+						<div class="contact__form-row">
+							<button class="contact__button js-btn-submit" type="submit" disabled>Отправить</button>
+						</div>
+						<div class="success js-success">Сообщение успешно отправлено!</div>
+						<div class="success-error js-success-error">Уупс.. Что-то пошло не так</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery_3.3.1.js"></script>
+	<script src="js/jquery.validate.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/ajax.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

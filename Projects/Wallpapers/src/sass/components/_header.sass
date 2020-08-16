@@ -1,0 +1,53 @@
+.header
+	width: 100%
+	padding: 8px 0 7px
+	background-color: #fff
+	&__container
+		padding: 0
+		+md
+			padding: 0 15px
+	&__row
+		display: flex
+		align-items: center
+		justify-content: space-between
+		+sm
+			flex-wrap: nowrap
+	&__col
+		display: flex
+		align-items: center
+	&__logo	
+		margin-right: 23px
+	&__link
+		font-size: 30px
+		letter-spacing: 9px
+		text-transform: uppercase
+		text-decoration: none
+		color: $black
+		+sm
+			font-size: 15px
+	&__description
+		max-width: 200px
+		font-size: 13px
+		line-height: 1.1
+		text-transform: uppercase	
+		color: $black
+		+sm
+			display: none
+	&__contact
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		flex-wrap: wrap
+	&__number-link
+		display: inline-block
+		font-family: $proximaNova
+		font-size: 35px
+		font-weight: 700
+		line-height: .8
+		color: $black
+		text-decoration: none
+		margin-right: 17px
+		+md
+			font-size: 28px
+		+sm
+			display: none

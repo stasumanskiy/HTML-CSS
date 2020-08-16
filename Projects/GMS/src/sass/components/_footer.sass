@@ -1,0 +1,109 @@
+.footer
+	padding: 40px 0
+	background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,.75) 100%)
+	&__autor
+		display: flex
+		align-items: center
+		justify-content: space-between
+		font-size: 12px
+		font-weight: 500
+		line-height: 1.3
+		letter-spacing: 1px
+		color: $gray
+		text-transform: uppercase
+		+sm
+			flex-wrap: wrap
+			span
+				margin-bottom: 15px
+				
+	&__contact
+		margin-bottom: 35px
+
+.nav-list_mod		
+	+sm
+		display: none	
+			
+.nav-list
+	display: flex
+	align-items: center
+	margin-bottom: 35px
+	+md
+		flex-wrap: wrap
+	&__item
+		position: relative
+		overflow: hidden
+		display: inline-block
+		margin-right: 30px
+		+sm
+			&:not(:last-child)
+				margin-bottom: 10px
+	&__link
+		display: block
+		white-space: nowrap	
+		.hover-block
+			position: absolute
+			display: block
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			padding: 3px 5px
+			background-color: $yellow
+			transform: translateX(-101%)
+			transition: transform .4s
+			+md
+				display: none	
+		&:hover
+			.hover-block
+				transform: translateX(101%)
+
+	&__link
+		font-size: 14px
+		font-weight: 500
+		line-height: 1.3
+		letter-spacing: 1px
+		color: $silver
+		text-decoration: none
+		transition: color .3s
+		&:hover
+			color: $yellow
+			+md
+				color: $silver		
+
+.contact-list
+	display: flex
+	flex-direction: column
+	&__item
+		display: inline-block
+		font-size: 12px
+		font-weight: 500
+		line-height: 1.3
+		letter-spacing: 1px
+		color: $gray
+		&:not(:last-child)
+			margin-bottom: 15px
+
+	
+
+
+
+.social
+	display: flex
+	align-items: center
+	+sm
+		width: 100%
+	&__item
+		display: inline-block
+		&:not(:last-child)
+			margin-right: 20px
+	&__link
+		.icon-facebook-logo,
+		.icon-vk-logo,
+		.icon-twitter-logo,
+		.icon-google-plus-logo,
+		.icon-odnoklassniki-logo
+			font-size: 16px
+			fill: $silver
+			transition: fill .3s
+			&:hover
+				fill: $yellow		

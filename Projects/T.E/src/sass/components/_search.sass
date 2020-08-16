@@ -1,0 +1,45 @@
+.search
+    &__label
+        display: block
+        position: relative
+        width: 100%
+        max-width: 784px
+    &__icon
+        display: block
+        position: absolute
+        top: 12px
+        left: 10px
+        font-size: 0
+        .icon
+            width: 18px
+            height: 18px
+            fill: $colorGray
+    &__input
+        height: 40px
+        width: 100%
+        max-width: 784px
+        padding: 12px 80px 12px 38px
+        border-radius: 3px
+        background-color: $colorWhite
+        font-family: $roboto
+        font-size: 13px
+        font-weight: 400
+        line-height: 19px
+        color: $colorDark
+        +placeholder
+            font-family: $roboto
+            font-size: 12px
+            font-weight: 400
+            line-height: 22px
+            color: $colorSilver
+    &__btn
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        width: 70px
+        border-radius: 0 4px 4px 0
+        transition: background .2s
+        &:hover
+            background: rgba($colorYellow, .9)
+

@@ -1,0 +1,82 @@
+.hero
+    position: relative
+    overflow: hidden
+    margin-top: -20px
+    height: 814px
+    width: 100%
+    background: transparent no-repeat 100% 0
+    -webkit-background-size: cover
+    background-size: cover
+    background-attachment: fixed
+    +sm
+        overflow: visible
+        margin-top: 0
+        height: 714px
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        background: rgb(14,47,125)
+        background: linear-gradient(90deg, rgba(14,47,125,0.8603816526610644) 50%, rgba(0,0,0,0.7315301120448179) 100%)
+    &__wrap
+        position: relative
+        margin-bottom: 240px
+        padding-top: 138px
+        z-index: 2
+        +sm
+            padding: 88px 12px 0 12px
+            margin-bottom: 60px
+
+.hero-cont
+    padding: 0 15px
+    &__title
+        margin-bottom: 15px
+        span
+            font-weight: 300
+    &__descript
+        margin-bottom: 48px
+        font-size: 21px
+        font-weight: 300
+        line-height: 1.6
+        color: $colorWhite
+        +sm
+            margin-bottom: 40px
+            font-size: 16px
+            line-height: 2
+    &__hr
+        margin-bottom: 52px
+        width: 100%
+        max-width: 262px
+        height: 7px
+        border-radius: 6px
+        background-color: $colorWhite
+        +sm
+            margin-bottom: 40px
+
+.hero-list
+    &:first-child
+        margin-bottom: 30px
+    &__item
+        position: relative
+        padding-left: 19px
+        font-size: 21px
+        font-weight: 400
+        line-height: 1.6
+        color: $colorWhite
+        +sm
+            font-size: 18px
+        &::before
+            display: block
+            content: ''
+            position: absolute
+            top: 11px
+            left: 0
+            width: 11px
+            height: 11px
+            border-radius: 50%
+            background-color: $colorWhite
+        &:not(:last-child)
+            margin-bottom: 10px

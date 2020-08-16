@@ -1,0 +1,55 @@
+.slider
+    position: relative
+    padding: 32px 15px 0
+    width: 100%
+    max-width: 1800px
+    margin: 0 auto 145px
+    z-index: 4
+    background-color: $colorWhite
+    +sm
+        padding: 0 26px
+        margin: 0 auto 75px
+    &__wrap
+        position: relative
+    .slide
+        position: relative
+        padding-bottom: 70%
+        background: transparent no-repeat 50% 50%
+        -webkit-background-size: cover
+        background-size: cover
+        &::after
+            display: block
+            content: ''
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            background-color: rgba(0,0,0, .55)
+            transition: opacity .3s
+        &:hover
+            &:after
+                opacity: 0
+                +sm
+                    opacity: 1
+    .owl-dots
+        position: absolute
+        left: 50%
+        bottom: -90px
+        transform: translate(-50%, 0)
+        text-align: center
+        +sm
+            bottom: -50px
+        .owl-dot
+            width: 22px
+            height: 22px
+            border: 1px solid $colorYellow
+            border-radius: 50%
+            transition: background-color .3s
+            +sm
+                margin-right: 10px
+            &:not(:last-child)
+                margin-right: 10px
+
+            &.active
+                background-color: $colorYellow

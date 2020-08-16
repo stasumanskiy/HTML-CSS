@@ -1,0 +1,170 @@
+.hero
+	&__bg
+		position: relative
+		width: 100%
+		background-image: url(../img/photo-main.png)
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: 50% 50%
+		+sm
+			background-image: url(../img/photo-main-mob.png)
+			background-position: 50% 40%
+	&__inner
+		padding-bottom: 40px	
+	&__wrap
+		text-align: center
+	&__text-block
+		display: block
+		margin-top: 205px
+		margin-bottom: 45px
+		padding: 13px 35px
+		background-color: rgba(0,0,0,.2)
+		+md
+			margin-bottom: 20px
+			margin-top: 170px
+		+sm
+			margin-top: 160px	
+	&__title
+		margin-bottom: 8px
+	&__description
+		font-size: 24px
+		font-style: italic
+		letter-spacing: 2.5px
+		color: $white
+		+md
+			font-size: 15px
+		+sm
+			font-size: 15px
+			letter-spacing: 0
+	&__btn
+		display: inline-block
+		margin-bottom: 20px
+		+md
+			margin-bottom: 10px	
+
+.nav-menu
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding: 18px 0
+	+md
+		flex-wrap: wrap
+	+sm
+		padding-left: 0
+		padding-right: 0
+	&__list
+		display: flex
+		align-items: center
+		+sm
+			position: absolute
+			top: 0px
+			right: -15px
+			left: -15px
+			background-color: $white
+			z-index: 9
+			padding: 20px 15px
+	&__item
+		+sm
+			text-align: center
+		&:not(:first-child)
+			margin-left: 34px
+			+md
+				margin-left: 30px
+			+sm
+				padding: 10px 0
+				margin-left: 0	
+	&__link
+		text-decoration: none
+		text-transform: uppercase
+		font-size: 15px
+		font-style: italic
+		color: $white
+		transition: color .3s
+		+sm
+			color: $blue
+		&:hover
+			color: $blue
+			+sm
+				color: $white
+		&.is-active
+			color: $blue
+	.list
+		display: none
+		+sm
+			display: flex
+			align-items: center
+			justify-content: flex-start
+			flex-wrap: wrap
+			padding-right: 60px
+			&__item
+				font-style: italic
+				font-size: 11px
+				color: $white
+				margin-bottom: 0
+				&:first-child
+					padding-left: 0
+
+
+.leng		
+	display: flex
+	align-items: center
+	margin-left: 30px
+	&.mob-show
+		display: none
+		+sm
+			display: flex
+			align-items: center
+			justify-content: flex-end
+	&__item
+		&:not(:first-child)
+			margin-left: 7px
+	&__link	
+		position: relative
+		text-decoration: none
+		text-transform: uppercase
+		font-size: 15px
+		font-style: italic
+		color: $white
+		transition: color .3s, opacity .3s
+		&:after
+			position: absolute
+			content: ''
+			left: 0
+			bottom: 0
+			width: 100%
+			height: 2px
+			background: #0f10b1
+			opacity: 0
+		&:hover
+			color: $blue
+			&:after
+				opacity: 1
+		&.is-active
+			color: $blue
+			&:after
+				opacity: 1
+
+
+.down
+	position: relative
+	width: 50px
+	height: 54px
+	margin: 0 auto
+	&__icon
+		position: absolute
+		left: 50%
+		top: 10px
+		transform: translate(-50%, 0)
+		animation: animate 1s linear infinite
+		.icon
+			fill: $white
+
+@keyframes animate
+	0%
+		transform: translate(-50%, 0px)
+		// opacity: 0
+
+	80%
+		transform: translate(-50%, 35px)
+		opacity: 1
